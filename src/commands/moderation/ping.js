@@ -1,11 +1,14 @@
-const {Command} = require('@sapphire/framework');
+const {Command, RegisterBehavior} = require('@sapphire/framework');
+const dotenv = require('dotenv');
+const fs = require('fs');
+const envConfig = dotenv.parse(fs.readFileSync('.env'));
 
 module.exports = class PingCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
             name: 'ping',
-            description: 'ping pong',
+            description: 'Affiche la latence de l\'API et de la connexion à Discord du bot Cecrops.',
         });
     }
 
@@ -13,11 +16,10 @@ module.exports = class PingCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName(this.name)
-                    .setDescription(this.description),
+                    .setName('ping')
+                    .setDescription('Affiche la latence de l\'API et de la connexion à Discord du bot Cecrops.'),
             {
-                guildIds: ['401733788096266240'],
-                idHints: ['973596711287128125'],
+                guildIds: [process.env.GUILD_ID],
             },
         );
     }

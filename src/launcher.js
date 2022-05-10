@@ -1,8 +1,8 @@
 const BotClient = require('./client.js');
-const path = require('path');
 const dotenv = require('dotenv');
 const fs = require('fs');
 const parameter = require('../parameter.json');
+const {ApplicationCommandRegistries, RegisterBehavior} = require('@sapphire/framework');
 
 /* Lecture de la configuration */
 
@@ -65,6 +65,10 @@ fs.readdir('./src/events/', (err, files) => {
         }
     });
 });
+
+/* Force les commandes à exister de façon unique ou presque*/
+
+ApplicationCommandRegistries.setDefaultBehaviorWhenNotIdentical(RegisterBehavior.Overwrite);
 
 /* Gestion du serveur Youtube */
 
