@@ -1,6 +1,6 @@
 {
   "name": "cecrops",
-  "main": "index.js",
+  "main": "src/launcher.js",
   "dependencies": {
     "@sapphire/framework": "^2.4.1",
     "discord.js": "^13.6.0",

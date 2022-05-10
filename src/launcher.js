@@ -1,12 +1,12 @@
-const SapphireClient = require('./client');
+const BotClient = require('./client.js');
 // const path = require('path');
 const dotenv = require('dotenv');
 const fs = require('fs');
-const parameter = require('./parameter.json');
+const parameter = require('../parameter.json');
 
 /* Lecture de la configuration */
 
-const envConfig = dotenv.parse(fs.readFileSync('../.env'));
+const envConfig = dotenv.parse(fs.readFileSync('.env'));
 
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
@@ -14,8 +14,8 @@ for (const k in envConfig) {
 
 /* Démarrage du client (de nombreuses options sont gérées) */
 
-const client = new SapphireClient({
-    intents: [],
+const client = new BotClient({
+    intents: ['GUILDS', 'GUILD_MESSAGES'],
     defaultPrefix: parameter.prefix,
     presence: {
         activity: {
@@ -30,10 +30,10 @@ const client = new SapphireClient({
 
 /* Gestion des erreurs, à ne pas toucher */
 
-fs.readdir('./events/', (err, files) => {
+fs.readdir('./src/events/', (err, files) => {
     if (err) return console.error(err);
     files.forEach((file) => {
-        const eventFunction = require(`.events/${file}`);
+        const eventFunction = require(`./events/${file}`);
         if (eventFunction.disabled) return;
 
         const event = eventFunction.event || file.split('.')[0];
@@ -48,7 +48,6 @@ fs.readdir('./events/', (err, files) => {
         }
     });
 });
-
 
 /* Gestion du serveur Youtube */
 

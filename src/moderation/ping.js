@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-class PingCommand extends Command {
+module.exports = class PingCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
@@ -21,8 +21,4 @@ class PingCommand extends Command {
 
         return msg.edit(content);
     }
-}
-
-module.exports = {
-    PingCommand,
 };
