@@ -1,5 +1,5 @@
 const BotClient = require('./client.js');
-// const path = require('path');
+const path = require('path');
 const dotenv = require('dotenv');
 const fs = require('fs');
 const parameter = require('../parameter.json');
@@ -15,13 +15,30 @@ for (const k in envConfig) {
 /* Démarrage du client (de nombreuses options sont gérées) */
 
 const client = new BotClient({
-    intents: ['GUILDS', 'GUILD_MESSAGES'],
+    intents: [
+        'GUILDS',
+        'GUILD_MEMBERS',
+        'GUILD_BANS',
+        'GUILD_EMOJIS_AND_STICKERS',
+        'GUILD_INTEGRATIONS',
+        'DIRECT_MESSAGES',
+        'DIRECT_MESSAGE_REACTIONS',
+        'DIRECT_MESSAGE_TYPING',
+        'GUILD_INVITES',
+        'GUILD_MESSAGE_REACTIONS',
+        'GUILD_MESSAGE_TYPING',
+        'GUILD_PRESENCES',
+        'GUILD_SCHEDULED_EVENTS',
+        'GUILD_VOICE_STATES',
+        'GUILD_MESSAGES',
+        'GUILD_WEBHOOKS',
+    ],
     defaultPrefix: parameter.prefix,
     presence: {
-        activity: {
+        activities: [{
             name: parameter.activity.status,
             type: parameter.activity.type,
-        },
+        }],
     },
     caseInsensitiveCommands: true,
     caseInsensitivePrefixes: false,
@@ -48,6 +65,13 @@ fs.readdir('./src/events/', (err, files) => {
         }
     });
 });
+
+/* Ajout des différents dossiers dans lesquels se situent les commandes */
+
+client.stores.get('commands').registerPath(path.join(__dirname, 'games/sutom'));
+client.stores.get('commands').registerPath(path.join(__dirname, 'games/gambling'));
+client.stores.get('commands').registerPath(path.join(__dirname, 'moderation'));
+client.stores.get('commands').registerPath(path.join(__dirname, 'music'));
 
 /* Gestion du serveur Youtube */
 
