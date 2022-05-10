@@ -6,6 +6,7 @@ const playerUniqueStatSchema = new mongoose.Schema({
 });
 
 const playerSchema = new mongoose.Schema({
+    id: 'string',
     name: 'string',
     level: 'number',
     experience: 'number',
