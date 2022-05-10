@@ -10,6 +10,7 @@
  - **Étape 2 :** Rendez-vous sur ce [lien](https://discord.com/developers/applications) et connectez-vous.
  - **Étape 3 :** Une fois connecté, créez une application en cliquant sur "New Application". Donnez à votre bot un nom (Cecrops !), une description (a very nice bot), et même une jolie photo de profil si vous le souhaitez.
  -  **Étape 4 :** Ensuite cliquez sur l'onglet "bot" et choisissez comme "Scope" le suivant :![image explaining where to go next](https://www.commentcoder.com/static/3b6fcf29448d1eb90d9d945382b060d1/b17f8/discord-permission-scope-bot.jpg)
+AJOUTEZ ENSUITE COMME SCOPE applications.command, c'est ESSENTIEL
 
 - **Étape 5 :** Lorsque vous aurez cliqué sur "Add bot", vous obtiendrez un token unique qu'il faut vous copier et sauvegarder précieusement. N'importe quelle personne ayant accès à ce token pourra se connecter sur votre bot (avec les permissions dont il dispose) et faire ce qu'il veut depuis ce bot.
 - **Étape 6 :** Vous devez maintenant inviter le bot sur votre serveur. Il doit y avoir sur le site sur lequel vous étiez un gros bouton + quelque part, qui vous permettra d'inviter le bot sur un serveur sur lequel vous avez les permissions nécessaires. Vous pourrez aussi modifier les permissions demandées par le bot.
