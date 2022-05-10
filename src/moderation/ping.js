@@ -5,16 +5,31 @@ module.exports = class PingCommand extends Command {
         super(context, {
             ...options,
             name: 'ping',
-            aliases: ['pong'],
             description: 'ping pong',
         });
     }
 
-    async messageRun(message) {
-        const msg = await message.channel.send('Ping?');
+    registerApplicationCommands(registry) {
+        registry.registerChatInputCommand(
+            (builder) =>
+                builder
+                    .setName(this.name)
+                    .setDescription(this.description),
+            {
+                guildIds: ['401733788096266240'],
+                idHints: ['973596711287128125'],
+            },
+        );
+    }
 
-        const content = `Pong from JavaScript! Bot Latency ${Math.round(this.container.client.ws.ping)} ms. API Latency ${msg.createdTimestamp - message.createdTimestamp} ms.`;
+    async chatInputRun(interaction) {
+        await interaction.reply('Ping?');
 
-        return msg.edit(content);
+        interaction.fetchReply()
+            .then((reply) => {
+                const content = `Pong from JavaScript! Bot Latency ${Math.round(this.container.client.ws.ping)} ms. API Latency ${(reply.createdTimestamp) - interaction.createdTimestamp} ms.`;
+
+                interaction.editReply(content);
+            });
     }
 };
