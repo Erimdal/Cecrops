@@ -66,13 +66,6 @@ fs.readdir('./src/events/', (err, files) => {
     });
 });
 
-/* Ajout des différents dossiers dans lesquels se situent les commandes */
-
-client.stores.get('commands').registerPath(path.join(__dirname, 'games/sutom'));
-client.stores.get('commands').registerPath(path.join(__dirname, 'games/gambling'));
-client.stores.get('commands').registerPath(path.join(__dirname, 'moderation'));
-client.stores.get('commands').registerPath(path.join(__dirname, 'music'));
-
 /* Gestion du serveur Youtube */
 
 client.server = {
