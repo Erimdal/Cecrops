@@ -1,13 +1,20 @@
 const BotClient = require('./client.js');
+
+const {REST} = require('@discordjs/rest');
+const {Routes} = require('discord-api-types/v9');
+
 const dotenv = require('dotenv');
 const fs = require('fs');
-const parameter = require('../parameter.json');
+
 const {ApplicationCommandRegistries, RegisterBehavior} = require('@sapphire/framework');
 
 /* Lecture de la configuration */
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'));
+const parameter = require('../parameter.json');
 
+const rest = new REST({ version: '9' }).setToken(process.env.BOT_TOKEN);
+
+const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
@@ -70,7 +77,31 @@ fs.readdir('./src/events/', (err, files) => {
 
 ApplicationCommandRegistries.setDefaultBehaviorWhenNotIdentical(RegisterBehavior.Overwrite);
 
-/* Gestion du serveur Youtube */
+
+/* Suppression des bêtises réalisées dans les modifications de commandes (pas adaptées au serveur, doublons, ce genre de choses) */
+
+rest.get(Routes.applicationCommands(process.env.CLIENT_ID))
+    .then(data => {
+        const promises = [];
+        for (const command of data) {
+            const deleteUrl = `${Routes.applicationCommands(process.env.CLIENT_ID)}/${command.id}`;
+            promises.push(rest.delete(deleteUrl));
+        }
+        return Promise.all(promises);
+    });
+
+rest.get(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID))
+.then(data => {
+    const promises = [];
+    for (const command of data) {
+        const deleteUrl = `${Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID)}/${command.id}`;
+        promises.push(rest.delete(deleteUrl));
+    }
+    return Promise.all(promises);
+});
+
+
+/* Création du serveur Youtube */
 
 client.server = {
     queue: [],
