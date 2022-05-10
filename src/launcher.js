@@ -6,6 +6,8 @@ const {Routes} = require('discord-api-types/v9');
 const dotenv = require('dotenv');
 const fs = require('fs');
 
+const mongoose = require('mongoose');
+
 const {ApplicationCommandRegistries, RegisterBehavior} = require('@sapphire/framework');
 
 /* Lecture de la configuration */
@@ -109,6 +111,14 @@ client.server = {
     dispatcher: null,
     connection: null,
 };
+
+/* Gestion de la base de données */
+
+client.on('ready', async () => {
+    await mongoose.connect(process.env.DATABASE || '', {
+        keepAlive: true,
+    });
+});
 
 /* Lancement du bot */
 
