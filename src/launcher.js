@@ -12,7 +12,7 @@ const {ApplicationCommandRegistries, RegisterBehavior} = require('@sapphire/fram
 
 const parameter = require('../parameter.json');
 
-const rest = new REST({ version: '9' }).setToken(process.env.BOT_TOKEN);
+const rest = new REST({version: '9'}).setToken(process.env.BOT_TOKEN);
 
 const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
@@ -91,14 +91,14 @@ rest.get(Routes.applicationCommands(process.env.CLIENT_ID))
     });
 
 rest.get(Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID))
-.then(data => {
-    const promises = [];
-    for (const command of data) {
-        const deleteUrl = `${Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID)}/${command.id}`;
-        promises.push(rest.delete(deleteUrl));
-    }
-    return Promise.all(promises);
-});
+    .then(data => {
+        const promises = [];
+        for (const command of data) {
+            const deleteUrl = `${Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID)}/${command.id}`;
+            promises.push(rest.delete(deleteUrl));
+        }
+        return Promise.all(promises);
+    });
 
 
 /* Création du serveur Youtube */
