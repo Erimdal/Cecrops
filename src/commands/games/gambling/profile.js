@@ -36,7 +36,7 @@ module.exports = class ProfileCommand extends Command {
         const clientId = interaction.member.user.id;
         const name = interaction.member.nickname;
 
-        const user = await prisma.users.findUnique({
+        const user = await prisma.users.findFirst({
             where: {
                 clientId,
             },
