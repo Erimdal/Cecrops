@@ -9,6 +9,7 @@ for (const k in envConfig) {
 }
 
 const prisma = require('../../../prismaClient');
+const addUserGambling = require('../../../utility/addUserGambling');
 
 module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
@@ -29,5 +30,24 @@ module.exports = class ProfileCommand extends Command {
                 guildsId: [process.env.GUILD_ID],
             },
         );
+    }
+
+    async chatInputRun(interaction) {
+        const clientId = interaction.member.user.id;
+        const name = interaction.member.nickname;
+
+        const user = await prisma.users.findUnique({
+            where: {
+                clientId,
+            },
+        });
+
+        if (user) {
+            await interaction.reply('User already existing !');
+        }
+        else {
+            await interaction.reply('New user created !');
+            await addUserGambling(name, clientId);
+        }
     }
 };

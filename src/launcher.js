@@ -10,7 +10,7 @@ const {ApplicationCommandRegistries, RegisterBehavior} = require('@sapphire/fram
 
 /* Lecture de la configuration */
 
-const parameter = require('../parameter.json');
+const parameter = require('../parameters/bot_parameters.json');
 
 const rest = new REST({version: '9'}).setToken(process.env.BOT_TOKEN);
 
