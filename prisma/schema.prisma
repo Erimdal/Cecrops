@@ -8,9 +8,8 @@ datasource db {
 }
 
 type UsersStatistics {
-  gameName  String
-  gamesLost Int
-  gamesWon  Int
+  gameName String
+  profits  Float
 }
 
 model Users {
