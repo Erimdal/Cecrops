@@ -8,7 +8,7 @@ for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const mongoose = require('mongoose');
+const prisma = require('../../../prismaClient');
 
 module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
@@ -29,31 +29,5 @@ module.exports = class ProfileCommand extends Command {
                 guildsId: [process.env.GUILD_ID],
             },
         );
-    }
-
-    async chatInputRun(interaction) {
-        const {playerSchema, economicSchema} = require('../../../database/gamblingEconomy');
-        const {username, id} = interaction.member.user;
-
-        if (mongoose.connection.model('economy', economicSchema).model('players', playerSchema).TODO:change that({
-            name: username,
-            id: id,
-        }) !== null) {
-            console.log('User exists ! That works !');
-        }
-        else {
-            const playerModel = await new playerSchema({
-                id: id,
-                name: username,
-                level: 0,
-                experience: 0,
-                credits: 0,
-                stats: [],
-                dailyCooldown: 0,
-            });
-
-            mongoose.connection.models.economy.players.push(playerModel);
-            console.log('User didnt exist but now he does ! That should works !');
-        }
     }
 };
