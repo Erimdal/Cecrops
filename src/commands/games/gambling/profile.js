@@ -11,7 +11,7 @@ for (const k in envConfig) {
 }
 
 const prisma = require('../../../prismaClient');
-const addUserGambling = require('../../../utility/addUserGambling');
+const retrieveUser = require('../../../utility/retrieveUser');
 
 module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
@@ -38,18 +38,7 @@ module.exports = class ProfileCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = await prisma.users.findFirst({
-            where: {
-                clientId,
-            },
-        });
-
-        if (!user) {
-            addUserGambling(name, clientId);
-            await setTimeout(100);
-            await this.chatInputRun(interaction);
-            return;
-        }
+        const user = retrieveUser(name, clientId);
 
         const embed = new MessageEmbed()
             .setColor('#ee6618')

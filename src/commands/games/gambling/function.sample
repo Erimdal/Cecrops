@@ -1,7 +1,7 @@
 const {Command} = require('@sapphire/framework');
 
 const dotenv = require('dotenv');
-const fs = require('fs'); 
+const fs = require('fs');
 
 const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
@@ -9,7 +9,7 @@ for (const k in envConfig) {
 }
 
 const prisma = require('../../../prismaClient');
-const addUserGambling = require('../../../utility/addUserGambling');
+const retrieveUser = require('../../../utility/retrieveUser');
 
 module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
@@ -36,16 +36,7 @@ module.exports = class ProfileCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = await prisma.users.findFirst({
-            where: {
-                clientId,
-            },
-        });
-
-        if (!user) {
-            addUserGambling(name, clientId);
-            this.chatInputRun(interaction);
-        }
+        const user = retrieveUser(name, clientId);
 
         await interaction.reply(user);
     }
