@@ -46,7 +46,7 @@ module.exports = class ProfileCommand extends Command {
             const seconds = Math.ceil(((differenceBetweenDates / (1000 * 60)) - Math.floor(differenceBetweenDates / (1000 * 60))) * 60);
 
             const notYetBegEmbed = new MessageEmbed()
-                .setColor('#ee6618')
+                .setColor('#f00c0c')
                 .addField('Vous avez déjà mendié récemment !', `Attendez encore ${minutes} minutes et ${seconds} secondes pour mendier à nouveau.`);
 
             await interaction.reply({embeds: [notYetBegEmbed]});
@@ -54,7 +54,14 @@ module.exports = class ProfileCommand extends Command {
         }
 
         if (user.credits > 0) {
-            await interaction.reply('On ne mendie pas quand on a de l\'argent ! ');
+            const alreadyHaveMoneyBegEmbed = new MessageEmbed()
+                .setColor('#f00c0c')
+                .addFields([
+                    {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent', inline: true},
+                    {name: 'Crédits restants', value: `${user.credits}`, inline: true},
+                ]);
+
+            await interaction.reply({embeds: [alreadyHaveMoneyBegEmbed]});
             return;
         }
 
@@ -69,6 +76,10 @@ module.exports = class ProfileCommand extends Command {
             },
         });
 
-        await interaction.reply('10,000 crédits vous ont été octroyés.');
+        beggedSuccessfullyEmbed = new MessageEmbed()
+            .setColor('#0cf021')
+            .addField('Vous avez reçu 10,000 crédits !', 'Ici apparaîtra un message rigolo dans lequel seront indiquées les conditions dans lesquelles vous avez mendié.');
+
+        await interaction.reply({embeds: [beggedSuccessfullyEmbed]});
     }
 };

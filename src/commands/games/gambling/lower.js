@@ -75,7 +75,7 @@ module.exports = class ProfileCommand extends Command {
         const experienceAdded = Math.round((50 / userValue) * 100);
 
         const optionalEmbed = new MessageEmbed()
-            .setColor('#ee6618')
+            .setColor('#0cf021')
             .setTitle('Level up !')
             .addField(`Niveau ${newLevel} atteint !`, 'Félicitations !');
 
