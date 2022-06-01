@@ -36,7 +36,7 @@ module.exports = class ProfileCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = retrieveUser(name, clientId);
+        const user = await retrieveUser(name, clientId);
 
         let totalProfits = 0;
         let fields = new Array();
