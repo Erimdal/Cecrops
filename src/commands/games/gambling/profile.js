@@ -3,6 +3,7 @@ const {MessageEmbed} = require('discord.js');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
+const {setTimeout} = require('timers/promises');
 
 const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
@@ -16,8 +17,8 @@ module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: 'function',
-            description: 'Fait quelque chose',
+            name: 'profile',
+            description: 'Affiche le profil de la personne qui lance la commande dans un embed',
         });
     }
 
@@ -25,8 +26,8 @@ module.exports = class ProfileCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName('function')
-                    .setDescription('Fait quelque chose'),
+                    .setName('profile')
+                    .setDescription('Affiche le profil de la personne qui lance la commande dans un embed'),
             {
                 guildsId: [process.env.GUILD_ID],
             },
@@ -45,7 +46,9 @@ module.exports = class ProfileCommand extends Command {
 
         if (!user) {
             addUserGambling(name, clientId);
-            this.chatInputRun(interaction);
+            await setTimeout(100);
+            await this.chatInputRun(interaction);
+            return;
         }
 
         const embed = new MessageEmbed()
@@ -54,7 +57,7 @@ module.exports = class ProfileCommand extends Command {
             .addFields([
                 {name: 'Niveau', value: `Vous êtes au niveau ${user.level}`, inline: true},
                 {name: 'Expérience / Prochain niveau', value: 'TODO', inline: true},
-                {name: 'Mise minimale', value: `${user.credits * 0.05}`, inline: true},
+                {name: 'Mise minimale', value: `${user.credits}`, inline: true},
                 {name: 'Progression', value: 'TODO', inline: true},
                 {name: 'Total d\'expérience', value: `${user.experience}`, inline: true},
             ]);
