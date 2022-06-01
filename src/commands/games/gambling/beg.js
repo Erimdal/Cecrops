@@ -1,4 +1,5 @@
 const {Command} = require('@sapphire/framework');
+const {MessageEmbed} = require('discord.js');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -39,8 +40,16 @@ module.exports = class ProfileCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        if (!(user.dailyCooldown < new Date(Date.now()))) {
-            await interaction.reply('Impossible de mendier maintenant. Réessayez dans une dizaine de minutes.');
+        if (user.dailyCooldown > new Date(Date.now())) {
+            const differenceBetweenDates = user.dailyCooldown - (new Date(Date.now()));
+            const minutes = Math.ceil(differenceBetweenDates / (1000 * 60));
+            const seconds = Math.ceil(((differenceBetweenDates / (1000 * 60)) - Math.floor(differenceBetweenDates / (1000 * 60))) * 60);
+
+            const notYetBegEmbed = new MessageEmbed()
+                .setColor('#ee6618')
+                .addField('Vous avez déjà mendié récemment !', `Attendez encore ${minutes} minutes et ${seconds} secondes pour mendier à nouveau.`);
+
+            await interaction.reply({embeds: [notYetBegEmbed]});
             return;
         }
 
@@ -56,7 +65,7 @@ module.exports = class ProfileCommand extends Command {
                 clientId,
             },
             data: {
-                dailyCooldown: new Date(Date.now() + (60 * 60 * 1000)),
+                dailyCooldown: new Date(Date.now() + (10 * 60 * 1000)),
             },
         });
 
