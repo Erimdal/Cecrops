@@ -29,7 +29,7 @@ module.exports = async (name, clientId) => {
                 statistics.push(statistic);
             }
 
-            const newUser = await prisma.users.create({
+            await prisma.users.create({
                 data: {
                     clientId,
                     credits: 0,
@@ -38,6 +38,12 @@ module.exports = async (name, clientId) => {
                     level: 1,
                     name,
                     statistics,
+                },
+            });
+
+            const newUser = await prisma.users.findFirst({
+                where: {
+                    clientId,
                 },
             });
 
