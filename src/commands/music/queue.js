@@ -1,5 +1,5 @@
 const {Command} = require('@sapphire/framework');
-const { MessageEmbed } = require('discord.js');
+const {MessageEmbed} = require('discord.js');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -52,7 +52,7 @@ module.exports = class QueueCommand extends Command {
             return await interaction.reply('Je ne suis pas dans le salon vocal.');
         }
 
-        const startingItem = (page - 1) = itemsPerPage;
+        const startingItem = (page - 1) * itemsPerPage;
         const queueLength = server.queue.length;
 
         let endingItem = startingItem + itemsPerPage;
@@ -79,7 +79,7 @@ module.exports = class QueueCommand extends Command {
                 endingItem = queueLength;
             }
 
-            for (let i = startingItem; i < endingItem; i++) {
+            for (let i = startingItem; i < endingItem; i += 1) {
                 const video = server.queue[i];
                 queueEmbed.addField(`\`${i + 1}.\`[${video.title}](${video.url})`);
             }

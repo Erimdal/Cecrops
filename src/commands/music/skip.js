@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-const ytdl = require(`ytdl-core`);
+const ytdl = require('ytdl-core');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -51,7 +51,7 @@ module.exports = class SkipCommand extends Command {
         const index = (interaction.getNumberOption('index') ? interaction.getNumberOption('index') : 1) - 1;
 
         if (!server.queue[index]) {
-            if (index == 0) {
+            if (index === 0) {
                 server.currentVideo = {title: 'Rien pour le moment', url: ''};
                 server.dispatcher.pause();
                 server.dispatcher = null;
@@ -66,7 +66,7 @@ module.exports = class SkipCommand extends Command {
         server.dispatcher = server.connection.play(await ytdl(server.currentVideo.url, {filter: 'audioonly'}));
         server.queue.splice(0, index + 1);
 
-        if (index == 0) {
+        if (index === 0) {
             return await interaction.reply('Musique passée.');
         }
         else {
