@@ -2,7 +2,7 @@ const prisma = require('../prismaClient');
 const fs = require('fs');
 
 module.exports = async (name, clientId) => {
-    fs.readFile('../../parameters/games.json', 'utf-8', function (err, data) {
+    fs.readFile('parameters/games.json', 'utf-8', function (err, data) {
         if (err) {
             throw err;
         }
@@ -23,7 +23,7 @@ module.exports = async (name, clientId) => {
             data: {
                 clientId,
                 credits: 0,
-                dailyCooldown: new Date().now(),
+                dailyCooldown: Date.now(),
                 experience: 0,
                 level: 1,
                 name,

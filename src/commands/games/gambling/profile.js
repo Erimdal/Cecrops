@@ -33,8 +33,8 @@ module.exports = class ProfileCommand extends Command {
     }
 
     async chatInputRun(interaction) {
-        const clientId = interaction.member.user.id;
-        const name = interaction.member.nickname;
+        const clientId = parseInt(interaction.user.id);
+        const name = interaction.user.username;
 
         const user = await prisma.users.findFirst({
             where: {

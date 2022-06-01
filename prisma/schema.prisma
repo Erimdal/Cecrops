@@ -14,7 +14,7 @@ type UsersStatistics {
 
 model Users {
   id            String            @id @default(auto()) @map("_id") @db.ObjectId
-  clientId      String
+  clientId      BigInt
   credits       BigInt
   dailyCooldown DateTime          @db.Date
   experience    BigInt
