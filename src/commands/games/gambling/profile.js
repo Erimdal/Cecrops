@@ -38,15 +38,15 @@ module.exports = class ProfileCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const experienceToNextLevel = user.experience - BigInt((user.level / 0.12) ^ 2);
-        const experienceNeededToNextLevel = BigInt(((user.level + 1) / 0.12) ^ 2) - BigInt((user.level / 0.12) ^ 2);
+        const experienceToNextLevel = user.experience - Math.floor((user.level / 0.12) ** 2);
+        const experienceNeededToNextLevel = Math.floor(((user.level + 1) / 0.12) ** 2) - Math.floor((user.level / 0.12) ** 2);
 
         const embed = new MessageEmbed()
             .setColor('#ee6618')
             .setTitle(`Profil de ${user.name}`)
             .addFields([
                 {name: 'Niveau', value: `Vous êtes au niveau ${user.level}`, inline: true},
-                {name: 'Mise minimale', value: `${user.credits}`, inline: true},
+                {name: 'Mise minimale', value: `${Math.min([(user.credits) * 0.05, 100])}`, inline: true},
                 {name: 'Progression', value: 'TODO', inline: false},
                 {name: 'Expérience / Prochain niveau', value: `${experienceToNextLevel} / ${experienceNeededToNextLevel}`, inline: false},
                 {name: 'Total d\'expérience', value: `${user.experience}`, inline: true},
