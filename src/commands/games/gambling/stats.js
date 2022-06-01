@@ -9,7 +9,6 @@ for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const prisma = require('../../../prismaClient');
 const retrieveUser = require('../../../utility/retrieveUser');
 
 module.exports = class ProfileCommand extends Command {

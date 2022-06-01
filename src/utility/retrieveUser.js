@@ -1,7 +1,7 @@
 const prisma = require('../prismaClient');
 const fs = require('fs');
 
-module.exports = (name, clientId) => {
+module.exports = async (name, clientId) => {
     const user = await prisma.users.findFirst({
         where: {
             clientId,
@@ -10,7 +10,8 @@ module.exports = (name, clientId) => {
 
     if (user) {
         return user;
-    } else {
+    }
+    else {
         fs.readFile('parameters/games.json', 'utf-8', async (err, data) => {
             if (err) {
                 throw err;
