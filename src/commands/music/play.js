@@ -81,27 +81,27 @@ module.exports = class PlayCommand extends Command {
 
         await voiceChannel.join().then((connection) => {
             if (ytpl.validateID(term)) {
-                ytpl(term).then((playlist) => {
+                ytpl(term).then(async (playlist) => {
                     playlist.items.forEach((video) => {
                         server.queue.push({title: video.title, url: video.shortUrl});
                     });
 
-                    if (server.currentVideo.url != '') {
+                    if (server.currentVideo.url !== '') {
                         return await interaction.reply(`${playlist.items.length} musiques ont été ajoutées à la file d'attente.`);
                     }
 
                     server.currentVideo = server.queue[0];
-                    this.runVideo(interaction, connection).then(() => {
+                    this.runVideo(interaction, connection).then(async () => {
                         await interaction.reply(`${playlist.items.length} musiques ont été ajoutées à la file d'attente.`);
                     });
                 });
             }
             else {
-                ytsr(term, {key:process.env.MUSIC_KEY, maxResults: 1, type: 'video'}).then((results) => {
+                ytsr(term, {key: process.env.MUSIC_KEY, maxResults: 1, type: 'video'}).then(async (results) => {
                     if (results.results[0]) {
                         const foundVideo = {title: results.results[0].title, url: results.results[0].link};
 
-                        if (server.currentVideo.url != '') {
+                        if (server.currentVideo.url !== '') {
                             server.queue.push(foundVideo);
                             return await interaction.reply(`Ajouté la vidéo suivante à la file d'attente : ${foundVideo.title}`);
                         }

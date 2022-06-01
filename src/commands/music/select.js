@@ -27,7 +27,7 @@ module.exports = class SelectCommand extends Command {
                     .setDescription('Va chercher une musique plus lointaine, la met en écoute, puis continue le reste')
                     .addNumberOption(option =>
                         option
-                            .setTitle('index')
+                            .setName('index')
                             .setDescription('Le titre auquel se rendre')
                             .setRequired(true),
                     ),
