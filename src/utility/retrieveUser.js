@@ -12,34 +12,29 @@ module.exports = async (name, clientId) => {
         return user;
     }
     else {
-        fs.readFile('parameters/games.json', 'utf-8', async (err, data) => {
-            if (err) {
-                throw err;
-            }
-            const file = JSON.parse(data);
+        const file = JSON.parse(fs.readFileSync('parameters/games.json', 'utf-8'));
 
-            let statistics = new Array(0);
+        let statistics = new Array(0);
 
-            for (const element of file) {
-                const value = Object.entries(element)[0][1];
-                const statistic = {
-                    'gameName': value,
-                    'profits': 0,
-                };
-                statistics.push(statistic);
-            }
+        for (const element of file) {
+            const value = Object.entries(element)[0][1];
+            const statistic = {
+                'gameName': value,
+                'profits': 0,
+            };
+            statistics.push(statistic);
+        }
 
-            await prisma.users.create({
-                data: {
-                    clientId,
-                    credits: 0,
-                    dailyCooldown: new Date(Date.now()),
-                    experience: 0,
-                    level: 0,
-                    name,
-                    statistics,
-                },
-            });
+        await prisma.users.create({
+            data: {
+                clientId,
+                credits: 0,
+                dailyCooldown: new Date(Date.now()),
+                experience: 0,
+                level: 0,
+                name,
+                statistics,
+            },
         });
 
         const newUser = await prisma.users.findFirst({
