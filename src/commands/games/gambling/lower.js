@@ -77,7 +77,7 @@ module.exports = class ProfileCommand extends Command {
         const optionalEmbed = new MessageEmbed()
             .setColor('#ee6618')
             .setTitle('Level up !')
-            .addField(`Niveau ${newLevel} atteint !`, '');
+            .addField(`Niveau ${newLevel} atteint !`, 'Félicitations !');
 
         if (userValue > botValue) {
             await modifyUserCredits(clientId, Math.round((50 / userValue) * bet));
