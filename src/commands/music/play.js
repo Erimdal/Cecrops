@@ -17,7 +17,7 @@ module.exports = class PlayCommand extends Command {
         super(context, {
             ...options,
             name: 'play',
-            description: 'Joue une vidéo depuis l\URL ou recherche les termes indiqués en arguments',
+            description: 'Joue une vidéo depuis l\'URL ou recherche les termes indiqués en arguments',
         });
     }
 
@@ -29,7 +29,7 @@ module.exports = class PlayCommand extends Command {
                     .setDescription('Joue une vidéo depuis l\'URL ou recherche les termes indiqués en arguments')
                     .addStringOption(option =>
                         option
-                            .setName('URL ou mots-clés')
+                            .setName('url')
                             .setDescription('Indiquez ici soit l\'URL de la vidéo Youtube à jouer ou bien des mots-clés permettant de la trouver')
                             .setRequired(false),
                     ),
