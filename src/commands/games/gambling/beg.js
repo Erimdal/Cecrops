@@ -13,7 +13,7 @@ for (const k in envConfig) {
 const prisma = require('../../../prismaClient');
 const retrieveUser = require('../../../utility/retrieveUser');
 
-module.exports = class ProfileCommand extends Command {
+module.exports = class BegCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,

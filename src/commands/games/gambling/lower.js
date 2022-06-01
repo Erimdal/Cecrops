@@ -13,7 +13,7 @@ const retrieveUser = require('../../../utility/retrieveUser');
 const modifyUserCredits = require('../../../utility/modifyUserCredits');
 const addExperience = require('../../../utility/addExperience');
 
-module.exports = class ProfileCommand extends Command {
+module.exports = class LowerCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,

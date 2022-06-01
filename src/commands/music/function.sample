@@ -8,8 +8,6 @@ for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const retrieveUser = require('../../../utility/retrieveUser');
-
 module.exports = class FunctionCommand extends Command {
     constructor(context, options) {
         super(context, {
@@ -32,11 +30,6 @@ module.exports = class FunctionCommand extends Command {
     }
 
     async chatInputRun(interaction) {
-        const clientId = parseInt(interaction.user.id);
-        const name = interaction.user.username;
-
-        const user = await retrieveUser(name, clientId);
-
-        await interaction.reply(user);
+        const server = interaction.client.server;
     }
 };

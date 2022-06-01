@@ -11,7 +11,7 @@ for (const k in envConfig) {
 
 const retrieveUser = require('../../../utility/retrieveUser');
 
-module.exports = class ProfileCommand extends Command {
+module.exports = class StatsCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
