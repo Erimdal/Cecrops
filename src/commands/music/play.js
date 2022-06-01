@@ -70,7 +70,7 @@ module.exports = class PlayCommand extends Command {
         const server = interaction.client.server;
         const voiceChannel = interaction.member.voice.channel;
 
-        const file = JSON.parse(fs.readFileSync('parameters/default_music.json', 'utf-8'));
+        const file = JSON.parse(fs.readFileSync('parameters/music.json', 'utf-8'));
 
         if (!voiceChannel) {
             await interaction.reply('Vous n\'êtes pas dans un salon vocal ! ');
