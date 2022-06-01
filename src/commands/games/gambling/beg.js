@@ -42,7 +42,7 @@ module.exports = class ProfileCommand extends Command {
 
         if (user.dailyCooldown > new Date(Date.now())) {
             const differenceBetweenDates = user.dailyCooldown - (new Date(Date.now()));
-            const minutes = Math.ceil(differenceBetweenDates / (1000 * 60));
+            const minutes = Math.floor(differenceBetweenDates / (1000 * 60));
             const seconds = Math.ceil(((differenceBetweenDates / (1000 * 60)) - Math.floor(differenceBetweenDates / (1000 * 60))) * 60);
 
             const notYetBegEmbed = new MessageEmbed()
@@ -57,8 +57,8 @@ module.exports = class ProfileCommand extends Command {
             const alreadyHaveMoneyBegEmbed = new MessageEmbed()
                 .setColor('#f00c0c')
                 .addFields([
-                    {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent', inline: true},
-                    {name: 'Crédits restants', value: `${user.credits}`, inline: true},
+                    {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent, voyons !',},
+                    {name: 'Crédits restants', value: `${user.credits}`},
                 ]);
 
             await interaction.reply({embeds: [alreadyHaveMoneyBegEmbed]});
@@ -76,7 +76,7 @@ module.exports = class ProfileCommand extends Command {
             },
         });
 
-        beggedSuccessfullyEmbed = new MessageEmbed()
+        const beggedSuccessfullyEmbed = new MessageEmbed()
             .setColor('#0cf021')
             .addField('Vous avez reçu 10,000 crédits !', 'Ici apparaîtra un message rigolo dans lequel seront indiquées les conditions dans lesquelles vous avez mendié.');
 
