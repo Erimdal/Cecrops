@@ -1,8 +1,8 @@
 const prisma = require('../prismaClient');
 const fs = require('fs');
 
-module.exports = async (name, clientId) => {
-    fs.readFile('parameters/games.json', 'utf-8', function (err, data) {
+module.exports = (name, clientId) => {
+    fs.readFile('parameters/games.json', 'utf-8', async (err, data) => {
         if (err) {
             throw err;
         }
@@ -19,16 +19,18 @@ module.exports = async (name, clientId) => {
             statistics.push(statistic);
         }
 
-        return prisma.users.create({
+        const newUser = await prisma.users.create({
             data: {
                 clientId,
                 credits: 0,
-                dailyCooldown: Date.now(),
+                dailyCooldown: new Date(Date.now()),
                 experience: 0,
                 level: 1,
                 name,
                 statistics,
             },
         });
+
+        return(newUser);
     });
 };
