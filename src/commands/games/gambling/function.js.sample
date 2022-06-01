@@ -2,6 +2,7 @@ const {Command} = require('@sapphire/framework');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
+const { add } = require('winston');
 
 const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
@@ -15,8 +16,8 @@ module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: 'profile',
-            description: 'Affiche le profil de la personne concernée dans un message embed.',
+            name: 'function',
+            description: 'Fait quelque chose',
         });
     }
 
@@ -24,8 +25,8 @@ module.exports = class ProfileCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName('profile')
-                    .setDescription('Affiche le profil de la personne concernée dans un message embed.'),
+                    .setName('function')
+                    .setDescription('Fait quelque chose'),
             {
                 guildsId: [process.env.GUILD_ID],
             },
@@ -42,12 +43,11 @@ module.exports = class ProfileCommand extends Command {
             },
         });
 
-        if (user) {
-            await interaction.reply('User already existing !');
+        if (!user) {
+            addUserGambling(name, clientId);
+            this.chatInputRun(interaction);
         }
-        else {
-            await interaction.reply('New user created !');
-            await addUserGambling(name, clientId);
-        }
+
+        await interaction.reply(user);
     }
 };
