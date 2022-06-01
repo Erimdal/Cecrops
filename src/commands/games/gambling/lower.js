@@ -86,9 +86,11 @@ module.exports = class ProfileCommand extends Command {
                 .setColor('#0cf021')
                 .setTitle(`Résultats du lower | ${user.name}`)
                 .addFields([
-                    {name: 'Vous remportez le pari !', value: `Cecrops a tiré ${botValue}.`, inline: true},
+                    {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: true},
+                    {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
+                    {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
                     {name: 'Gain', value: Math.round((50 / userValue) * bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
-                    {name: 'Crédits', value: 'Vous avez ' + (user.credits + Math.round((50 / userValue) * bet)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +  ' crédits.'},
+                    {name: 'Crédits', value: 'Vous avez ' + (user.credits + Math.round((50 / userValue) * bet)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +  ' crédits.', inline: true},
                 ])
                 .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
@@ -106,9 +108,11 @@ module.exports = class ProfileCommand extends Command {
                 .setColor('#f00c0c')
                 .setTitle(`Résultats du lower | ${user.name}`)
                 .addFields([
-                    {name: 'Vous perdez le pari !', value: `Cecrops a tiré ${botValue}.`, inline: true},
+                    {name: 'Vous perdez le pari !', value: 'Dommage !', inline: true},
+                    {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
+                    {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
                     {name: 'Perte', value: bet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
-                    {name: 'Crédits', value: 'Vous avez ' + (user.credits - bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
+                    {name: 'Crédits', value: 'Vous avez ' + (user.credits - bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
                 ])
                 .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
