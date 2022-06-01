@@ -9,7 +9,7 @@ datasource db {
 
 type UsersStatistics {
   gameName String
-  profits  Float
+  profits  Int
 }
 
 model Users {
