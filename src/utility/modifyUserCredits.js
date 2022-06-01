@@ -9,7 +9,7 @@ module.exports = async (clientId, profit) => {
 
     const newCredits = user.credits + profit;
 
-    await prisma.users.update({
+    await prisma.users.updateMany({
         where: {
             clientId,
         },

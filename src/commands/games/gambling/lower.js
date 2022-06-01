@@ -1,4 +1,5 @@
 const {Command} = require('@sapphire/framework');
+const {MessageEmbed} = require('discord.js');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -63,20 +64,40 @@ module.exports = class ProfileCommand extends Command {
             return;
         }
 
-        if (bet < Math.max(user.credits * 0.05, 100)) {
-            await interaction.reply(`Vous devez parier au moins ${Math.max(user.credits * 0.05, 100)}.`);
+        if (bet < Math.max(Math.round(user.credits * 0.05), 100)) {
+            await interaction.reply('Vous devez parier au moins ' + (Math.max(Math.round(user.credits * 0.05), 100)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.');
             return;
         }
 
-        const botValue = Math.random() * 99;
+        const botValue = Math.round(Math.random() * 99);
 
         if (userValue > botValue) {
-            await interaction.reply('Vous remportez le pari.');
-            modifyUserCredits(clientId, (50 / userValue) * bet);
+            await modifyUserCredits(clientId, Math.round((50 / userValue) * bet));
+
+            const winningEmbed = new MessageEmbed()
+                .setColor('#0cf021')
+                .setTitle(`Résultats du lower | ${user.name}`)
+                .addFields([
+                    {name: 'Vous remportez le pari !', value: `Cecrops a tiré ${botValue}.`, inline: true},
+                    {name: 'Gain', value: Math.round((50 / userValue) * bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
+                    {name: 'Crédits', value: 'Vous avez ' + (user.credits + Math.round((50 / userValue) * bet)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +  ' crédits.'},
+                ]);
+
+            await interaction.reply({embeds: [winningEmbed]});
         }
         else {
-            await interaction.reply('Vous perdez le pari.');
-            modifyUserCredits(clientId, - bet);
+            await modifyUserCredits(clientId, - bet);
+
+            const losingEmbed = new MessageEmbed()
+                .setColor('#f00c0c')
+                .setTitle(`Résultats du lower | ${user.name}`)
+                .addFields([
+                    {name: 'Vous perdez le pari !', value: `Cecrops a tiré ${botValue}.`, inline: true},
+                    {name: 'Perte', value: bet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
+                    {name: 'Crédits', value: 'Vous avez ' + (user.credits - bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
+                ]);
+
+            await interaction.reply({embeds: [losingEmbed]});
         }
     }
 };
