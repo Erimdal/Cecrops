@@ -11,6 +11,7 @@ for (const k in envConfig) {
 
 const retrieveUser = require('../../../utility/retrieveUser');
 const modifyUserCredits = require('../../../utility/modifyUserCredits');
+const addExperience = require('../../../utility/addExperience');
 
 module.exports = class ProfileCommand extends Command {
     constructor(context, options) {
@@ -70,6 +71,7 @@ module.exports = class ProfileCommand extends Command {
         }
 
         const botValue = Math.round(Math.random() * 99);
+        const experienceAdded = await addExperience(clientId, (50 / userValue) * 100);
 
         if (userValue > botValue) {
             await modifyUserCredits(clientId, Math.round((50 / userValue) * bet));
@@ -81,7 +83,8 @@ module.exports = class ProfileCommand extends Command {
                     {name: 'Vous remportez le pari !', value: `Cecrops a tiré ${botValue}.`, inline: true},
                     {name: 'Gain', value: Math.round((50 / userValue) * bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
                     {name: 'Crédits', value: 'Vous avez ' + (user.credits + Math.round((50 / userValue) * bet)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') +  ' crédits.'},
-                ]);
+                ])
+                .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
             await interaction.reply({embeds: [winningEmbed]});
         }
@@ -95,7 +98,8 @@ module.exports = class ProfileCommand extends Command {
                     {name: 'Vous perdez le pari !', value: `Cecrops a tiré ${botValue}.`, inline: true},
                     {name: 'Perte', value: bet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.', inline: true},
                     {name: 'Crédits', value: 'Vous avez ' + (user.credits - bet).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
-                ]);
+                ])
+                .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
             await interaction.reply({embeds: [losingEmbed]});
         }
