@@ -40,14 +40,14 @@ module.exports = async (name, clientId) => {
                     statistics,
                 },
             });
-
-            const newUser = await prisma.users.findFirst({
-                where: {
-                    clientId,
-                },
-            });
-
-            return newUser;
         });
+
+        const newUser = await prisma.users.findFirst({
+            where: {
+                clientId,
+            },
+        });
+
+        return newUser;
     }
 };
