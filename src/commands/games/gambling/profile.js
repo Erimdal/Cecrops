@@ -38,8 +38,8 @@ module.exports = class ProfileCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const experienceToNextLevel = user.experience - (user.level / 0.12) ^ 2;
-        const experienceNeededToNextLevel = ((user.level + 1) / 0.12) ^ 2 - (user.level / 0.12) ^ 2;
+        const experienceToNextLevel = user.experience - BigInt((user.level / 0.12) ^ 2);
+        const experienceNeededToNextLevel = BigInt(((user.level + 1) / 0.12) ^ 2) - BigInt((user.level / 0.12) ^ 2);
 
         const embed = new MessageEmbed()
             .setColor('#ee6618')

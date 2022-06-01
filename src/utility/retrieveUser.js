@@ -35,7 +35,7 @@ module.exports = async (name, clientId) => {
                     credits: 0,
                     dailyCooldown: new Date(Date.now()),
                     experience: 0,
-                    level: 1,
+                    level: 0,
                     name,
                     statistics,
                 },
