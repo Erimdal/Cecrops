@@ -40,15 +40,17 @@ module.exports = class ProfileCommand extends Command {
 
         const experienceToNextLevel = user.experience - Math.floor((user.level / 0.12) ** 2);
         const experienceNeededToNextLevel = Math.floor(((user.level + 1) / 0.12) ** 2) - Math.floor((user.level / 0.12) ** 2);
+        const percentageOfProgression = Math.round(experienceToNextLevel / experienceNeededToNextLevel * 100);
+        const numberOfProgressionTiles = Math.round(percentageOfProgression / 10);
 
         const embed = new MessageEmbed()
             .setColor('#ee6618')
             .setTitle(`Profil de ${user.name}`)
             .addFields([
-                {name: 'Niveau', value: `Vous êtes au niveau ${user.level}`, inline: true},
-                {name: 'Mise minimale', value: `${Math.min((user.credits) * 0.05, 100)}`, inline: true},
-                {name: 'Progression', value: 'TODO', inline: false},
-                {name: 'Expérience / Prochain niveau', value: `${experienceToNextLevel} / ${experienceNeededToNextLevel}`, inline: false},
+                {name: 'Niveau d\'utilisateur', value: `${user.level}`, inline: true},
+                {name: 'Mise minimale', value: `${Math.max((user.credits) * 0.05, 100)}`, inline: true},
+                {name: 'Progression', value: `${percentageOfProgression}%\n[` + '='.repeat(numberOfProgressionTiles) + '-'.repeat(10 - numberOfProgressionTiles) + ']', inline: false},
+                {name: 'Prochain niveau', value: `${experienceToNextLevel} / ${experienceNeededToNextLevel}`, inline: false},
                 {name: 'Total d\'expérience', value: `${user.experience}`, inline: true},
             ]);
 
