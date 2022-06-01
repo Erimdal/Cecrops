@@ -1,7 +1,7 @@
 const prisma = require('../prismaClient');
 
 function computeLevel(level, experience, experienceAdded) {
-    const experienceToNextLevel = Math.floor(((level + 1) / 0.12) ** 2) - Math.floor((level / 0.12) ** 2);
+    const experienceToNextLevel = Math.floor(((level + 1) / 0.12) ** 2) - experience;
     if (experienceToNextLevel > experienceAdded) {
         return level;
     }
