@@ -33,5 +33,5 @@ module.exports = async (clientId, amount) => {
         },
     });
 
-    return amount;
-}
+    return newLevel;
+};

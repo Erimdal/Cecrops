@@ -71,7 +71,13 @@ module.exports = class ProfileCommand extends Command {
         }
 
         const botValue = Math.round(Math.random() * 99);
-        const experienceAdded = await addExperience(clientId, (50 / userValue) * 100);
+        const newLevel = await addExperience(clientId, Math.round((50 / userValue) * 100));
+        const experienceAdded = Math.round((50 / userValue) * 100);
+
+        const optionalEmbed = new MessageEmbed()
+            .setColor('#ee6618')
+            .setTitle('Level up !')
+            .addField(`Niveau ${newLevel} atteint !`, '');
 
         if (userValue > botValue) {
             await modifyUserCredits(clientId, Math.round((50 / userValue) * bet));
@@ -86,7 +92,12 @@ module.exports = class ProfileCommand extends Command {
                 ])
                 .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
-            await interaction.reply({embeds: [winningEmbed]});
+            if (newLevel === user.level) {
+                await interaction.reply({embeds: [winningEmbed]});
+            }
+            else {
+                await interaction.reply({embeds: [winningEmbed, optionalEmbed]});
+            }
         }
         else {
             await modifyUserCredits(clientId, - bet);
@@ -101,7 +112,12 @@ module.exports = class ProfileCommand extends Command {
                 ])
                 .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
-            await interaction.reply({embeds: [losingEmbed]});
+            if (newLevel === user.level) {
+                await interaction.reply({embeds: [losingEmbed]});
+            }
+            else {
+                await interaction.reply({embeds: [losingEmbed, optionalEmbed]});
+            }
         }
     }
 };
