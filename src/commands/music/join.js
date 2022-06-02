@@ -1,5 +1,7 @@
 const {Command} = require('@sapphire/framework');
 
+const retrieveConnection = require('./utility/retrieveConnection');
+
 const dotenv = require('dotenv');
 const fs = require('fs');
 
@@ -36,7 +38,7 @@ module.exports = class JoinCommand extends Command {
             return await interaction.reply('Vous n\'êtes pas dans un salon vocal');
         }
 
-        await voiceChannel.join();
+        await retrieveConnection(voiceChannel);
 
         return await interaction.reply(`J'ai bien rejoint ${voiceChannel.name}.`);
     }
