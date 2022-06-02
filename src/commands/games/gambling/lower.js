@@ -1,9 +1,9 @@
 const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
 
-const retrieveUser = require('./utility/retrieveUser');
-const modifyUserCredits = require('./utility/modifyUserCredits');
-const addExperience = require('./utility/addExperience');
+const retrieveUser = require('../../../utility/gambling/retrieveUser');
+const modifyUserCredits = require('../../../utility/gambling/modifyUserCredits');
+const addExperience = require('../../../utility/gambling/addExperience');
 
 const dotenv = require('dotenv');
 const fs = require('fs');

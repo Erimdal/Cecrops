@@ -1,7 +1,7 @@
 const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
 
-const retrieveUser = require('./utility/retrieveUser');
+const retrieveUser = require('../../../utility/gambling/retrieveUser');
 
 const dotenv = require('dotenv');
 const fs = require('fs');

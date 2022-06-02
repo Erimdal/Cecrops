@@ -1,4 +1,4 @@
-const prisma = require('../../../../prismaClient');
+const prisma = require('../../prismaClient');
 const fs = require('fs');
 
 module.exports = async (name, clientId) => {

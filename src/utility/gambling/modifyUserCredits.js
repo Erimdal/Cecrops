@@ -1,4 +1,4 @@
-const prisma = require('../../../../prismaClient');
+const prisma = require('../../prismaClient');
 
 module.exports = async (clientId, profit) => {
     const user = await prisma.users.findFirst({

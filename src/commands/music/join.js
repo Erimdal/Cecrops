@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-const retrieveConnection = require('./utility/retrieveConnection');
+const retrieveConnection = require('../../utility/music/retrieveConnection');
 
 const dotenv = require('dotenv');
 const fs = require('fs');

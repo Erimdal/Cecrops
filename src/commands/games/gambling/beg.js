@@ -3,8 +3,8 @@ const {MessageEmbed} = require('discord.js');
 
 const prisma = require('../../../prismaClient');
 
-const retrieveUser = require('./utility/retrieveUser');
-const modifyUserCredits = require('./utility/modifyUserCredits');
+const retrieveUser = require('../../../utility/gambling/retrieveUser');
+const modifyUserCredits = require('../../../utility/gambling/modifyUserCredits');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
