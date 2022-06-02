@@ -1,6 +1,8 @@
 const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
 
+const retrieveUser = require('./utility/retrieveUser');
+
 const dotenv = require('dotenv');
 const fs = require('fs');
 
@@ -8,8 +10,6 @@ const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
-
-const retrieveUser = require('../../../utility/retrieveUser');
 
 module.exports = class ProfileCommand extends Command {
     constructor(context, options) {

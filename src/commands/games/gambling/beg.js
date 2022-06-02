@@ -1,17 +1,19 @@
 const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
 
+const prisma = require('../../../prismaClient');
+
+const retrieveUser = require('./utility/retrieveUser');
+const modifyUserCredits = require('./utility/modifyUserCredits');
+
 const dotenv = require('dotenv');
 const fs = require('fs');
-const modifyUserCredits = require('../../../utility/modifyUserCredits');
 
 const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const prisma = require('../../../prismaClient');
-const retrieveUser = require('../../../utility/retrieveUser');
 
 module.exports = class BegCommand extends Command {
     constructor(context, options) {

@@ -1,6 +1,10 @@
 const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
 
+const retrieveUser = require('./utility/retrieveUser');
+const modifyUserCredits = require('./utility/modifyUserCredits');
+const addExperience = require('./utility/addExperience');
+
 const dotenv = require('dotenv');
 const fs = require('fs');
 
@@ -8,10 +12,6 @@ const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
-
-const retrieveUser = require('../../../utility/retrieveUser');
-const modifyUserCredits = require('../../../utility/modifyUserCredits');
-const addExperience = require('../../../utility/addExperience');
 
 module.exports = class LowerCommand extends Command {
     constructor(context, options) {
