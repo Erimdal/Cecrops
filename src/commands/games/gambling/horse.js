@@ -11,6 +11,7 @@ for (const k in envConfig) {
 
 const retrieveUser = require('../../../utility/gambling/retrieveUser');
 const addExperience = require('../../../utility/gambling/addExperience');
+const modifyUserCredits = require('../../../utility/gambling/modifyUserCredits');
 
 /**
  *
@@ -129,7 +130,7 @@ module.exports = class HorseCommand extends Command {
         const winningHorse = results.indexOf(0) + 1;
 
         const newLevel = await addExperience(clientId, 150);
-        const experienceAdded = Math.round((50 / userValue) * 100);
+        const experienceAdded = 150;
 
         const optionalEmbed = new MessageEmbed()
             .setColor('#0cf021')
@@ -141,7 +142,7 @@ module.exports = class HorseCommand extends Command {
 
             const winningEmbed = new MessageEmbed()
                 .setColor('#0cf021')
-                .setTitle(`Résultats du lower | ${user.name}`)
+                .setTitle(`Résultats du horse | ${user.name}`)
                 .addFields([
                     {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: false},
                     {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous remportez ' + (bet * 4).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
@@ -149,10 +150,10 @@ module.exports = class HorseCommand extends Command {
                 .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
             if (newLevel === user.level) {
-                await interaction.addReply({embeds: [winningEmbed]});
+                await interaction.followUp({embeds: [winningEmbed]});
             }
             else {
-                await interaction.addReply({embeds: [winningEmbed, optionalEmbed]});
+                await interaction.followUp({embeds: [winningEmbed, optionalEmbed]});
             }
         }
         else {
@@ -160,7 +161,7 @@ module.exports = class HorseCommand extends Command {
 
             const losingEmbed = new MessageEmbed()
                 .setColor('#f00c0c')
-                .setName(`Résultats du horse | ${user.name}`)
+                .setTitle(`Résultats du horse | ${user.name}`)
                 .addFields([
                     {name: 'Vous perdez le pari !', value: `Vous aviez misé sur le cheval ${horseChoosen}`, inline: false},
                     {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous perdez ' + bet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
@@ -168,10 +169,10 @@ module.exports = class HorseCommand extends Command {
                 .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
 
             if (newLevel === user.level) {
-                await interaction.addReply({embeds: [losingEmbed]});
+                await interaction.followUp({embeds: [losingEmbed]});
             }
             else {
-                await interaction.addReply({embeds: [losingEmbed, optionalEmbed]});
+                await interaction.followUp({embeds: [losingEmbed, optionalEmbed]});
             }
         }
     }
