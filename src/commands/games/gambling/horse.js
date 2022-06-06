@@ -41,11 +41,12 @@ function keepOneZeroOnly(array) {
 
         randomExploration.forEach((value) => {
             if (array[value] === 0 && foundZero) {
-                array[value] = 1
-            } else if (array[value] === 0) {
+                array[value] = 1;
+            }
+            else if (array[value] === 0) {
                 foundZero = true;
             }
-        })
+        });
     }
     return array;
 }
@@ -153,7 +154,8 @@ module.exports = class HorseCommand extends Command {
             else {
                 await interaction.addReply({embeds: [winningEmbed, optionalEmbed]});
             }
-        } else {
+        }
+        else {
             await modifyUserCredits(clientId, -bet);
 
             const losingEmbed = new MessageEmbed()
