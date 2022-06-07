@@ -106,7 +106,7 @@ module.exports = class HorseCommand extends Command {
                 await interaction.followUp({embeds: [winningEmbed(user.name, bet, experienceAdded, winningHorse)]});
             }
             else {
-                await interaction.followUp({embeds: [winningEmbed(user.name, bet, experienceAdded, winningHorse), levelUpEmbed(user.level)]});
+                await interaction.followUp({embeds: [winningEmbed(user.name, bet, experienceAdded, winningHorse), levelUpEmbed(newLevel)]});
             }
         }
         else {
@@ -116,7 +116,7 @@ module.exports = class HorseCommand extends Command {
                 await interaction.followUp({embeds: [losingEmbed(user.name, bet, experienceAdded, winningHorse, horseChoosen)]});
             }
             else {
-                await interaction.followUp({embeds: [losingEmbed(user.name, bet, experienceAdded, winningHorse, horseChoosen), levelUpEmbed(user.level)]});
+                await interaction.followUp({embeds: [losingEmbed(user.name, bet, experienceAdded, winningHorse, horseChoosen), levelUpEmbed(newLevel)]});
             }
         }
     }

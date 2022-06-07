@@ -25,8 +25,22 @@
     },
     {
         "index": "lower",
-        "name": "",
-        "description": ""
+        "name": "lower",
+        "description": "Jouer au lower.",
+        "options": [
+            {
+                "index": "bet",
+                "name": "enjeu",
+                "description": "Votre mise",
+                "required": true
+            },
+            {
+                "index": "value",
+                "name": "pari",
+                "description": "Votre pari",
+                "required": true
+            }
+        ]
     },
     {
         "index": "profile",

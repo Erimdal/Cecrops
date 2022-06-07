@@ -1,5 +1,6 @@
 const {MessageEmbed} = require('discord.js');
 const stringify = require('./utility/stringify');
+const {notEnoughBet, notEnoughCredits, levelUpEmbed} = require('./commonEmbed');
 
 /**
  * @function
@@ -9,29 +10,6 @@ function horseNotExisting() {
     return new MessageEmbed()
         .setColor('#f00c0c')
         .addField('Le cheval que vous avez choisi n\'existe pas', 'Merci de choisir l\'une des valeurs suivantes : 1, 2, 3, 4 ou 5.');
-}
-
-/**
- * @function
- * @param {number} credits
- * @returns {MessageEmbed}
- */
-function notEnoughCredits(credits) {
-    return new MessageEmbed()
-        .setColor('#f00c0c')
-        .addField('Vous n\'avez pas assez de crédits.', 'Vous avez ' + stringify(credits) + ' crédits restants.');
-}
-
-/**
- * @function
- * @param {number} minimumBet
- * @param {number} credits
- * @returns {MessageEmbed}
- */
-function notEnoughBet(minimumBet, credits) {
-    return new MessageEmbed()
-        .setColor('#f00c0c')
-        .addField('Vous devez parier au minimum ' + stringify(minimumBet) + ' crédits.', 'Vous avez ' + stringify(credits) + ' crédits restants.');
 }
 
 /**
@@ -51,18 +29,6 @@ function gamePlayingEmbed(username, results) {
             {name: ':checkered_flag:' + '- '.repeat(results[3]) + ':horse_racing: 4.', value: '\u200b', inline: false},
             {name: ':checkered_flag:' + '- '.repeat(results[4]) + ':horse_racing: 5.', value: '\u200b', inline: false},
         ]);
-}
-
-/**
- * @function
- * @param {number} level
- * @returns {MessageEmbed}
- */
-function levelUpEmbed(level) {
-    return new MessageEmbed()
-        .setColor('#0cf021')
-        .setTitle('Level up !')
-        .addField(`Niveau ${level} atteint !`, 'Félicitations !');
 }
 
 /**
