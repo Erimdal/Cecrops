@@ -18,8 +18,8 @@ module.exports = class BegCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: commandParameters.commandName,
-            description: commandParameters.commandDescription,
+            name: commandParameters.name,
+            description: commandParameters.description,
         });
     }
 
@@ -27,8 +27,8 @@ module.exports = class BegCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName(commandParameters.commandName)
-                    .setDescription(commandParameters.commandDescription),
+                    .setName(commandParameters.name)
+                    .setDescription(commandParameters.description),
             {
                 guildsId: [process.env.GUILD_ID],
             },
