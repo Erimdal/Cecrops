@@ -2,39 +2,20 @@ const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
 const {setTimeout} = require('timers/promises');
 
-const dotenv = require('dotenv');
-const fs = require('fs');
+const {retrieveUser, modifyUserCredits, addExperience} = require('../../../utility/gambling');
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'));
+const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
+
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const retrieveUser = require('../../../utility/gambling/retrieveUser');
-const addExperience = require('../../../utility/gambling/addExperience');
-const modifyUserCredits = require('../../../utility/gambling/modifyUserCredits');
+const commandParameters = commandsParameters('horse');
 
 /**
- *
- * @param {Array<Int>} results
- * @returns {MessageEmbed}
- */
-function getNewEmbed(interaction, results) {
-    return new MessageEmbed()
-        .setColor('#ee6618')
-        .setTitle(`Course de ${interaction.user.username}`)
-        .addFields([
-            {name: ':checkered_flag:' + '- '.repeat(results[0]) + ':horse_racing: 1.', value: '\u200b', inline: false},
-            {name: ':checkered_flag:' + '- '.repeat(results[1]) + ':horse_racing: 2.', value: '\u200b', inline: false},
-            {name: ':checkered_flag:' + '- '.repeat(results[2]) + ':horse_racing: 3.', value: '\u200b', inline: false},
-            {name: ':checkered_flag:' + '- '.repeat(results[3]) + ':horse_racing: 4.', value: '\u200b', inline: false},
-            {name: ':checkered_flag:' + '- '.repeat(results[4]) + ':horse_racing: 5.', value: '\u200b', inline: false},
-        ]);
-}
-
-/**
- *
- * @param {Array<Int>} array
+ * @function
+ * @param {Array<number>} array
+ * @returns {Array<number>}
  */
 function keepOneZeroOnly(array) {
     if (array.includes(0)) {
@@ -58,8 +39,8 @@ module.exports = class HorseCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: 'horse',
-            description: 'Joue une course de chevaux',
+            name: commandParameters.commandName,
+            description: commandParameters.commandDescription,
         });
     }
 
@@ -67,8 +48,8 @@ module.exports = class HorseCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName('horse')
-                    .setDescription('Joue une course de chevaux')
+                    .setName(commandParameters.commandName)
+                    .setDescription(commandParameters.commandDescription)
                     .addNumberOption(option =>
                         option
                             .setName('cheval')

@@ -6,8 +6,22 @@
     },
     {
         "commandIndex": "horse",
-        "commandName": "",
-        "commandDescription": ""
+        "commandName": "horse",
+        "commandDescription": "Course de chevaux.",
+        "options": [
+            {
+                "optionIndex": "bet",
+                "optionName": "enjeu",
+                "optionDescription": "Votre mise",
+                "required": true
+            },
+            {
+                "optionIndex": "horseChoosen",
+                "optionName": "pari",
+                "optionDescription": "Le cheval sur lequel vous voulez parier, de 1 à 5",
+                "required": true
+            }
+        ]
     },
     {
         "commandIndex": "lower",
