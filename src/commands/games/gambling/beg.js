@@ -2,12 +2,8 @@ const {Command} = require('@sapphire/framework');
 
 const prisma = require('../../../prismaClient');
 
-const retrieveUser = require('../../../utility/gambling/retrieveUser');
-const modifyUserCredits = require('../../../utility/gambling/modifyUserCredits');
-
-const alreadyCredits = require('../../../../parameters/embeds/beg/alreadyCredits');
-const cannotBegAgainYet = require('../../../../parameters/embeds/beg/cannotBegAgainYet');
-const successfullyBegging = require('../../../../parameters/embeds/beg/successfullyBegging');
+const {retrieveUser, modifyUserCredits} = require('../../../utility/gambling');
+const {alreadyCredits, cannotBegAgainYet, successfullyBegging} = require('../../../../parameters/embeds/begEmbed');
 
 const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
 
