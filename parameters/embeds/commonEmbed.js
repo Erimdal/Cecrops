@@ -1,6 +1,8 @@
 const {MessageEmbed} = require('discord.js');
 const stringify = require('./utility/stringify');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @param {number} level
@@ -8,7 +10,7 @@ const stringify = require('./utility/stringify');
  */
 function levelUpEmbed(level) {
     return new MessageEmbed()
-        .setColor('#0cf021')
+        .setColor(colors.levelUp)
         .setTitle('Level up !')
         .addField(`Niveau ${level} atteint !`, 'Félicitations !');
 }
@@ -20,7 +22,7 @@ function levelUpEmbed(level) {
  */
 function notEnoughCredits(credits) {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.notAllowed)
         .addField('Vous n\'avez pas assez de crédits.', 'Vous avez ' + stringify(credits) + ' crédits restants.');
 }
 
@@ -32,7 +34,7 @@ function notEnoughCredits(credits) {
  */
 function notEnoughBet(minimumBet, credits) {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.notAllowed)
         .addField('Vous devez parier au minimum ' + stringify(minimumBet) + ' crédits.', 'Vous avez ' + stringify(credits) + ' crédits restants.');
 }
 

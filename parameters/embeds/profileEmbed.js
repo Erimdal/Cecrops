@@ -1,6 +1,8 @@
 const {MessageEmbed} = require('discord.js');
 const stringify = require('./utility/stringify');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @param {string} username
@@ -17,7 +19,7 @@ function profileEmbed(username, level, credits, minimumBet, experienceToNextLeve
     const numberOfProgressionTiles = Math.floor(percentageOfProgression / 10);
 
     return new MessageEmbed()
-        .setColor('#ee6618')
+        .setColor(colors.neutral)
         .setTitle(`Profil de ${username}`)
         .addFields([
             {name: 'Niveau d\'utilisateur', value: `${level}`, inline: true},

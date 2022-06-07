@@ -2,6 +2,8 @@ const {MessageEmbed} = require('discord.js');
 const stringify = require('./utility/stringify');
 const {levelUpEmbed, notEnoughBet, notEnoughCredits} = require('./commonEmbed');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @returns {MessageEmbed}
@@ -24,7 +26,7 @@ function valueNotExisting() {
  */
 function winningEmbed(username, botValue, userValue, profit, credits, experienceAdded) {
     return new MessageEmbed()
-        .setColor('#0cf021')
+        .setColor(colors.win)
         .setTitle(`Résultats du lower | ${username}`)
         .addFields([
             {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: true},
@@ -48,7 +50,7 @@ function winningEmbed(username, botValue, userValue, profit, credits, experience
  */
 function losingEmbed(username, botValue, userValue, bet, credits, experienceAdded) {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.loss)
         .setTitle(`Résultats du lower | ${username}`)
         .addFields([
             {name: 'Vous perdez le pari !', value: 'Dommage !', inline: true},

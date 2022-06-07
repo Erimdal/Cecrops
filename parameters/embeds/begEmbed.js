@@ -1,5 +1,7 @@
 const {MessageEmbed} = require('discord.js');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @param {number} credits
@@ -7,7 +9,7 @@ const {MessageEmbed} = require('discord.js');
  */
 function alreadyCredits(credits) {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.notAllowed)
         .addFields([
             {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent, voyons !'},
             {name: 'Crédits restants', value: `${credits}`},
@@ -22,7 +24,7 @@ function alreadyCredits(credits) {
  */
 function cannotBegAgainYet(minutes, seconds) {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.notAllowed)
         .addField('Vous avez déjà mendié récemment !', `Attendez encore ${minutes} minutes et ${seconds} secondes pour mendier à nouveau.`);
 }
 
@@ -32,7 +34,7 @@ function cannotBegAgainYet(minutes, seconds) {
  */
 function successfullyBegging() {
     return new MessageEmbed()
-        .setColor('#0cf021')
+        .setColor(colors.allowed)
         .addField('Vous avez reçu 10,000 crédits !', 'Ici apparaîtra un message rigolo dans lequel seront indiquées les conditions dans lesquelles vous avez mendié.');
 }
 

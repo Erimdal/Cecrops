@@ -2,13 +2,15 @@ const {MessageEmbed} = require('discord.js');
 const stringify = require('./utility/stringify');
 const {notEnoughBet, notEnoughCredits, levelUpEmbed} = require('./commonEmbed');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @returns {MessageEmbed}
  */
 function horseNotExisting() {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.notAllowed)
         .addField('Le cheval que vous avez choisi n\'existe pas', 'Merci de choisir l\'une des valeurs suivantes : 1, 2, 3, 4 ou 5.');
 }
 
@@ -20,7 +22,7 @@ function horseNotExisting() {
  */
 function gamePlayingEmbed(username, results) {
     return new MessageEmbed()
-        .setColor('#ee6618')
+        .setColor(colors.neutral)
         .setTitle(`Course de ${username}`)
         .addFields([
             {name: ':checkered_flag:' + '- '.repeat(results[0]) + ':horse_racing: 1.', value: '\u200b', inline: false},
@@ -41,7 +43,7 @@ function gamePlayingEmbed(username, results) {
  */
 function winningEmbed(username, bet, experienceAdded, winningHorse) {
     return new MessageEmbed()
-        .setColor('#0cf021')
+        .setColor(colors.win)
         .setTitle(`Résultats du horse | ${username}`)
         .addFields([
             {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: false},
@@ -61,7 +63,7 @@ function winningEmbed(username, bet, experienceAdded, winningHorse) {
  */
 function losingEmbed(username, bet, experienceAdded, winningHorse, horseChoosen) {
     return new MessageEmbed()
-        .setColor('#f00c0c')
+        .setColor(colors.loss)
         .setTitle(`Résultats du horse | ${username}`)
         .addFields([
             {name: 'Vous perdez le pari !', value: `Vous aviez misé sur le cheval ${horseChoosen}`, inline: false},

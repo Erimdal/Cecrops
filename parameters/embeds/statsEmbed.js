@@ -1,5 +1,7 @@
 const {MessageEmbed} = require('discord.js');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @param {Array<Object>} statistics
@@ -29,7 +31,7 @@ function statsEmbed(username, statistics) {
     const fields = produceFields(statistics);
 
     return new MessageEmbed()
-        .setColor('#ee6618')
+        .setColor(colors.neutral)
         .setTitle(`Statistiques pour ${username}`)
         .addFields(fields);
 }
