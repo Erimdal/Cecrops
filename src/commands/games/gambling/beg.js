@@ -9,20 +9,20 @@ const alreadyCredits = require('../../../../parameters/embeds/beg/alreadyCredits
 const cannotBegAgainYet = require('../../../../parameters/embeds/beg/cannotBegAgainYet');
 const successfullyBegging = require('../../../../parameters/embeds/beg/successfullyBegging');
 
-const dotenv = require('dotenv');
-const fs = require('fs');
+const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
+
+const commandParameters = commandsParameters('beg');
 
 module.exports = class BegCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: 'beg',
-            description: 'Mendier quand vous avez 0 crédits. Disponible toutes les heures.',
+            name: commandParameters.commandName,
+            description: commandParameters.commandDescription,
         });
     }
 
@@ -30,8 +30,8 @@ module.exports = class BegCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName('beg')
-                    .setDescription('Mendier quand vous avez 0 crédits. Disponible toutes les heures.'),
+                    .setName(commandParameters.commandName)
+                    .setDescription(commandParameters.commandDescription),
             {
                 guildsId: [process.env.GUILD_ID],
             },

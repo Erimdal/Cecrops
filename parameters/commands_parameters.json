@@ -1,0 +1,32 @@
+[
+    {
+        "commandIndex": "beg",
+        "commandName": "beg",
+        "commandDescription": "Mendier quand vous avez 0 crédits. Disponible toutes les heures."
+    },
+    {
+        "commandIndex": "horse",
+        "commandName": "",
+        "commandDescription": ""
+    },
+    {
+        "commandIndex": "lower",
+        "commandName": "",
+        "commandDescription": ""
+    },
+    {
+        "commandIndex": "profile",
+        "commandName": "",
+        "commandDescription": ""
+    },
+    {
+        "commandIndex": "stats",
+        "commandName": "",
+        "commandDescription": ""
+    },
+    {
+        "commandIndex": "ping",
+        "commandName": "",
+        "commandDescription": ""
+    }
+]
