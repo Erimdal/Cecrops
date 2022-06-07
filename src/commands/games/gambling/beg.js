@@ -1,10 +1,13 @@
 const {Command} = require('@sapphire/framework');
-const {MessageEmbed} = require('discord.js');
 
 const prisma = require('../../../prismaClient');
 
 const retrieveUser = require('../../../utility/gambling/retrieveUser');
 const modifyUserCredits = require('../../../utility/gambling/modifyUserCredits');
+
+const alreadyCredits = require('../../../../parameters/embeds/beg/alreadyCredits');
+const cannotBegAgainYet = require('../../../../parameters/embeds/beg/cannotBegAgainYet');
+const successfullyBegging = require('../../../../parameters/embeds/beg/successfullyBegging');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -13,7 +16,6 @@ const envConfig = dotenv.parse(fs.readFileSync('.env'));
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
-
 
 module.exports = class BegCommand extends Command {
     constructor(context, options) {
@@ -47,23 +49,12 @@ module.exports = class BegCommand extends Command {
             const minutes = Math.floor(differenceBetweenDates / (1000 * 60));
             const seconds = Math.ceil(((differenceBetweenDates / (1000 * 60)) - Math.floor(differenceBetweenDates / (1000 * 60))) * 60);
 
-            const notYetBegEmbed = new MessageEmbed()
-                .setColor('#f00c0c')
-                .addField('Vous avez déjà mendié récemment !', `Attendez encore ${minutes} minutes et ${seconds} secondes pour mendier à nouveau.`);
-
-            await interaction.reply({embeds: [notYetBegEmbed]});
+            await interaction.reply({embeds: [cannotBegAgainYet(minutes, seconds)]});
             return;
         }
 
         if (user.credits > 0) {
-            const alreadyHaveMoneyBegEmbed = new MessageEmbed()
-                .setColor('#f00c0c')
-                .addFields([
-                    {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent, voyons !'},
-                    {name: 'Crédits restants', value: `${user.credits}`},
-                ]);
-
-            await interaction.reply({embeds: [alreadyHaveMoneyBegEmbed]});
+            await interaction.reply({embeds: [alreadyCredits(user)]});
             return;
         }
 
@@ -78,10 +69,6 @@ module.exports = class BegCommand extends Command {
             },
         });
 
-        const beggedSuccessfullyEmbed = new MessageEmbed()
-            .setColor('#0cf021')
-            .addField('Vous avez reçu 10,000 crédits !', 'Ici apparaîtra un message rigolo dans lequel seront indiquées les conditions dans lesquelles vous avez mendié.');
-
-        await interaction.reply({embeds: [beggedSuccessfullyEmbed]});
+        await interaction.reply({embeds: [successfullyBegging()]});
     }
 };

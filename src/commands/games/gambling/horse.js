@@ -1,5 +1,6 @@
 const {Command} = require('@sapphire/framework');
 const {MessageEmbed} = require('discord.js');
+const {setTimeout} = require('timers/promises');
 
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -37,7 +38,8 @@ function getNewEmbed(interaction, results) {
  */
 function keepOneZeroOnly(array) {
     if (array.includes(0)) {
-        const randomExploration = [...Array.from(Array(array.length).keys)].sort(() => Math.random() - 0.5);
+        const randomExploration = Array.from(Array(array.length), (_, index) => index + 1).sort(() => Math.random() - 0.5);
+        console.log(randomExploration);
         let foundZero = false;
 
         randomExploration.forEach((value) => {
@@ -123,6 +125,8 @@ module.exports = class HorseCommand extends Command {
             });
 
             results = keepOneZeroOnly(results);
+
+            await setTimeout(1000);
 
             await interaction.editReply({embeds: [getNewEmbed(interaction, results)]});
         }
