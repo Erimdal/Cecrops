@@ -9,4 +9,4 @@ function getEmbed() {
         .setColor();
 }
 
-module.exports = {function1, function 2};
+// module.exports = {function1, function 2, ...};

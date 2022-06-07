@@ -14,7 +14,7 @@ function horseNotExisting() {
 
 /**
  * @function
- * @param {String} username
+ * @param {string} username
  * @param {Array<number>} results
  * @returns {MessageEmbed}
  */
@@ -33,7 +33,7 @@ function gamePlayingEmbed(username, results) {
 
 /**
  * @function
- * @param {String} username
+ * @param {string} username
  * @param {number} bet
  * @param {number} experienceAdded
  * @param {number} winningHorse
@@ -52,7 +52,7 @@ function winningEmbed(username, bet, experienceAdded, winningHorse) {
 
 /**
  * @function
- * @param {String} username
+ * @param {string} username
  * @param {number} bet
  * @param {number} experienceAdded
  * @param {number} winningHorse

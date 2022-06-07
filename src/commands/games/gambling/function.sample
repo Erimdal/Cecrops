@@ -1,21 +1,23 @@
 const {Command} = require('@sapphire/framework');
 
-const dotenv = require('dotenv');
-const fs = require('fs');
+const {retrieveUser} = require('../../../utility/gambling');
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'));
+// const {embed1, embed2, ...} = require('../../../../parameters/embeds/functionEmbed');
+
+const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
+
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const retrieveUser = require('../../../utility/retrieveUser');
+const commandParameters = commandsParameters('function');
 
-module.exports = class FunctionCommand extends Command {
+module.exports = class BegCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: 'function',
-            description: 'Fait quelque chose',
+            name: commandParameters.commandName,
+            description: commandParameters.commandDescription,
         });
     }
 
@@ -23,8 +25,8 @@ module.exports = class FunctionCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName('function')
-                    .setDescription('Fait quelque chose'),
+                    .setName(commandParameters.commandName)
+                    .setDescription(commandParameters.commandDescription),
             {
                 guildsId: [process.env.GUILD_ID],
             },
@@ -36,7 +38,5 @@ module.exports = class FunctionCommand extends Command {
         const name = interaction.user.username;
 
         const user = await retrieveUser(name, clientId);
-
-        await interaction.reply(user);
     }
 };

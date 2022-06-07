@@ -1,22 +1,23 @@
 const {Command} = require('@sapphire/framework');
-const {MessageEmbed} = require('discord.js');
 
-const retrieveUser = require('../../../utility/gambling/retrieveUser');
+const {retrieveUser} = require('../../../utility/gambling');
 
-const dotenv = require('dotenv');
-const fs = require('fs');
+const {statsEmbed} = require('../../../../parameters/embeds/statsEmbed');
 
-const envConfig = dotenv.parse(fs.readFileSync('.env'));
+const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
+
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
+
+const commandParameters = commandsParameters('stats');
 
 module.exports = class StatsCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: 'stats',
-            description: 'Affiche les statistiques dans un message embed',
+            name: commandParameters.name,
+            description: commandParameters.description,
         });
     }
 
@@ -24,8 +25,8 @@ module.exports = class StatsCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName('stats')
-                    .setDescription('Affiche les statistiques dans un message embed'),
+                    .setName(commandParameters.name)
+                    .setDescription(commandParameters.description),
             {
                 guildsId: [process.env.GUILD_ID],
             },
@@ -38,21 +39,6 @@ module.exports = class StatsCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        let totalProfits = 0;
-        let fields = new Array();
-
-        user.statistics.forEach((data) => {
-            totalProfits += data.profits;
-            fields.push({name: `${data.gameName}`, value: `${data.profits}`, inline: true});
-        });
-
-        fields.unshift({name: 'Total', value: `${totalProfits}`, inline: true});
-
-        const embed = new MessageEmbed()
-            .setColor('#ee6618')
-            .setTitle(`Statistiques pour ${user.name}`)
-            .addFields(fields);
-
-        await interaction.reply({embeds: [embed]});
+        await interaction.reply({embeds: [statsEmbed(user.name, user.statistics)]});
     }
 };

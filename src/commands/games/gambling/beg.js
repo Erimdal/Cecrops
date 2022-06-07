@@ -51,7 +51,7 @@ module.exports = class BegCommand extends Command {
         }
 
         if (user.credits > 0) {
-            await interaction.reply({embeds: [alreadyCredits(user)]});
+            await interaction.reply({embeds: [alreadyCredits(user.credits)]});
             return;
         }
 
