@@ -3,6 +3,7 @@ const {Command} = require('@sapphire/framework');
 const prisma = require('../../../prismaClient');
 
 const {retrieveUser, modifyUserCredits} = require('../../../utility/gambling');
+
 const {alreadyCredits, cannotBegAgainYet, successfullyBegging} = require('../../../../parameters/embeds/begEmbed');
 
 const {envConfig, commandsParameters} = require('../../../utility/basicImportations');

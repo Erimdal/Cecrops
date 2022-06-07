@@ -26,4 +26,25 @@ function commandsParameters(commandName) {
     throw new Error('Command name not found in the parameters');
 }
 
-module.exports = {envConfig, commandsParameters};
+/**
+ * @function
+ * @param {Object} commandParameters
+ * @param {String} optionIndex
+ * @returns {Object}
+ */
+function getOption(commandParameters, optionIndex) {
+    if (!commandParameters.options) {
+        throw new Error('No options found in getOption.');
+    }
+    else {
+        for (const element of commandParameters.options) {
+            if (element.optionIndex === optionIndex) {
+                return element;
+            }
+        }
+
+        throw new Error('The option you were looking for hasn\'t been found in the parameters');
+    }
+}
+
+module.exports = {envConfig, commandsParameters, getOption};

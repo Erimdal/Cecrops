@@ -1,46 +1,46 @@
 [
     {
-        "commandIndex": "beg",
-        "commandName": "beg",
-        "commandDescription": "Mendier quand vous avez 0 crédits. Disponible toutes les heures."
+        "index": "beg",
+        "name": "beg",
+        "description": "Mendier quand vous avez 0 crédits. Disponible toutes les heures."
     },
     {
-        "commandIndex": "horse",
-        "commandName": "horse",
-        "commandDescription": "Course de chevaux.",
+        "index": "horse",
+        "name": "horse",
+        "description": "Course de chevaux.",
         "options": [
             {
-                "optionIndex": "bet",
-                "optionName": "enjeu",
-                "optionDescription": "Votre mise",
+                "index": "bet",
+                "name": "enjeu",
+                "description": "Votre mise",
                 "required": true
             },
             {
-                "optionIndex": "horseChoosen",
-                "optionName": "pari",
-                "optionDescription": "Le cheval sur lequel vous voulez parier, de 1 à 5",
+                "index": "horse",
+                "name": "pari",
+                "description": "Le cheval sur lequel vous voulez parier, de 1 à 5",
                 "required": true
             }
         ]
     },
     {
-        "commandIndex": "lower",
-        "commandName": "",
-        "commandDescription": ""
+        "index": "lower",
+        "name": "",
+        "description": ""
     },
     {
-        "commandIndex": "profile",
-        "commandName": "",
-        "commandDescription": ""
+        "index": "profile",
+        "name": "",
+        "description": ""
     },
     {
-        "commandIndex": "stats",
-        "commandName": "",
-        "commandDescription": ""
+        "index": "stats",
+        "name": "",
+        "description": ""
     },
     {
-        "commandIndex": "ping",
-        "commandName": "",
-        "commandDescription": ""
+        "index": "ping",
+        "name": "",
+        "description": ""
     }
 ]

@@ -1,16 +1,49 @@
-const {MessageEmbed, CommandInteraction} = require('discord.js');
+const {MessageEmbed} = require('discord.js');
 const stringify = require('./utility/stringify');
 
 /**
  * @function
- * @param {CommandInteraction} interaction
+ * @returns {MessageEmbed}
+ */
+function horseNotExisting() {
+    return new MessageEmbed()
+        .setColor('#f00c0c')
+        .addField('Le cheval que vous avez choisi n\'existe pas', 'Merci de choisir l\'une des valeurs suivantes : 1, 2, 3, 4 ou 5.');
+}
+
+/**
+ * @function
+ * @param {number} credits
+ * @returns {MessageEmbed}
+ */
+function notEnoughCredits(credits) {
+    return new MessageEmbed()
+        .setColor('#f00c0c')
+        .addField('Vous n\'avez pas assez de crédits.', 'Vous avez ' + stringify(credits) + ' crédits restants.');
+}
+
+/**
+ * @function
+ * @param {number} minimumBet
+ * @param {number} credits
+ * @returns {MessageEmbed}
+ */
+function notEnoughBet(minimumBet, credits) {
+    return new MessageEmbed()
+        .setColor('#f00c0c')
+        .addField('Vous devez parier au minimum ' + stringify(minimumBet) + ' crédits.', 'Vous avez ' + stringify(credits) + ' crédits restants.');
+}
+
+/**
+ * @function
+ * @param {String} username
  * @param {Array<number>} results
  * @returns {MessageEmbed}
  */
-function gamePlayingEmbed(interaction, results) {
+function gamePlayingEmbed(username, results) {
     return new MessageEmbed()
         .setColor('#ee6618')
-        .setTitle(`Course de ${interaction.user.username}`)
+        .setTitle(`Course de ${username}`)
         .addFields([
             {name: ':checkered_flag:' + '- '.repeat(results[0]) + ':horse_racing: 1.', value: '\u200b', inline: false},
             {name: ':checkered_flag:' + '- '.repeat(results[1]) + ':horse_racing: 2.', value: '\u200b', inline: false},
@@ -34,16 +67,16 @@ function levelUpEmbed(level) {
 
 /**
  * @function
- * @param {import('@prisma/client').Users} user
+ * @param {String} username
  * @param {number} bet
  * @param {number} experienceAdded
  * @param {number} winningHorse
  * @returns {MessageEmbed}
  */
-function winningEmbed(user, bet, experienceAdded, winningHorse) {
+function winningEmbed(username, bet, experienceAdded, winningHorse) {
     return new MessageEmbed()
         .setColor('#0cf021')
-        .setTitle(`Résultats du horse | ${user.name}`)
+        .setTitle(`Résultats du horse | ${username}`)
         .addFields([
             {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: false},
             {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous remportez ' + stringify(bet * 4) + ' crédits.'},
@@ -53,20 +86,22 @@ function winningEmbed(user, bet, experienceAdded, winningHorse) {
 
 /**
  * @function
- * @param {import('@prisma/client').Users} user
- * @param {*} bet
+ * @param {String} username
+ * @param {number} bet
  * @param {number} experienceAdded
  * @param {number} winningHorse
  * @param {number} horseChoosen
  * @returns {MessageEmbed}
  */
-function losingEmbed(user, bet, experienceAdded, winningHorse, horseChoosen) {
+function losingEmbed(username, bet, experienceAdded, winningHorse, horseChoosen) {
     return new MessageEmbed()
         .setColor('#f00c0c')
-        .setTitle(`Résultats du horse | ${user.name}`)
+        .setTitle(`Résultats du horse | ${username}`)
         .addFields([
             {name: 'Vous perdez le pari !', value: `Vous aviez misé sur le cheval ${horseChoosen}`, inline: false},
             {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous perdez ' + stringify(bet) + ' crédits.'},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
+
+module.exports = {horseNotExisting, notEnoughCredits, notEnoughBet, gamePlayingEmbed, levelUpEmbed, winningEmbed, losingEmbed};

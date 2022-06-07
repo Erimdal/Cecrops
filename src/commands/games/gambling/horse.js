@@ -1,10 +1,13 @@
 const {Command} = require('@sapphire/framework');
-const {MessageEmbed} = require('discord.js');
+
 const {setTimeout} = require('timers/promises');
 
 const {retrieveUser, modifyUserCredits, addExperience} = require('../../../utility/gambling');
+const keepOneZeroOnly = require('../../../utility/keepOneZeroOnly');
 
-const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
+const {horseNotExisting, notEnoughCredits, notEnoughBet, gamePlayingEmbed, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/embeds/horseEmbed');
+
+const {envConfig, commandsParameters, getOption} = require('../../../utility/basicImportations');
 
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
@@ -12,35 +15,12 @@ for (const k in envConfig) {
 
 const commandParameters = commandsParameters('horse');
 
-/**
- * @function
- * @param {Array<number>} array
- * @returns {Array<number>}
- */
-function keepOneZeroOnly(array) {
-    if (array.includes(0)) {
-        const randomExploration = Array.from(Array(array.length), (_, index) => index + 1).sort(() => Math.random() - 0.5);
-        console.log(randomExploration);
-        let foundZero = false;
-
-        randomExploration.forEach((value) => {
-            if (array[value] === 0 && foundZero) {
-                array[value] = 1;
-            }
-            else if (array[value] === 0) {
-                foundZero = true;
-            }
-        });
-    }
-    return array;
-}
-
 module.exports = class HorseCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
-            name: commandParameters.commandName,
-            description: commandParameters.commandDescription,
+            name: commandParameters.name,
+            description: commandParameters.description,
         });
     }
 
@@ -48,19 +28,19 @@ module.exports = class HorseCommand extends Command {
         registry.registerChatInputCommand(
             (builder) =>
                 builder
-                    .setName(commandParameters.commandName)
-                    .setDescription(commandParameters.commandDescription)
+                    .setName(commandParameters.name)
+                    .setDescription(commandParameters.description)
                     .addNumberOption(option =>
                         option
-                            .setName('cheval')
-                            .setDescription('Le cheval sur lequel vous voulez parier, de 1 à 5')
-                            .setRequired(true),
+                            .setName(getOption(commandParameters, 'horse').name)
+                            .setDescription(getOption(commandParameters, 'horse').description)
+                            .setRequired(getOption(commandParameters, 'horse').required),
                     )
                     .addNumberOption(option =>
                         option
-                            .setName('enjeu')
-                            .setDescription('Votre mise')
-                            .setRequired(true),
+                            .setName(getOption(commandParameters, 'bet').name)
+                            .setDescription(getOption(commandParameters, 'bet').description)
+                            .setRequired(getOption(commandParameters, 'bet').required),
                     ),
 
             {
@@ -75,27 +55,29 @@ module.exports = class HorseCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const bet = interaction.options.getNumber('enjeu');
-        const horseChoosen = interaction.options.getNumber('cheval');
+        const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
+        const horseChoosen = interaction.options.getNumber(getOption(commandParameters, 'horse').name);
 
-        if (horseChoosen > 5 || horseChoosen < 1) {
-            await interaction.reply('Vous devez choisir un cheval dont le numéro existe (1 à 5 uniquement)');
+        if (horseChoosen < 1 || horseChoosen > 5) {
+            await interaction.reply({embeds: [horseNotExisting()]});
             return;
         }
 
         if (bet > user.credits) {
-            await interaction.reply('Vous n\'avez pas assez de crédits pour faire ce pari.');
+            await interaction.reply({embeds: [notEnoughCredits(user.credits)]});
             return;
         }
 
-        if (bet < Math.max(Math.round(user.credits * 0.05), 100)) {
-            await interaction.reply('Vous devez parier au moins ' + (Math.max(Math.round(user.credits * 0.05), 100)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '.');
+        const minimumBet = Math.max(Math.round(user.credits * 0.05), 100);
+
+        if (bet < minimumBet) {
+            await interaction.reply({embeds: [notEnoughBet(minimumBet, user.credits)]});
             return;
         }
 
-        let results = [5, 5, 5, 5, 5];
+        let results = [5] * 5;
 
-        await interaction.reply({embeds: [getNewEmbed(interaction, results)]});
+        await interaction.reply({embeds: [gamePlayingEmbed(user.name, results)]});
 
         while (!results.includes(0)) {
             results = results.map((value) => {
@@ -109,7 +91,7 @@ module.exports = class HorseCommand extends Command {
 
             await setTimeout(1000);
 
-            await interaction.editReply({embeds: [getNewEmbed(interaction, results)]});
+            await interaction.editReply({embeds: [gamePlayingEmbed(user.name, results)]});
         }
 
         const winningHorse = results.indexOf(0) + 1;
@@ -117,47 +99,24 @@ module.exports = class HorseCommand extends Command {
         const newLevel = await addExperience(clientId, 150);
         const experienceAdded = 150;
 
-        const optionalEmbed = new MessageEmbed()
-            .setColor('#0cf021')
-            .setTitle('Level up !')
-            .addField(`Niveau ${newLevel} atteint !`, 'Félicitations !');
-
         if (horseChoosen === winningHorse) {
             await modifyUserCredits(clientId, 4 * bet);
 
-            const winningEmbed = new MessageEmbed()
-                .setColor('#0cf021')
-                .setTitle(`Résultats du horse | ${user.name}`)
-                .addFields([
-                    {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: false},
-                    {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous remportez ' + (bet * 4).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
-                ])
-                .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
-
             if (newLevel === user.level) {
-                await interaction.followUp({embeds: [winningEmbed]});
+                await interaction.followUp({embeds: [winningEmbed(user.name, bet, experienceAdded, winningHorse)]});
             }
             else {
-                await interaction.followUp({embeds: [winningEmbed, optionalEmbed]});
+                await interaction.followUp({embeds: [winningEmbed(user.name, bet, experienceAdded, winningHorse), levelUpEmbed(user.level)]});
             }
         }
         else {
             await modifyUserCredits(clientId, -bet);
 
-            const losingEmbed = new MessageEmbed()
-                .setColor('#f00c0c')
-                .setTitle(`Résultats du horse | ${user.name}`)
-                .addFields([
-                    {name: 'Vous perdez le pari !', value: `Vous aviez misé sur le cheval ${horseChoosen}`, inline: false},
-                    {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous perdez ' + bet.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' crédits.'},
-                ])
-                .setFooter({text: '+ ' + experienceAdded.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') + 'XP'});
-
             if (newLevel === user.level) {
-                await interaction.followUp({embeds: [losingEmbed]});
+                await interaction.followUp({embeds: [losingEmbed(user.name, bet, experienceAdded, winningHorse, horseChoosen)]});
             }
             else {
-                await interaction.followUp({embeds: [losingEmbed, optionalEmbed]});
+                await interaction.followUp({embeds: [losingEmbed(user.name, bet, experienceAdded, winningHorse, horseChoosen), levelUpEmbed(user.level)]});
             }
         }
     }
