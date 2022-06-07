@@ -75,7 +75,7 @@ module.exports = class HorseCommand extends Command {
             return;
         }
 
-        let results = [5] * 5;
+        let results = Array(5).fill(5);
 
         await interaction.reply({embeds: [gamePlayingEmbed(user.name, results)]});
 
