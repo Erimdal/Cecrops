@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
+const {envConfig, commandsParameters} = require('../../utility/basicImportations');
 
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
