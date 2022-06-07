@@ -1,4 +1,4 @@
-const prisma = require('../../prismaClient');
+const prisma = require('../prismaClient');
 const fs = require('fs');
 
 function computeLevel(level, experience, experienceAdded) {
