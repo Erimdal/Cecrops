@@ -11,14 +11,14 @@ function envConfig() {
 
 /**
  * Retrieves all parameters of the command given in argument
- * @param {String} commandName
+ * @param {string} commandIndex
  * @returns {Object}
  */
-function commandsParameters(commandName) {
+function commandsParameters(commandIndex) {
     const file = JSON.parse(fs.readFileSync('parameters/commands_parameters.json', 'utf-8'));
 
     for (const element of file) {
-        if (element.commandIndex === commandName) {
+        if (element.index === commandIndex) {
             return element;
         }
     }
@@ -29,7 +29,7 @@ function commandsParameters(commandName) {
 /**
  * @function
  * @param {Object} commandParameters
- * @param {String} optionIndex
+ * @param {string} optionIndex
  * @returns {Object}
  */
 function getOption(commandParameters, optionIndex) {
@@ -38,7 +38,7 @@ function getOption(commandParameters, optionIndex) {
     }
     else {
         for (const element of commandParameters.options) {
-            if (element.optionIndex === optionIndex) {
+            if (element.index === optionIndex) {
                 return element;
             }
         }
