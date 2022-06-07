@@ -54,7 +54,7 @@
     },
     {
         "index": "ping",
-        "name": "",
-        "description": ""
+        "name": "ping",
+        "description": "Affiche la latence de l'API et de la connexion à Discord du bot Cecrops."
     }
 ]
