@@ -76,7 +76,7 @@ module.exports = class LowerCommand extends Command {
         const newLevel = await addExperience(clientId, experienceAdded);
 
         if (userValue > botValue) {
-            const profit = Math.round((50 / userValue) * bet);
+            const profit = Math.round(((100 / userValue) - 1) * bet);
 
             await modifyUserCredits(clientId, profit);
 

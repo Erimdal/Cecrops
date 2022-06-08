@@ -27,13 +27,11 @@ function valueNotExisting() {
 function winningEmbed(username, botValue, userValue, profit, credits, experienceAdded) {
     return new MessageEmbed()
         .setColor(colors.win)
-        .setTitle(`Résultats du lower | ${username}`)
+        .setTitle(`Résultats du lower - VICTOIRE | ${username}`)
         .addFields([
-            {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: true},
             {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
             {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
-            {name: 'Gain', value: stringify(profit) + ' crédits.', inline: true},
-            {name: 'Crédits', value: 'Vous avez ' + stringify(credits + profit) + ' crédits.', inline: true},
+            {name: 'Vous remportez ' + stringify(profit) + ' crédits.', value: 'Vous avez ' + stringify(credits + profit) + ' crédits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
@@ -51,13 +49,11 @@ function winningEmbed(username, botValue, userValue, profit, credits, experience
 function losingEmbed(username, botValue, userValue, bet, credits, experienceAdded) {
     return new MessageEmbed()
         .setColor(colors.loss)
-        .setTitle(`Résultats du lower | ${username}`)
+        .setTitle(`Résultats du lower - DÉFAITE | ${username}`)
         .addFields([
-            {name: 'Vous perdez le pari !', value: 'Dommage !', inline: true},
             {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
             {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
-            {name: 'Perte', value: stringify(bet) + ' crédits.', inline: true},
-            {name: 'Crédits', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: true},
+            {name: 'Vous remportez ' + stringify(bet) + ' crédits.', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: true},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
