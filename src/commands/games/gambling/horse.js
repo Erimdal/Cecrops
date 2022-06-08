@@ -53,7 +53,7 @@ module.exports = class HorseCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = retrieveUser(name, clientId);
+        const user = await retrieveUser(name, clientId);
 
         const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
         const horseChoosen = interaction.options.getNumber(getOption(commandParameters, 'horse').name);
@@ -96,7 +96,7 @@ module.exports = class HorseCommand extends Command {
 
         const experienceAdded = 150;
 
-        const newLevel = addExperience(clientId, experienceAdded);
+        const newLevel = await addExperience(clientId, experienceAdded);
 
         if (horseChoosen === winningHorse) {
             await modifyUserCredits(clientId, 4 * bet);

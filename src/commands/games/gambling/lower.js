@@ -49,7 +49,7 @@ module.exports = class LowerCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = retrieveUser(name, clientId);
+        const user = await retrieveUser(name, clientId);
 
         const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
         const userValue = interaction.options.getNumber(getOption(commandParameters, 'value').name);
@@ -73,7 +73,7 @@ module.exports = class LowerCommand extends Command {
 
         const experienceAdded = Math.round((50 / userValue) * 100);
 
-        const newLevel = addExperience(clientId, experienceAdded);
+        const newLevel = await addExperience(clientId, experienceAdded);
 
         if (userValue > botValue) {
             const profit = Math.round((50 / userValue) * bet);
