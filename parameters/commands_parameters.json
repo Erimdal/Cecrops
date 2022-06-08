@@ -61,6 +61,18 @@
         "index": "roulette",
         "name": "roulette",
         "description": "Jouer à la roulette",
+        "subcommands": [
+            {
+                "index": "color",
+                "name": "color",
+                "description": "red ou black"
+            },
+            {
+                "index": "value",
+                "name": "value",
+                "description": "0 -> 36"
+            }
+        ],
         "options": [
             {
                 "index": "bet",

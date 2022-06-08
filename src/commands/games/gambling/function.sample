@@ -12,7 +12,7 @@ for (const k in envConfig) {
 
 const commandParameters = commandsParameters('function');
 
-module.exports = class BegCommand extends Command {
+module.exports = class FunctionCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,

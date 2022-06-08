@@ -47,4 +47,25 @@ function getOption(commandParameters, optionIndex) {
     }
 }
 
-module.exports = {envConfig, commandsParameters, getOption};
+/**
+ * @function
+ * @param {Object} commandParameters
+ * @param {string} subcommandIndex
+ * @returns {Object}
+ */
+ function getSubcommand(commandParameters, subcommandIndex) {
+    if (!commandParameters.subcommands) {
+        throw new Error('No subcommand found in getSubcommand.');
+    }
+    else {
+        for (const element of commandParameters.subcommands) {
+            if (element.index === subcommandIndex) {
+                return element;
+            }
+        }
+
+        throw new Error('The subcommand you were looking for hasn\'t been found in the parameters');
+    }
+}
+
+module.exports = {envConfig, commandsParameters, getOption, getSubcommand};

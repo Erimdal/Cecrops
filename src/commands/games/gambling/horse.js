@@ -30,13 +30,13 @@ module.exports = class HorseCommand extends Command {
                 builder
                     .setName(commandParameters.name)
                     .setDescription(commandParameters.description)
-                    .addNumberOption(option =>
+                    .addIntegerOption(option =>
                         option
                             .setName(getOption(commandParameters, 'horse').name)
                             .setDescription(getOption(commandParameters, 'horse').description)
                             .setRequired(getOption(commandParameters, 'horse').required),
                     )
-                    .addNumberOption(option =>
+                    .addIntegerOption(option =>
                         option
                             .setName(getOption(commandParameters, 'bet').name)
                             .setDescription(getOption(commandParameters, 'bet').description)
@@ -55,8 +55,8 @@ module.exports = class HorseCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
-        const horseChoosen = interaction.options.getNumber(getOption(commandParameters, 'horse').name);
+        const bet = interaction.options.getInteger(getOption(commandParameters, 'bet').name);
+        const horseChoosen = interaction.options.getInteger(getOption(commandParameters, 'horse').name);
 
         if (horseChoosen < 1 || horseChoosen > 5) {
             await interaction.reply({embeds: [horseNotExisting()]});

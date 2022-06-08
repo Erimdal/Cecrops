@@ -27,13 +27,13 @@ module.exports = class LowerCommand extends Command {
                 builder
                     .setName(commandParameters.name)
                     .setDescription(commandParameters.description)
-                    .addNumberOption(option =>
+                    .addIntegerOption(option =>
                         option
                             .setName(getOption(commandParameters, 'bet').name)
                             .setDescription(getOption(commandParameters, 'bet').description)
                             .setRequired(getOption(commandParameters, 'bet').required),
                     )
-                    .addNumberOption(option =>
+                    .addIntegerOption(option =>
                         option
                             .setName(getOption(commandParameters, 'value').name)
                             .setDescription(getOption(commandParameters, 'value').description)
@@ -51,8 +51,8 @@ module.exports = class LowerCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
-        const userValue = interaction.options.getNumber(getOption(commandParameters, 'value').name);
+        const bet = interaction.options.getInteger(getOption(commandParameters, 'bet').name);
+        const userValue = interaction.options.getInteger(getOption(commandParameters, 'value').name);
 
         if (userValue < 1 || userValue > 99) {
             await interaction.reply({embeds: [valueNotExisting()]});
