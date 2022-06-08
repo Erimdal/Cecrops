@@ -1,4 +1,5 @@
 const {MessageEmbed} = require('discord.js');
+const stringify = require('./utility/stringify');
 
 const colors = require('../colors.json');
 
@@ -12,7 +13,7 @@ function alreadyCredits(credits) {
         .setColor(colors.notAllowed)
         .addFields([
             {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent, voyons !'},
-            {name: 'Crédits restants', value: `${credits}`},
+            {name: 'Crédits restants', value: stringify(credits)},
         ]);
 }
 
