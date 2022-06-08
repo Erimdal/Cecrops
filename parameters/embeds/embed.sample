@@ -1,5 +1,7 @@
 const {MessageEmbed} = require('discord.js');
 
+const colors = require('../colors.json');
+
 /**
  * @function
  * @returns {MessageEmbed}

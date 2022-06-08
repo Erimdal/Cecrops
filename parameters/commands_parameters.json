@@ -56,5 +56,24 @@
         "index": "ping",
         "name": "ping",
         "description": "Affiche la latence de l'API et de la connexion à Discord du bot Cecrops."
+    },
+    {
+        "index": "roulette",
+        "name": "roulette",
+        "description": "Jouer à la roulette",
+        "options": [
+            {
+                "index": "bet",
+                "name": "enjeu",
+                "description": "Votre mise",
+                "required": true
+            },
+            {
+                "index": "value",
+                "name": "pari",
+                "description": "red, black, 0 -> 36",
+                "required": true
+            }
+        ]
     }
 ]
