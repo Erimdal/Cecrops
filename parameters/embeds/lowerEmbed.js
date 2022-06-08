@@ -53,7 +53,7 @@ function losingEmbed(username, botValue, userValue, bet, credits, experienceAdde
         .addFields([
             {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
             {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
-            {name: 'Vous remportez ' + stringify(bet) + ' crédits.', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: true},
+            {name: 'Vous perdez ' + stringify(bet) + ' crédits.', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
