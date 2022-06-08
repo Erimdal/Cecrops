@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-const {retrieveUser} = require('../../../utility/gambling');
+const {retrieveUser, experiencePerLevel, experienceToLevel, minimumBet} = require('../../../utility/gambling');
 
 const {profileEmbed} = require('../../../../parameters/embeds/profileEmbed');
 
@@ -39,10 +39,8 @@ module.exports = class ProfileCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const minimumBet = Math.max(Math.round(user.credits * 0.05), 100);
-        const experienceToNextLevel = user.experience - Math.floor((user.level / 0.12) ** 2);
-        const experienceNeededToNextLevel = Math.floor(((user.level + 1) / 0.12) ** 2) - Math.floor((user.level / 0.12) ** 2);
+        const experienceToNextLevel = user.experience - experienceToLevel(user.level);
 
-        await interaction.reply({embeds: [profileEmbed(user.name, user.level, user.credits, minimumBet, experienceToNextLevel, experienceNeededToNextLevel, user.experience)]});
+        await interaction.reply({embeds: [profileEmbed(user.name, user.level, user.credits, minimumBet(user.credits), experienceToNextLevel, experiencePerLevel(user.level + 1), user.experience)]});
     }
 };

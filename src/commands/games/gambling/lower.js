@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-const {retrieveUser, modifyUserCredits, addExperience} = require('../../../utility/gambling');
+const {retrieveUser, modifyUserCredits, addExperience, minimumBet} = require('../../../utility/gambling');
 
 const {notEnoughBet, notEnoughCredits, valueNotExisting, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/embeds/lowerEmbed');
 
@@ -49,7 +49,7 @@ module.exports = class LowerCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = await retrieveUser(name, clientId);
+        const user = retrieveUser(name, clientId);
 
         const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
         const userValue = interaction.options.getNumber(getOption(commandParameters, 'value').name);
@@ -64,16 +64,16 @@ module.exports = class LowerCommand extends Command {
             return;
         }
 
-        const minimumBet = Math.max(Math.round(user.credits * 0.05), 100);
-
-        if (bet < minimumBet) {
-            await interaction.reply({embeds: [notEnoughBet(minimumBet, user.credits)]});
+        if (bet < minimumBet(user.credits)) {
+            await interaction.reply({embeds: [notEnoughBet(minimumBet(user.credits), user.credits)]});
             return;
         }
 
         const botValue = Math.round(Math.random() * 99);
-        const newLevel = await addExperience(clientId, Math.round((50 / userValue) * 100));
+
         const experienceAdded = Math.round((50 / userValue) * 100);
+
+        const newLevel = addExperience(clientId, experienceAdded);
 
         if (userValue > botValue) {
             const profit = Math.round((50 / userValue) * bet);

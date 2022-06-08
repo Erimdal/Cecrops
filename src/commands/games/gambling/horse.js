@@ -2,7 +2,7 @@ const {Command} = require('@sapphire/framework');
 
 const {setTimeout} = require('timers/promises');
 
-const {retrieveUser, modifyUserCredits, addExperience} = require('../../../utility/gambling');
+const {retrieveUser, modifyUserCredits, addExperience, minimumBet} = require('../../../utility/gambling');
 const keepOneZeroOnly = require('../../../utility/keepOneZeroOnly');
 
 const {horseNotExisting, notEnoughCredits, notEnoughBet, gamePlayingEmbed, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/embeds/horseEmbed');
@@ -53,7 +53,7 @@ module.exports = class HorseCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = await retrieveUser(name, clientId);
+        const user = retrieveUser(name, clientId);
 
         const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
         const horseChoosen = interaction.options.getNumber(getOption(commandParameters, 'horse').name);
@@ -68,10 +68,8 @@ module.exports = class HorseCommand extends Command {
             return;
         }
 
-        const minimumBet = Math.max(Math.round(user.credits * 0.05), 100);
-
-        if (bet < minimumBet) {
-            await interaction.reply({embeds: [notEnoughBet(minimumBet, user.credits)]});
+        if (bet < minimumBet(user.credits)) {
+            await interaction.reply({embeds: [notEnoughBet(minimumBet(user.credits), user.credits)]});
             return;
         }
 
@@ -96,8 +94,9 @@ module.exports = class HorseCommand extends Command {
 
         const winningHorse = results.indexOf(0) + 1;
 
-        const newLevel = await addExperience(clientId, 150);
         const experienceAdded = 150;
+
+        const newLevel = addExperience(clientId, experienceAdded);
 
         if (horseChoosen === winningHorse) {
             await modifyUserCredits(clientId, 4 * bet);

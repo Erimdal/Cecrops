@@ -39,7 +39,7 @@ module.exports = class BegCommand extends Command {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
 
-        const user = await retrieveUser(name, clientId);
+        const user = retrieveUser(name, clientId);
 
         if (user.dailyCooldown > new Date(Date.now())) {
             const differenceBetweenDates = user.dailyCooldown - (new Date(Date.now()));

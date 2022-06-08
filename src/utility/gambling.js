@@ -1,8 +1,43 @@
 const prisma = require('../prismaClient');
 const fs = require('fs');
 
+/**
+ * @function
+ * @param {number} credits
+ * @returns {number}
+ */
+function minimumBet(credits) {
+    return Math.max(Math.round(credits * 0.05), 100);
+}
+
+/**
+ * The experience needed to achive a certain level, starting from zero
+ * @param {number} level The level to achieve
+ * @returns {number}
+ */
+function experienceToLevel(level) {
+    return Math.floor((level / 0.12) ** 2);
+}
+
+/**
+ * The experience needed to achieve level, starting from the level just below
+ * @param {number} level
+ * @returns {number}
+ */
+function experiencePerLevel(level) {
+    return experienceToLevel(level) - experienceToLevel(level - 1);
+}
+
+/**
+ * @function
+ * @param {number} level
+ * @param {number} experience
+ * @param {number} experienceAdded
+ * @returns {number}
+ */
 function computeLevel(level, experience, experienceAdded) {
-    const experienceToNextLevel = Math.floor(((level + 1) / 0.12) ** 2) - experience;
+    const experienceToNextLevel = experienceToLevel(level + 1) - experience;
+
     if (experienceToNextLevel > experienceAdded) {
         return level;
     }
@@ -11,6 +46,13 @@ function computeLevel(level, experience, experienceAdded) {
     }
 }
 
+/**
+ * @function
+ * @async
+ * @param {number} clientId
+ * @param {number} amount
+ * @returns {number} Le niveau à la fin de l'ajout d'expérience
+ */
 async function addExperience(clientId, amount) {
     const user = await prisma.users.findFirst({
         where: {
@@ -37,6 +79,13 @@ async function addExperience(clientId, amount) {
     return newLevel;
 }
 
+/**
+ * @function
+ * @async
+ * @param {string} name
+ * @param {number} clientId
+ * @returns {import('@prisma/client').Users}
+ */
 async function retrieveUser(name, clientId) {
     const user = await prisma.users.findFirst({
         where: {
@@ -81,6 +130,12 @@ async function retrieveUser(name, clientId) {
     }
 }
 
+/**
+ * @function
+ * @async
+ * @param {number} clientId
+ * @param {number} profit can be a negative number too
+ */
 async function modifyUserCredits(clientId, profit) {
     const user = await prisma.users.findFirst({
         where: {
@@ -100,4 +155,4 @@ async function modifyUserCredits(clientId, profit) {
     });
 }
 
-module.exports = {addExperience, retrieveUser, modifyUserCredits};
+module.exports = {minimumBet, experienceToLevel, experiencePerLevel, addExperience, retrieveUser, modifyUserCredits};
