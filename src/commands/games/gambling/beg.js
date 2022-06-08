@@ -41,17 +41,17 @@ module.exports = class BegCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
+        if (user.credits > 0) {
+            await interaction.reply({embeds: [alreadyCredits(user.credits)]});
+            return;
+        }
+
         if (user.dailyCooldown > new Date(Date.now())) {
             const differenceBetweenDates = user.dailyCooldown - (new Date(Date.now()));
             const minutes = Math.floor(differenceBetweenDates / (1000 * 60));
             const seconds = Math.ceil(((differenceBetweenDates / (1000 * 60)) - Math.floor(differenceBetweenDates / (1000 * 60))) * 60);
 
             await interaction.reply({embeds: [cannotBegAgainYet(minutes, seconds)]});
-            return;
-        }
-
-        if (user.credits > 0) {
-            await interaction.reply({embeds: [alreadyCredits(user.credits)]});
             return;
         }
 
