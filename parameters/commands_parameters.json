@@ -65,26 +65,40 @@
             {
                 "index": "color",
                 "name": "color",
-                "description": "red ou black"
+                "description": "red ou black",
+                "options": [
+                    {
+                        "index": "bet",
+                        "name": "enjeu",
+                        "description": "Votre mise",
+                        "required": true
+                    },
+                    {
+                        "index": "value",
+                        "name": "pari",
+                        "description": "red, black",
+                        "required": true
+                    }
+                ]
             },
             {
                 "index": "value",
                 "name": "value",
-                "description": "0 -> 36"
-            }
-        ],
-        "options": [
-            {
-                "index": "bet",
-                "name": "enjeu",
-                "description": "Votre mise",
-                "required": true
-            },
-            {
-                "index": "value",
-                "name": "pari",
-                "description": "red, black, 0 -> 36",
-                "required": true
+                "description": "0 -> 36",
+                "options": [
+                    {
+                        "index": "bet",
+                        "name": "enjeu",
+                        "description": "Votre mise",
+                        "required": true
+                    },
+                    {
+                        "index": "value",
+                        "name": "pari",
+                        "description": "0 -> 36",
+                        "required": true
+                    }
+                ]
             }
         ]
     }

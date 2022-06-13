@@ -4,13 +4,15 @@ const {retrieveUser, minimumBet} = require('../../../utility/gambling');
 
 const {notEnoughBet, notEnoughCredits, levelUpEmbed, valueNotExisting, winningCoinflipEmbed, winningNumberEmbed, losingCoinflipEmbed, losingNumberEmbed} = require('../../../../parameters/embeds/rouletteEmbed');
 
-const {envConfig, commandsParameters, getOption, getSubcommand} = require('../../../utility/basicImportations');
+const {envConfig, commandsParameters, getOption, subcommandParameters} = require('../../../utility/basicImportations');
 
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
 const commandParameters = commandsParameters('roulette');
+const valueSubcommandParameters = subcommandParameters(commandParameters, 'value');
+const colorSubcommandParameters = subcommandParameters(commandParameters, 'color');
 
 module.exports = class RouletteCommand extends Command {
     constructor(context, options) {
