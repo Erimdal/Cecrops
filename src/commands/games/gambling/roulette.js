@@ -1,6 +1,6 @@
 const {Command} = require('@sapphire/framework');
 
-const {retrieveUser, minimumBet} = require('../../../utility/gambling');
+const {retrieveUser, minimumBet, addExperience} = require('../../../utility/gambling');
 
 const {notEnoughBet, notEnoughCredits, levelUpEmbed, valueNotExisting, winningCoinflipEmbed, winningNumberEmbed, losingCoinflipEmbed, losingNumberEmbed} = require('../../../../parameters/embeds/rouletteEmbed');
 
@@ -35,15 +35,15 @@ module.exports = class RouletteCommand extends Command {
                             .setDescription(getSubcommand(commandParameters, 'value').description)
                             .addNumberOption(option =>
                                 option
-                                    .setName(getOption(commandParameters, 'bet').name)
-                                    .setDescription(getOption(commandParameters, 'bet').description)
-                                    .setRequired(getOption(commandParameters, 'bet').required),
+                                    .setName(getOption(valueSubcommandParameters, 'bet').name)
+                                    .setDescription(getOption(valueSubcommandParameters, 'bet').description)
+                                    .setRequired(getOption(valueSubcommandParameters, 'bet').required),
                             )
                             .addNumberOption(option =>
                                 option
-                                    .setName(getOption(commandParameters, 'value').name)
-                                    .setDescription(getOption(commandParameters, 'value').description)
-                                    .setRequired(getOption(commandParameters, 'value').required),
+                                    .setName(getOption(valueSubcommandParameters, 'value').name)
+                                    .setDescription(getOption(valueSubcommandParameters, 'value').description)
+                                    .setRequired(getOption(valueSubcommandParameters, 'value').required),
                             ),
                     )
                     .addSubcommand(subcommand =>
@@ -52,15 +52,16 @@ module.exports = class RouletteCommand extends Command {
                             .setDescription(getSubcommand(commandParameters, 'color').description)
                             .addNumberOption(option =>
                                 option
-                                    .setName(getOption(commandParameters, 'bet').name)
-                                    .setDescription(getOption(commandParameters, 'bet').description)
-                                    .setRequired(getOption(commandParameters, 'bet').required),
+                                    .setName(getOption(colorSubcommandParameters, 'bet').name)
+                                    .setDescription(getOption(colorSubcommandParameters, 'bet').description)
+                                    .setRequired(getOption(colorSubcommandParameters, 'bet').required),
                             )
-                            .addNumberOption(option =>
+                            .addStringOption(option =>
                                 option
-                                    .setName(getOption(commandParameters, 'value').name)
-                                    .setDescription(getOption(commandParameters, 'value').description)
-                                    .setRequired(getOption(commandParameters, 'value').required),
+                                    .setName(getOption(colorSubcommandParameters, 'value').name)
+                                    .setDescription(getOption(colorSubcommandParameters, 'value').description)
+                                    .setRequired(getOption(colorSubcommandParameters, 'value').required)
+                                    .setChoices(getOption(colorSubcommandParameters, 'value').choices)
                             ),
                     ),
             {
@@ -75,9 +76,18 @@ module.exports = class RouletteCommand extends Command {
 
         const user = await retrieveUser(name, clientId);
 
-        const bet = interaction.options.getNumber(getOption(commandParameters, 'bet').name);
-        const userValue = interaction.options.getString(getOption(commandParameters, 'value').name);
-        const subcommand = interaction.options.getSubcommand();
+        /**
+         * @param colorMode if true -> color mode, if false -> value mode
+         */
+        const colorMode = interaction.options.getSubcommand() === getSubcommand(commandParameters, 'color').name;
+
+        // Test of parameters validity
+        if (colorMode ? !([ 'black', 'red' ].includes(interaction.options.getString(getOption(colorSubcommandParameters, 'value').name))) : !(0 <= interaction.options.getNumber(getOption(valueSubcommandParameters, 'value').name) <= 36)) {
+            await interaction.reply({embeds: [valueNotExisting()]});
+            return;
+        }
+
+        const bet = colorMode ? interaction.options.getNumber(getOption(colorSubcommandParameters, 'bet').name) : interaction.options.getNumber(getOption(valueSubcommandParameters, 'bet').name);
 
         if (bet > user.credits) {
             await interaction.reply({embeds: [notEnoughCredits(user.credits)]});
@@ -87,6 +97,40 @@ module.exports = class RouletteCommand extends Command {
         if (bet < minimumBet(user.credits)) {
             await interaction.reply({embeds: [notEnoughBet(minimumBet(user.credits), user.credits)]});
             return;
+        }
+
+        const experienceAdded = 150;
+
+        const newLevel = await addExperience(clientId, experienceAdded);
+
+        if (colorMode) {
+            const userColor = interaction.options.getString(getOption(colorSubcommandParameters, 'value').name);
+            const botValue = Math.round(Math.random() * 37) - 1; //TODO: refaire les maths ici
+            const botColor = //TODO
+
+            if (userColor === botColor) {
+                await modifyUserCredits(clientId, bet);
+
+                if (newLevel === user.level) {
+                    await interaction.reply({embeds: [winningCoinflipEmbed(user.name, userColor === 'black', userValue, profit, user.credits, experienceAdded)]});
+                }
+                else {
+                    await interaction.reply({embeds: [winningCoinflipEmbed(user.name, botValue, userValue, profit, user.credits, experienceAdded), levelUpEmbed(newLevel)]});
+                }
+            }
+            else {
+                await modifyUserCredits(clientId, - bet);
+
+                if (newLevel === user.level) {
+                    await interaction.reply({embeds: [winningEmbed(user.name, botValue, userValue, profit, user.credits, experienceAdded)]});
+                }
+                else {
+                    await interaction.reply({embeds: [winningEmbed(user.name, botValue, userValue, profit, user.credits, experienceAdded), levelUpEmbed(newLevel)]});
+                }
+            }
+        }
+        else {
+            const userValue = interaction.options.getNumber(getOption(valueSubcommandParameters, 'value').name);
         }
     }
 };
