@@ -1,10 +1,10 @@
 const {Command} = require('@sapphire/framework');
+const {MessageEmbed} = require('discord.js');
 
 const team = require('./team.json');
 const colors = require('../../../parameters/colors.json');
 
 const {envConfig, commandsParameters} = require('../../utility/basicImportations');
-const { MessageEmbed } = require('discord.js');
 
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
@@ -41,7 +41,8 @@ module.exports = class LoadTeamCommand extends Command {
             embed.setTitle(player.name + ' | ' + player.rank);
             if (player.startingPlayer) {
                 embed.setColor(colors.win);
-            } else {
+            }
+            else {
                 embed.setColor(colors.loss);
             }
 
@@ -59,14 +60,14 @@ module.exports = class LoadTeamCommand extends Command {
                     name += ' :large_blue_diamond:';
                 }
                 if (champion.toWatch) {
-                    name += ' :no_entry:'
+                    name += ' :no_entry:';
                 }
 
                 embed.addField(name, champion.commentary);
             });
 
             embeds.push(embed);
-        })
+        });
 
         await interaction.reply({embeds: embeds});
     }
