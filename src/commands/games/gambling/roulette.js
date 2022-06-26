@@ -106,7 +106,7 @@ module.exports = class RouletteCommand extends Command {
         if (colorMode) {
             const userColor = interaction.options.getString(getOption(colorSubcommandParameters, 'value').name);
             const botValue = Math.round(Math.random() * 37) - 1; //TODO: refaire les maths ici
-            const botColor = //TODO
+            const botColor = 5;//TODO
 
             if (userColor === botColor) {
                 await modifyUserCredits(clientId, bet);

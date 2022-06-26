@@ -58,6 +58,11 @@
         "description": "Affiche la latence de l'API et de la connexion à Discord du bot Cecrops."
     },
     {
+        "index": "loadTeam",
+        "name": "load",
+        "description": "Affiche la team"
+    },
+    {
         "index": "roulette",
         "name": "roulette",
         "description": "Jouer à la roulette",

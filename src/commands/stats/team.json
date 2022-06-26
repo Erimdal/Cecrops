@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Kîrod",
+        "role": "MID",
+        "commentary": "Peut swap avec son top occasionnellement / Joue beaucoup de champions peu de fois, me demander pendant la draft en cas de doute",
+        "startingPlayer": true,
+        "leagueOfGraphs": "https://www.leagueofgraphs.com/summoner/euw/Kîrod",
+        "csPerMinutes": 5,
+        "champions": [
+            {
+                "name": "Cassiopeia",
+                "commentary": "12 games, 58%",
+                "main": true,
+                "playedByLeDirectoire": true,
+                "toWatch": false
+            },
+            {
+                "name": "Akali",
+                "commentary": "9 games, 33%",
+                "main": false,
+                "playedByLeDirectoire": false,
+                "toWatch": false
+            },
+            {
+                "name": "Vel’koz",
+                "commentary": "7 games, 57%",
+                "main": true,
+                "playedByLeDirectoire": false,
+                "toWatch": false
+            },
+            {
+                "name": "Azir",
+                "commentary": "6 games, 83%",
+                "main": false,
+                "playedByLeDirectoire": false,
+                "toWatch": false
+            },
+            {
+                "name": "Corki",
+                "commentary": "6 games 83%",
+                "main": false,
+                "playedByLeDirectoire": false,
+                "toWatch": false
+            },
+            {
+                "name": "Orianna",
+                "commentary": "5 games, 100%, KDA de 5",
+                "main": false,
+                "playedByLeDirectoire": true,
+                "toWatch": false
+            },
+            {
+                "name": "Karma",
+                "commentary": "3 games 66%",
+                "main": false,
+                "playedByLeDirectoire": true,
+                "toWatch": false
+            },
+            {
+                "name": "Lissandra",
+                "commentary": "Peu joué récemment",
+                "main": true,
+                "playedByLeDirectoire": false,
+                "toWatch": true
+            }
+        ]
+    }
+]
