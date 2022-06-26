@@ -38,7 +38,7 @@ module.exports = class LoadTeamCommand extends Command {
 
         team.forEach((player) => {
             const embed = new MessageEmbed();
-            embed.setTitle(player.name);
+            embed.setTitle(player.name + ' | ' + player.rank);
             if (player.startingPlayer) {
                 embed.setColor(colors.win);
             } else {
@@ -49,30 +49,20 @@ module.exports = class LoadTeamCommand extends Command {
             embed.addField(player.csPerMinutes + ' CS par minutes', player.commentary);
 
             player.champions.forEach((champion) => {
-                let i = 2;
 
-                embed.addField(champion.name, champion.commentary, true);
+                let name = champion.name;
 
                 if (champion.main) {
-                    embed.addField('MAIN !', '\u200B', true);
-                    i -= 1;
+                    name += ' :orange_heart:';
                 }
                 if (champion.playedByLeDirectoire) {
-                    embed.addField('Joué chez nous.', '\u200B', true);
-                    i -= 1;
+                    name += ' :large_blue_diamond:';
                 }
                 if (champion.toWatch) {
-                    embed.addField('DANGER !', '\u200B', true);
-                    if (i == 0) {
-                        i += 2;
-                    }
-                    else {
-                        i -= 1;
-                    }
+                    name += ' :no_entry:'
                 }
-                for (i; i > 0; i--) {
-                    embed.addField('\u200B', '\u200B', true);
-                }
+
+                embed.addField(name, champion.commentary);
             });
 
             embeds.push(embed);
