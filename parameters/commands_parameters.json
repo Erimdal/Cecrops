@@ -58,6 +58,11 @@
         "description": "Returns the latency between the API and the Discord connection."
     },
     {
+        "index": "god",
+        "name": "god",
+        "description": "Activate or deactivate god mode. Only for admins."
+    },
+    {
         "index": "loadTeam",
         "name": "load",
         "description": "Deprecated."
