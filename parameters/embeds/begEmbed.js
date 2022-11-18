@@ -26,7 +26,7 @@ function alreadyCredits(credits) {
 function cannotBegAgainYet(minutes, seconds) {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('You will be bullied if you beg again.', `Please wait ${minutes} minutes and ${seconds} seconds and try again.`);
+        .addFields([{name: 'You will be bullied if you beg again.', value: `Please wait ${minutes} minutes and ${seconds} seconds and try again.`}]);
 }
 
 /**
@@ -44,7 +44,7 @@ function successfullyBegging() {
 
     return new MessageEmbed()
         .setColor(colors.allowed)
-        .addField('You received 10,000 credits!', begMessages[Math.floor(Math.random() * begMessages.length)]);
+        .addFields([{name: 'You received 10,000 credits!', value: begMessages[Math.floor(Math.random() * begMessages.length)]}]);
 }
 
 module.exports = {alreadyCredits, cannotBegAgainYet, successfullyBegging};

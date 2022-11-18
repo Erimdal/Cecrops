@@ -11,7 +11,7 @@ const colors = require('../colors.json');
 function horseNotExisting() {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('The horse that you have chosen doesn\'t exist.', 'Please choose a horse between 1 and 5.');
+        .addFields([{name: 'The horse that you have chosen doesn\'t exist.', value: 'Please choose a horse between 1 and 5.'}]);
 }
 
 /**

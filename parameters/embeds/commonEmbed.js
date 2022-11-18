@@ -12,7 +12,7 @@ function levelUpEmbed(level) {
     return new MessageEmbed()
         .setColor(colors.levelUp)
         .setTitle('Level up !')
-        .addField(`You are now level ${level}!`, 'Congrats!');
+        .addFields([{name: `You are now level ${level}!`, value: 'Congrats!'}]);
 }
 
 /**
@@ -23,7 +23,7 @@ function levelUpEmbed(level) {
 function notEnoughCredits(credits) {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('You don\'t have enough credits.', 'You have ' + stringify(credits) + ' credits remaining.');
+        .addFields([{name: 'You don\'t have enough credits.', value: 'You have ' + stringify(credits) + ' credits remaining.'}]);
 }
 
 /**
@@ -35,7 +35,7 @@ function notEnoughCredits(credits) {
 function notEnoughBet(minimumBet, credits) {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('You must bet at least ' + stringify(minimumBet) + ' credits (5% of your wealth).', 'You have ' + stringify(credits) + ' credits remaining.');
+        .addFields([{name: 'You must bet at least ' + stringify(minimumBet) + ' credits (5% of your wealth).', value: 'You have ' + stringify(credits) + ' credits remaining.'}]);
 }
 
 module.exports = {levelUpEmbed, notEnoughBet, notEnoughCredits};

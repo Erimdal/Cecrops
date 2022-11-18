@@ -11,7 +11,7 @@ const colors = require('../colors.json');
 function valueNotExisting() {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('The value you have entered is incorrect.', 'Please choose a correct value.');
+        .addFields([{name: 'The value you have entered is incorrect.', value: 'Please choose a correct value.'}]);
 }
 
 /**

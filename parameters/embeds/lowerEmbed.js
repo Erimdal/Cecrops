@@ -11,7 +11,7 @@ const colors = require('../colors.json');
 function valueNotExisting() {
     return new MessageEmbed()
         .setColor('#f00c0c')
-        .addField('The value you have given can\'t be used.', 'Please choose a number between 1 and 99.');
+        .addFields([{name: 'The value you have given can\'t be used.', value: 'Please choose a number between 1 and 99.'}]);
 }
 
 /**
