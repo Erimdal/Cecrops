@@ -12,8 +12,8 @@ function alreadyCredits(credits) {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
         .addFields([
-            {name: 'Vous avez déjà de l\'argent !', value: 'On ne mendie pas quand on a déjà autant d\'argent, voyons !'},
-            {name: 'Crédits restants', value: stringify(credits)},
+            {name: 'You already have credits.', value: 'Don\'t beg money if you\'re not in the need!'},
+            {name: 'Credits remaining :', value: stringify(credits)},
         ]);
 }
 
@@ -26,7 +26,7 @@ function alreadyCredits(credits) {
 function cannotBegAgainYet(minutes, seconds) {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('Vous avez déjà mendié récemment !', `Attendez encore ${minutes} minutes et ${seconds} secondes pour mendier à nouveau.`);
+        .addField('You will be bullied if you beg again.', `Please wait ${minutes} minutes and ${seconds} seconds and try again.`);
 }
 
 /**
@@ -35,16 +35,16 @@ function cannotBegAgainYet(minutes, seconds) {
  */
 function successfullyBegging() {
     const begMessages = [
-        "Oh, t'as pas fini de pleurer ? Tiens, un peu d'argent pour t'acheter des mouchoirs.",
-        "La personne qui vous a donné cet argent est repartie avec un sourire maléfique...",
-        "Vous allez faire bon usage de cet argent, n'est-ce pas ? :D",
-        "Taper la  vieille dame, ce n'est plus mendier, m'enfin il faut ce qu'il faut...",
-        "Malgré toutes vos mauvaises actions, vous semblez avoir une bonne étoile ! Mais vous êtes quand même horrible."
-    ]
+        'Haven\'t you finished crying yet ? Take that tissue at least, you\'re pathetic.',
+        'The person that gave you that money left you alone with a terrifying smile...',
+        'You will clearly use cleverly this money, right? Right?',
+        'You didn\'t even beg, you just hit this random dude ! You\'re such an asshole.',
+        'You are lucky despite all the bad things you\'ve done so far... Why?',
+    ];
 
     return new MessageEmbed()
         .setColor(colors.allowed)
-        .addField('Vous avez reçu 10,000 crédits !', begMessages[Math.floor(Math.random() * begMessages.length)]);
+        .addField('You received 10,000 credits!', begMessages[Math.floor(Math.random() * begMessages.length)]);
 }
 
 module.exports = {alreadyCredits, cannotBegAgainYet, successfullyBegging};

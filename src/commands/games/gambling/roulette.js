@@ -4,15 +4,15 @@ const {retrieveUser, minimumBet, addExperience} = require('../../../utility/gamb
 
 const {notEnoughBet, notEnoughCredits, levelUpEmbed, valueNotExisting, winningCoinflipEmbed, winningNumberEmbed, losingCoinflipEmbed, losingNumberEmbed} = require('../../../../parameters/embeds/rouletteEmbed');
 
-const {envConfig, commandsParameters, getOption, subcommandParameters} = require('../../../utility/basicImportations');
+const {envConfig, commandsParameters, getOption, getSubcommand} = require('../../../utility/basicImportations');
 
 for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
 const commandParameters = commandsParameters('roulette');
-const valueSubcommandParameters = subcommandParameters(commandParameters, 'value');
-const colorSubcommandParameters = subcommandParameters(commandParameters, 'color');
+const valueSubcommandParameters = getSubcommand(commandParameters, 'value');
+const colorSubcommandParameters = getSubcommand(commandParameters, 'color');
 
 module.exports = class RouletteCommand extends Command {
     constructor(context, options) {
@@ -31,8 +31,8 @@ module.exports = class RouletteCommand extends Command {
                     .setDescription(commandParameters.description)
                     .addSubcommand(subcommand =>
                         subcommand
-                            .setName(getSubcommand(commandParameters, 'value').name)
-                            .setDescription(getSubcommand(commandParameters, 'value').description)
+                            .setName(valueSubcommandParameters.name)
+                            .setDescription(valueSubcommandParameters.description)
                             .addNumberOption(option =>
                                 option
                                     .setName(getOption(valueSubcommandParameters, 'bet').name)
@@ -48,8 +48,8 @@ module.exports = class RouletteCommand extends Command {
                     )
                     .addSubcommand(subcommand =>
                         subcommand
-                            .setName(getSubcommand(commandParameters, 'color').name)
-                            .setDescription(getSubcommand(commandParameters, 'color').description)
+                            .setName(colorSubcommandParameters.name)
+                            .setDescription(colorSubcommandParameters.description)
                             .addNumberOption(option =>
                                 option
                                     .setName(getOption(colorSubcommandParameters, 'bet').name)
@@ -61,7 +61,7 @@ module.exports = class RouletteCommand extends Command {
                                     .setName(getOption(colorSubcommandParameters, 'value').name)
                                     .setDescription(getOption(colorSubcommandParameters, 'value').description)
                                     .setRequired(getOption(colorSubcommandParameters, 'value').required)
-                                    .setChoices(getOption(colorSubcommandParameters, 'value').choices)
+                                    .setChoices(...getOption(colorSubcommandParameters, 'value').choices),
                             ),
                     ),
             {

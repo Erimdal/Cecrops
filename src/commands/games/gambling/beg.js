@@ -62,7 +62,7 @@ module.exports = class BegCommand extends Command {
                 clientId,
             },
             data: {
-                dailyCooldown: new Date(Date.now() + (10 * 60 * 1000)),
+                dailyCooldown: new Date(Date.now() + (2 * 60 * 1000)),
             },
         });
 

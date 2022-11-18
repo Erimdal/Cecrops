@@ -53,7 +53,7 @@ function getOption(commandParameters, optionIndex) {
  * @param {string} subcommandIndex
  * @returns {Object}
  */
-function subcommandParameters(commandParameters, subcommandIndex) {
+function getSubcommand(commandParameters, subcommandIndex) {
     if (!commandParameters.subcommands) {
         throw new Error('No subcommand found in getSubcommand.');
     }
@@ -68,4 +68,4 @@ function subcommandParameters(commandParameters, subcommandIndex) {
     }
 }
 
-module.exports = {envConfig, commandsParameters, getOption, subcommandParameters};
+module.exports = {envConfig, commandsParameters, getOption, getSubcommand};

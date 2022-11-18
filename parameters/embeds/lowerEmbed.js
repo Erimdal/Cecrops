@@ -11,7 +11,7 @@ const colors = require('../colors.json');
 function valueNotExisting() {
     return new MessageEmbed()
         .setColor('#f00c0c')
-        .addField('La valeur que vous avez entrée est incorrecte', 'Merci de sélectionner un nombre entre 1 et 99.');
+        .addField('The value you have given can\'t be used.', 'Please choose a number between 1 and 99.');
 }
 
 /**
@@ -27,11 +27,11 @@ function valueNotExisting() {
 function winningEmbed(username, botValue, userValue, profit, credits, experienceAdded) {
     return new MessageEmbed()
         .setColor(colors.win)
-        .setTitle(`Résultats du lower - VICTOIRE | ${username}`)
+        .setTitle(`Lower results - VICTORY | ${username}`)
         .addFields([
-            {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
-            {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
-            {name: 'Vous remportez ' + stringify(profit) + ' crédits.', value: 'Vous avez ' + stringify(credits + profit) + ' crédits.', inline: false},
+            {name: 'Bot number', value: `Cecrops has chosen ${botValue}.`, inline: true},
+            {name: 'Your number', value: `You have chosen ${userValue}.`, inline: true},
+            {name: 'You have gained ' + stringify(profit) + ' credits.', value: 'You now have ' + stringify(credits + profit) + ' credits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
@@ -49,11 +49,11 @@ function winningEmbed(username, botValue, userValue, profit, credits, experience
 function losingEmbed(username, botValue, userValue, bet, credits, experienceAdded) {
     return new MessageEmbed()
         .setColor(colors.loss)
-        .setTitle(`Résultats du lower - DÉFAITE | ${username}`)
+        .setTitle(`Lower results - DEFEAT | ${username}`)
         .addFields([
-            {name: 'Tirage du bot', value: `Cecrops a tiré ${botValue}.`, inline: true},
-            {name: 'Votre tirage', value: `Vous avez tiré ${userValue}.`, inline: true},
-            {name: 'Vous perdez ' + stringify(bet) + ' crédits.', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: false},
+            {name: 'Bot number', value: `Cecrops has chosen ${botValue}.`, inline: true},
+            {name: 'Your number', value: `You have chosen ${userValue}.`, inline: true},
+            {name: 'You have lost ' + stringify(bet) + ' credits.', value: 'You now have ' + stringify(credits - bet) + ' credits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }

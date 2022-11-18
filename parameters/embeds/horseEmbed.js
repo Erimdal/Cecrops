@@ -11,7 +11,7 @@ const colors = require('../colors.json');
 function horseNotExisting() {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('Le cheval que vous avez choisi n\'existe pas', 'Merci de choisir l\'une des valeurs suivantes : 1, 2, 3, 4 ou 5.');
+        .addField('The horse that you have chosen doesn\'t exist.', 'Please choose a horse between 1 and 5.');
 }
 
 /**
@@ -44,10 +44,10 @@ function gamePlayingEmbed(username, results) {
 function winningEmbed(username, bet, experienceAdded, winningHorse) {
     return new MessageEmbed()
         .setColor(colors.win)
-        .setTitle(`Résultats du horse | ${username}`)
+        .setTitle(`Horse results - VICTORY | ${username}`)
         .addFields([
-            {name: 'Vous remportez le pari !', value: 'Félicitations !', inline: false},
-            {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous remportez ' + stringify(bet * 4) + ' crédits.'},
+            {name: 'You win!', value: 'Congrats!', inline: false},
+            {name: `Horse ${winningHorse} wins.`, value: 'You have gained ' + stringify(bet * 4) + ' credits.'},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
@@ -64,10 +64,10 @@ function winningEmbed(username, bet, experienceAdded, winningHorse) {
 function losingEmbed(username, bet, experienceAdded, winningHorse, horseChoosen) {
     return new MessageEmbed()
         .setColor(colors.loss)
-        .setTitle(`Résultats du horse | ${username}`)
+        .setTitle(`Horse results - DEFEAT | ${username}`)
         .addFields([
-            {name: 'Vous perdez le pari !', value: `Vous aviez misé sur le cheval ${horseChoosen}`, inline: false},
-            {name: `Le cheval ${winningHorse} a gagné !`, value: 'Vous perdez ' + stringify(bet) + ' crédits.'},
+            {name: 'You lose!', value: `You bet on the dark horse, number ${horseChoosen}`, inline: false},
+            {name: `Horse ${winningHorse} wins.`, value: 'You have lost ' + stringify(bet) + ' credits.'},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }

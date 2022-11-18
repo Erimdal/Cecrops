@@ -2,23 +2,23 @@
     {
         "index": "beg",
         "name": "beg",
-        "description": "Mendier quand vous avez 0 crédits. Disponible toutes les heures."
+        "description": "Beg when you have 0 credits. Available every 2 minutes."
     },
     {
         "index": "horse",
         "name": "horse",
-        "description": "Course de chevaux.",
+        "description": "A horse race ; support your horse until the end of the race !",
         "options": [
             {
-                "index": "bet",
-                "name": "enjeu",
-                "description": "Votre mise",
+                "index": "horse",
+                "name": "horse",
+                "description": "The number of the horse you've chosen, from 1 to 5.",
                 "required": true
             },
             {
-                "index": "horse",
-                "name": "pari",
-                "description": "Le cheval sur lequel vous voulez parier, de 1 à 5",
+                "index": "bet",
+                "name": "bet",
+                "description": "The credits you're betting.",
                 "required": true
             }
         ]
@@ -26,18 +26,18 @@
     {
         "index": "lower",
         "name": "lower",
-        "description": "Jouer au lower.",
+        "description": "A comparison game between your number and Cecrops' number. Smallest number wins.",
         "options": [
             {
-                "index": "bet",
-                "name": "enjeu",
-                "description": "Votre mise",
+                "index": "value",
+                "name": "value",
+                "description": "The value to be compared to the bot.",
                 "required": true
             },
             {
-                "index": "value",
-                "name": "pari",
-                "description": "Votre pari",
+                "index": "bet",
+                "name": "bet",
+                "description": "The credits you're betting.",
                 "required": true
             }
         ]
@@ -45,43 +45,37 @@
     {
         "index": "profile",
         "name": "profile",
-        "description": "Affiche le profil de la personne qui lance la commande dans un embed"
+        "description": "Returns the profile of the person who is launching the command."
     },
     {
         "index": "stats",
         "name": "stats",
-        "description": "Affiche les statistiques dans un message embed"
+        "description": "Returns the statistics of games played in each gamemode. Not implemented yet."
     },
     {
         "index": "ping",
         "name": "ping",
-        "description": "Affiche la latence de l'API et de la connexion à Discord du bot Cecrops."
+        "description": "Returns the latency between the API and the Discord connection."
     },
     {
         "index": "loadTeam",
         "name": "load",
-        "description": "Affiche la team"
+        "description": "Deprecated."
     },
     {
         "index": "roulette",
         "name": "roulette",
-        "description": "Jouer à la roulette",
+        "description": "Plays the casino roulette.",
         "subcommands": [
             {
                 "index": "color",
                 "name": "color",
-                "description": "red ou black",
+                "description": "Choose a color, red or black.",
                 "options": [
                     {
-                        "index": "bet",
-                        "name": "enjeu",
-                        "description": "Votre mise",
-                        "required": true
-                    },
-                    {
                         "index": "value",
-                        "name": "pari",
-                        "description": "red, black",
+                        "name": "value",
+                        "description": "Either red or black, the color chosen for the game.",
                         "required": true,
                         "choices": [
                             {
@@ -93,24 +87,30 @@
                                 "value": "black"
                             }
                         ]
+                    },
+                    {
+                        "index": "bet",
+                        "name": "bet",
+                        "description": "The credits you're betting.",
+                        "required": true
                     }
                 ]
             },
             {
                 "index": "value",
                 "name": "value",
-                "description": "0 -> 36",
+                "description": "Choose a value between 0 and 36.",
                 "options": [
                     {
-                        "index": "bet",
-                        "name": "enjeu",
-                        "description": "Votre mise",
+                        "index": "value",
+                        "name": "value",
+                        "description": "A value between 0 and 36.",
                         "required": true
                     },
                     {
-                        "index": "value",
-                        "name": "pari",
-                        "description": "0 -> 36",
+                        "index": "bet",
+                        "name": "bet",
+                        "description": "The credits you're betting.",
                         "required": true
                     }
                 ]

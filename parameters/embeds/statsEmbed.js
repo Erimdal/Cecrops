@@ -32,7 +32,7 @@ function statsEmbed(username, statistics) {
 
     return new MessageEmbed()
         .setColor(colors.neutral)
-        .setTitle(`Statistiques pour ${username}`)
+        .setTitle(`Stats for ${username}`)
         .addFields(fields);
 }
 

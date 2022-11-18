@@ -22,12 +22,12 @@ function profileEmbed(username, level, credits, minimumBet, experienceToNextLeve
         .setColor(colors.neutral)
         .setTitle(`Profil de ${username}`)
         .addFields([
-            {name: 'Niveau d\'utilisateur', value: `${level}`, inline: true},
-            {name: 'Crédits', value: credits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','), inline: true},
-            {name: 'Mise minimale', value: stringify(minimumBet) + ' crédits', inline: true},
-            {name: 'Progression', value: `${percentageOfProgression}% [ ` + '= '.repeat(numberOfProgressionTiles) + '- '.repeat(10 - numberOfProgressionTiles) + ']', inline: true},
-            {name: 'Prochain niveau', value: stringify(experienceToNextLevel) + ' / ' + stringify(experienceNeededToNextLevel) + ' XP', inline: true},
-            {name: 'Total d\'expérience', value: stringify(totalExperience) + ' XP', inline: true},
+            {name: 'User level', value: `${level}`, inline: true},
+            {name: 'Credits', value: credits.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','), inline: true},
+            {name: 'Minimum bet (5%)', value: stringify(minimumBet) + ' crédits', inline: true},
+            {name: 'Progression until next level', value: `${percentageOfProgression}% [ ` + '= '.repeat(numberOfProgressionTiles) + '- '.repeat(10 - numberOfProgressionTiles) + ']', inline: true},
+            {name: 'Next level', value: stringify(experienceToNextLevel) + ' / ' + stringify(experienceNeededToNextLevel) + ' XP', inline: true},
+            {name: 'Total experience', value: stringify(totalExperience) + ' XP', inline: true},
         ]);
 }
 

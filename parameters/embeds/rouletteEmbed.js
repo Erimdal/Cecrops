@@ -11,7 +11,7 @@ const colors = require('../colors.json');
 function valueNotExisting() {
     return new MessageEmbed()
         .setColor(colors.notAllowed)
-        .addField('La valeur que vous avez entrée est incorrecte', 'Merci de sélectionner un nombre entre 0 et 36 ou bien \'red\' ou \'black\'.');
+        .addField('The value you have entered is incorrect.', 'Please choose a correct value.');
 }
 
 /**
@@ -29,10 +29,10 @@ function winningCoinflipEmbed(username, winningColor, winningValue, profit, cred
 
     return new MessageEmbed()
         .setColor(colors.win)
-        .setTitle(`Résultats de la roulette - VICTOIRE | ${username}`)
+        .setTitle(`Roulette results - VICTORY | ${username}`)
         .addFields([
-            {name: `Tirage de la roulette : ${winningValue}`, value: 'Vous aviez choisi la couleur ' + color + '.', inline: true},
-            {name: 'Vous remportez ' + stringify(profit) + ' crédits.', value: 'Vous avez ' + stringify(credits + profit) + ' crédits.', inline: false},
+            {name: `Roulette value : ${winningValue}`, value: 'You have chosen color ' + color + '.', inline: true},
+            {name: 'You have gained ' + stringify(profit) + ' credits.', value: 'You now have ' + stringify(credits + profit) + ' credits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
@@ -52,10 +52,10 @@ function losingCoinflipEmbed(username, losingColor, losingValue, bet, credits, e
 
     return new MessageEmbed()
         .setColor(colors.loss)
-        .setTitle(`Résultats de la roulette - DÉFAITE | ${username}`)
+        .setTitle(`Roulette results - DEFEAT | ${username}`)
         .addFields([
-            {name: `Tirage de la roulette : ${losingValue}`, value: 'Vous aviez choisi la couleur ' + color + '.', inline: true},
-            {name: 'Vous perdez ' + stringify(bet) + ' crédits.', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: false},
+            {name: `Roulette value : ${losingValue}`, value: 'You have chosen color ' + color + '.', inline: true},
+            {name: 'You have lost ' + stringify(bet) + ' credits.', value: 'You now have ' + stringify(credits - bet) + ' credits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
@@ -72,10 +72,10 @@ function losingCoinflipEmbed(username, losingColor, losingValue, bet, credits, e
 function winningNumberEmbed(username, winningValue, profit, credits, experienceAdded) {
     return new MessageEmbed()
         .setColor(colors.win)
-        .setTitle(`Résultats de la roulette - VICTOIRE | ${username}`)
+        .setTitle(`Roulette results - VICTORY | ${username}`)
         .addFields([
-            {name: `Tirage de la roulette : ${winningValue}`, value: 'Vous aviez choisi la même valeur, bravo !', inline: true},
-            {name: 'Vous remportez ' + stringify(profit) + ' crédits.', value: 'Vous avez ' + stringify(credits + profit) + ' crédits.', inline: false},
+            {name: `Roulette value : ${winningValue}`, value: 'You exactly selected this value, congrats!', inline: true},
+            {name: 'You have gained ' + stringify(profit) + ' credits.', value: 'You now have ' + stringify(credits + profit) + ' credits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
@@ -93,10 +93,10 @@ function winningNumberEmbed(username, winningValue, profit, credits, experienceA
 function losingNumberEmbed(username, winningValue, losingValue, bet, credits, experienceAdded) {
     return new MessageEmbed()
         .setColor(colors.loss)
-        .setTitle(`Résultats de la roulette - DÉFAITE | ${username}`)
+        .setTitle(`Roulette results - DEFEAT | ${username}`)
         .addFields([
-            {name: `Tirage de la roulette : ${winningValue}`, value: `Vous aviez choisi la valeur ${losingValue}`, inline: true},
-            {name: 'Vous perdez ' + stringify(bet) + ' crédits.', value: 'Vous avez ' + stringify(credits - bet) + ' crédits.', inline: false},
+            {name: `Roulette value : ${winningValue}`, value: `You have chosen value ${losingValue}`, inline: true},
+            {name: 'You have lost ' + stringify(bet) + ' credits.', value: 'You now have ' + stringify(credits - bet) + ' credits.', inline: false},
         ])
         .setFooter({text: '+ ' + stringify(experienceAdded) + 'XP'});
 }
