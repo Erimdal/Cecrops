@@ -34,9 +34,17 @@ function cannotBegAgainYet(minutes, seconds) {
  * @returns {MessageEmbed}
  */
 function successfullyBegging() {
+    const begMessages = [
+        "Oh, t'as pas fini de pleurer ? Tiens, un peu d'argent pour t'acheter des mouchoirs.",
+        "La personne qui vous a donné cet argent est repartie avec un sourire maléfique...",
+        "Vous allez faire bon usage de cet argent, n'est-ce pas ? :D",
+        "Taper la  vieille dame, ce n'est plus mendier, m'enfin il faut ce qu'il faut...",
+        "Malgré toutes vos mauvaises actions, vous semblez avoir une bonne étoile ! Mais vous êtes quand même horrible."
+    ]
+
     return new MessageEmbed()
         .setColor(colors.allowed)
-        .addField('Vous avez reçu 10,000 crédits !', 'Ici apparaîtra un message rigolo dans lequel seront indiquées les conditions dans lesquelles vous avez mendié.');
+        .addField('Vous avez reçu 10,000 crédits !', begMessages[Math.floor(Math.random() * begMessages.length)]);
 }
 
 module.exports = {alreadyCredits, cannotBegAgainYet, successfullyBegging};
