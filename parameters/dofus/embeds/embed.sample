@@ -1,0 +1,14 @@
+const {MessageEmbed} = require('discord.js');
+
+const colors = require('../colors.json');
+
+/**
+ * @function
+ * @returns {MessageEmbed}
+ */
+function getEmbed() {
+    return new MessageEmbed()
+        .setColor();
+}
+
+// module.exports = {function1, function 2, ...};

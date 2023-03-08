@@ -121,5 +121,30 @@
                 ]
             }
         ]
+    },
+    {
+        "index": "almanax",
+        "name": "almanax",
+        "description": "A review of the current and next almanax bonuses and prices.",
+        "subcommands": [
+            {
+                "index": "daily",
+                "name": "daily",
+                "description": "A complete description of the daily almanax."
+            },
+            {
+                "index": "review",
+                "name": "review",
+                "description": "A review of the next days for the almanax.",
+                "options": [
+                    {
+                        "index": "days",
+                        "name": "days",
+                        "description": "The number of days to review.",
+                        "required": true
+                    }
+                ]
+            }
+        ]
     }
 ]
