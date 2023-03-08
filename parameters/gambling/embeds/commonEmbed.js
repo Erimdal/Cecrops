@@ -1,5 +1,5 @@
 const {MessageEmbed} = require('discord.js');
-const stringify = require('./utility/stringify');
+const stringify = require('../../utility/stringify');
 
 const colors = require('../../colors.json');
 
