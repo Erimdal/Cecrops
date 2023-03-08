@@ -8,7 +8,8 @@ const colors = require('../colors.json');
  */
 function notValidDaysNumberEmbed() {
     return new MessageEmbed()
-        .setColor(colors.red);
+        .setColor(colors.red)
+        .setTitle("Format invalide pour le nombre de jours à calculer.");
 }
 
 /**
@@ -17,8 +18,58 @@ function notValidDaysNumberEmbed() {
  * @returns {MessageEmbed}
  */
 function offeringListEmbed(offerings) {
+    let fields = []
+
+    offerings.forEach(offering => {
+        const consideredDate = new Date(offering.date)
+        let consideredMonth = ""
+        switch (consideredDate.getUTCMonth()) {
+            case 1:
+                consideredMonth = "janvier";
+                break;
+            case 2:
+                consideredMonth = "février";
+                break;
+            case 3:
+                consideredMonth = "mars";
+                break;
+            case 4:
+                consideredMonth = "avril";
+                break;
+            case 5:
+                consideredMonth = "mai";
+                break;
+            case 6:
+                consideredMonth = "juin";
+                break;
+            case 7:
+                consideredMonth = "juillet";
+                break;
+            case 8:
+                consideredMonth = "août";
+                break;
+            case 9:
+                consideredMonth = "septembre";
+                break;
+            case 10:
+                consideredMonth = "octobre";
+                break;
+            case 11:
+                consideredMonth = "novembre";
+                break;
+            case 12:
+                consideredMonth = "décembre";
+                break;
+        }
+
+        fields.push({name: "Almanax du " + consideredDate.getUTCDate() + " " + consideredMonth + " " + consideredDate.getFullYear() + `${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`, value: `${offering.bonus.name} : ${offering.bonus.description}.`})
+    });
+
+    console.log(fields);
+
     return new MessageEmbed()
-        .setColor(colors.neutral);
+        .setColor(colors.neutral)
+        .addFields(fields);
 }
 
 /**
@@ -76,8 +127,8 @@ function singleOfferingEmbed(offering) {
         .setThumbnail(offering.meridia.image)
         .setImage(offering.resource.image)
         .addFields(
-            {name: encoder.encode(`Nous célébrons ${offering.meridia.name} !`), value: encoder.encode(`${offering.bonus.name} : ${offering.bonus.description}.`)},
-            {name: encoder.encode(`Offrande du jour :`), value: encoder.encode(`${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`)}
+            {name: `Nous célébrons ${offering.meridia.name} !`, value: `${offering.bonus.name} : ${offering.bonus.description}.`},
+            {name: `Offrande du jour :`, value: `${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`}
         );
 }
 

@@ -58,19 +58,19 @@ module.exports = class AlmanaxCommand extends Command {
             /*
             Review mode
             */
-            let daysRequired = interaction.options.getNumber(getOption(valueSubcommandParameters, 'days').name);
+            let daysRequired = interaction.options.getNumber(getOption(reviewSubcommandParameters, 'days').name);
             let dayExplored = new Date(Date.now());
             dayExplored.setHours(0, 0, 0, 0);
 
             // Testing the validity of the parameter
             const endOfYear = new Date(new Date(Date.now()).getFullYear(), 12, 31);
-            const diffInDays = Math.round((endOfYear.getTime() - Date.now().getTime()) / (1000 * 60 * 60 * 24));
+            const diffInDays = Math.round((endOfYear.getTime() - new Date(Date.now()).getTime()) / (1000 * 60 * 60 * 24));
             if (daysRequired < 1 || daysRequired > diffInDays) {
                 await interaction.reply({embeds: [notValidDaysNumberEmbed()]});
                 return;
             }
 
-            let embeds = []
+            let first = true;
 
             while (daysRequired > 0) {
                 let offerings = [];
@@ -89,10 +89,14 @@ module.exports = class AlmanaxCommand extends Command {
                     dayExplored.setDate(dayExplored.getDate() + 1);
                 }
 
-                embeds.push(offeringListEmbed(offerings));
+                if (first) {
+                    first = false;
+                    await interaction.reply({embeds: [offeringListEmbed(offerings)]});
+                } else {
+                    await interaction.followUp({embeds: [offeringListEmbed(offerings)]});
+                }
             }
 
-            await interaction.reply({embeds: embeds});
         } else {
             /*
             Daily mode
