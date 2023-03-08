@@ -29,7 +29,7 @@ function offeringListEmbed(offerings) {
 function singleOfferingEmbed(offering) {
     return new MessageEmbed()
         .setColor(colors.neutral)
-        .addFields([offering.stringify()]);
+        .setTitle(offering.date);
 }
 
 module.exports = {notValidDaysNumberEmbed, offeringListEmbed, singleOfferingEmbed};
