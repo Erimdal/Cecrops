@@ -8,7 +8,7 @@ const colors = require('../colors.json');
  */
 function notValidDaysNumberEmbed() {
     return new MessageEmbed()
-        .setColor();
+        .setColor(colors.red);
 }
 
 /**
@@ -18,7 +18,7 @@ function notValidDaysNumberEmbed() {
  */
 function offeringListEmbed(offerings) {
     return new MessageEmbed()
-        .setColor();
+        .setColor(colors.neutral);
 }
 
 /**
@@ -28,7 +28,8 @@ function offeringListEmbed(offerings) {
  */
 function singleOfferingEmbed(offering) {
     return new MessageEmbed()
-        .setColor();
+        .setColor(colors.neutral)
+        .addFields([offering.stringify()]);
 }
 
 module.exports = {notValidDaysNumberEmbed, offeringListEmbed, singleOfferingEmbed};

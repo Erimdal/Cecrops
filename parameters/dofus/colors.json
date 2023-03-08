@@ -1,8 +1,4 @@
 {
-    "loss": "#f00c0c",
-    "win": "#0cf021",
-    "neutral": "#ee6618",
-    "notAllowed": "#f00c0c",
-    "allowed": "#0cf021",
-    "levelUp": "#0cf021"
+    "red": "#f00c0c",
+    "neutral": "#ee6618"
 }
