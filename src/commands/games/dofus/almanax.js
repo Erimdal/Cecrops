@@ -70,30 +70,33 @@ module.exports = class AlmanaxCommand extends Command {
                 return;
             }
 
-            let first = true;
+            let counter = 0;
+            let offerings = [];
 
             while (daysRequired > 0) {
-                let offerings = [];
+                const offering = file[counter];
 
-                for (let i = 0 ; i < 9 ; i++) {
-                    for (const offering of file) {
-                        if (offering.date === dayExplored.toISOString().split("T")[0]) {
-                            offerings.push(offering);
-                            continue;
-                        }
-                    }
-
-                    if (--daysRequired == 0) {
-                        continue;
-                    }
+                if (offering.date === dayExplored.toISOString().split("T")[0]) {
+                    offerings.push(offering);
+                    daysRequired--;
                     dayExplored.setDate(dayExplored.getDate() + 1);
                 }
+                for (const offering of file) {
+                    if (offering.date === dayExplored.toISOString().split("T")[0]) {
+                        offerings.push(offering);
+                        continue;
+                    }
+                }
+            }
 
+            let first = true;
+
+            while (offerings.length() != 0) {
                 if (first) {
+                    await interaction.reply({embeds: offerings.splice(0, Math.max(10, offerings.length()))});
                     first = false;
-                    await interaction.reply({embeds: [offeringListEmbed(offerings)]});
                 } else {
-                    await interaction.followUp({embeds: [offeringListEmbed(offerings)]});
+                    await interaction.followUp({embeds: offerings.splice(0, Math.max(10, offerings.length()))});
                 }
             }
 

@@ -24,40 +24,40 @@ function offeringListEmbed(offerings) {
         const consideredDate = new Date(offering.date)
         let consideredMonth = ""
         switch (consideredDate.getUTCMonth()) {
-            case 1:
+            case 0:
                 consideredMonth = "janvier";
                 break;
-            case 2:
+            case 1:
                 consideredMonth = "février";
                 break;
-            case 3:
+            case 2:
                 consideredMonth = "mars";
                 break;
-            case 4:
+            case 3:
                 consideredMonth = "avril";
                 break;
-            case 5:
+            case 4:
                 consideredMonth = "mai";
                 break;
-            case 6:
+            case 5:
                 consideredMonth = "juin";
                 break;
-            case 7:
+            case 6:
                 consideredMonth = "juillet";
                 break;
-            case 8:
+            case 7:
                 consideredMonth = "août";
                 break;
-            case 9:
+            case 8:
                 consideredMonth = "septembre";
                 break;
-            case 10:
+            case 9:
                 consideredMonth = "octobre";
                 break;
-            case 11:
+            case 10:
                 consideredMonth = "novembre";
                 break;
-            case 12:
+            case 11:
                 consideredMonth = "décembre";
                 break;
         }
@@ -81,40 +81,40 @@ function singleOfferingEmbed(offering) {
     const currentDate = new Date(offering.date)
     let month = ""
     switch (currentDate.getUTCMonth()) {
-        case 1:
+        case 0:
             month = "janvier";
             break;
-        case 2:
+        case 1:
             month = "février";
             break;
-        case 3:
+        case 2:
             month = "mars";
             break;
-        case 4:
+        case 3:
             month = "avril";
             break;
-        case 5:
+        case 4:
             month = "mai";
             break;
-        case 6:
+        case 5:
             month = "juin";
             break;
-        case 7:
+        case 6:
             month = "juillet";
             break;
-        case 8:
+        case 7:
             month = "août";
             break;
-        case 9:
+        case 8:
             month = "septembre";
             break;
-        case 10:
+        case 9:
             month = "octobre";
             break;
-        case 11:
+        case 10:
             month = "novembre";
             break;
-        case 12:
+        case 11:
             month = "décembre";
             break;
     }
