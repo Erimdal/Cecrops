@@ -62,10 +62,8 @@ function offeringListEmbed(offerings) {
                 break;
         }
 
-        fields.push({name: "Almanax du " + consideredDate.getUTCDate() + " " + consideredMonth + " " + consideredDate.getFullYear() + `${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`, value: `${offering.bonus.name} : ${offering.bonus.description}.`})
+        fields.push({name: "Almanax du " + consideredDate.getUTCDate() + " " + consideredMonth + " " + consideredDate.getFullYear() + " : ", value: `${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`});
     });
-
-    console.log(fields);
 
     return new MessageEmbed()
         .setColor(colors.neutral)

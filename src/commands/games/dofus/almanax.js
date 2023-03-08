@@ -61,6 +61,7 @@ module.exports = class AlmanaxCommand extends Command {
             let daysRequired = interaction.options.getNumber(getOption(reviewSubcommandParameters, 'days').name);
             let dayExplored = new Date(Date.now());
             dayExplored.setHours(0, 0, 0, 0);
+            dayExplored.setDate(dayExplored.getDate() + 1);
 
             // Testing the validity of the parameter
             const endOfYear = new Date(new Date(Date.now()).getFullYear(), 12, 31);
@@ -81,22 +82,18 @@ module.exports = class AlmanaxCommand extends Command {
                     daysRequired--;
                     dayExplored.setDate(dayExplored.getDate() + 1);
                 }
-                for (const offering of file) {
-                    if (offering.date === dayExplored.toISOString().split("T")[0]) {
-                        offerings.push(offering);
-                        continue;
-                    }
-                }
+
+                counter++;
             }
 
             let first = true;
 
-            while (offerings.length() != 0) {
+            while (offerings.length !== 0) {
                 if (first) {
-                    await interaction.reply({embeds: offerings.splice(0, Math.max(10, offerings.length()))});
+                    await interaction.reply({embeds: [offeringListEmbed(offerings.splice(0, Math.min(5, offerings.length)))]});
                     first = false;
                 } else {
-                    await interaction.followUp({embeds: offerings.splice(0, Math.max(10, offerings.length()))});
+                    await interaction.followUp({embeds: [offeringListEmbed(offerings.splice(0, Math.min(5, offerings.length)))]});
                 }
             }
 

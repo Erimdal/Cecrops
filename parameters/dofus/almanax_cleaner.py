@@ -170,10 +170,10 @@ def main():
 
             current_day = current_day.__add__(timedelta(1))
 
-    json_data = json.dumps([offering.compute_json() for offering in offerings], indent=4)
+    json_data = json.dumps([offering.compute_json() for offering in offerings], indent=4, ensure_ascii=False).encode('utf-8')
 
     with open("parameters/dofus/almanaxData.json", "w") as almanax_json:
-        almanax_json.write(json_data)
+        almanax_json.write(json_data.decode())
 
 
 main()
