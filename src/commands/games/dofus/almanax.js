@@ -3,7 +3,6 @@ const {Command} = require('@sapphire/framework');
 const fs = require('fs');
 
 const {notValidDaysNumberEmbed, offeringListEmbed, singleOfferingEmbed} = require('../../../../parameters/dofus/embeds/almanaxEmbed');
-const {almanaxData} = require('../../../../parameters/dofus/almanaxData.json');
 
 const {envConfig, commandsParameters, getOption, getSubcommand} = require('../../../utility/basicImportations');
 
