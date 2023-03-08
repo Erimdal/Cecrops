@@ -1,8 +1,8 @@
 const {MessageEmbed} = require('discord.js');
-const stringify = require('./utility/stringify');
+const stringify = require('../../utility/stringify');
 const {notEnoughBet, notEnoughCredits, levelUpEmbed} = require('./commonEmbed');
 
-const colors = require('../colors.json');
+const colors = require('../../colors.json');
 
 /**
  * @function

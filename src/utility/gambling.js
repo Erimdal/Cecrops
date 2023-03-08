@@ -97,7 +97,7 @@ async function retrieveUser(name, clientId) {
         return user;
     }
     else {
-        const file = JSON.parse(fs.readFileSync('parameters/gambling.json', 'utf-8'));
+        const file = JSON.parse(fs.readFileSync('parameters/gambling/gambling.json', 'utf-8'));
 
         let statistics = new Array(0);
 

@@ -2,7 +2,7 @@ const {Command} = require('@sapphire/framework');
 
 const {retrieveUser} = require('../../../utility/gambling');
 
-// const {embed1, embed2, ...} = require('../../../../parameters/embeds/functionEmbed');
+// const {embed1, embed2, ...} = require('../../../../parameters/gambling/embeds/functionEmbed');
 
 const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
 

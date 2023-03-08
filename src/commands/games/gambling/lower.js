@@ -2,7 +2,7 @@ const {Command} = require('@sapphire/framework');
 
 const {retrieveUser, modifyUserCredits, addExperience, minimumBet} = require('../../../utility/gambling');
 
-const {notEnoughBet, notEnoughCredits, valueNotExisting, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/embeds/lowerEmbed');
+const {notEnoughBet, notEnoughCredits, valueNotExisting, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/gambling/embeds/lowerEmbed');
 
 const {envConfig, commandsParameters, getOption} = require('../../../utility/basicImportations');
 

@@ -5,7 +5,7 @@ const {setTimeout} = require('timers/promises');
 const {retrieveUser, modifyUserCredits, addExperience, minimumBet} = require('../../../utility/gambling');
 const keepOneZeroOnly = require('../../../utility/keepOneZeroOnly');
 
-const {horseNotExisting, notEnoughCredits, notEnoughBet, gamePlayingEmbed, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/embeds/horseEmbed');
+const {horseNotExisting, notEnoughCredits, notEnoughBet, gamePlayingEmbed, levelUpEmbed, winningEmbed, losingEmbed} = require('../../../../parameters/gambling/embeds/horseEmbed');
 
 const {envConfig, commandsParameters, getOption} = require('../../../utility/basicImportations');
 

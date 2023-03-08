@@ -2,7 +2,7 @@ const {Command} = require('@sapphire/framework');
 
 const {retrieveUser, experiencePerLevel, experienceToLevel, minimumBet} = require('../../../utility/gambling');
 
-const {profileEmbed} = require('../../../../parameters/embeds/profileEmbed');
+const {profileEmbed} = require('../../../../parameters/gambling/embeds/profileEmbed');
 
 const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
 

@@ -4,7 +4,7 @@ const prisma = require('../../../prismaClient');
 
 const {retrieveUser, modifyUserCredits} = require('../../../utility/gambling');
 
-const {alreadyCredits, cannotBegAgainYet, successfullyBegging} = require('../../../../parameters/embeds/begEmbed');
+const {alreadyCredits, cannotBegAgainYet, successfullyBegging} = require('../../../../parameters/gambling/embeds/begEmbed');
 
 const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
 

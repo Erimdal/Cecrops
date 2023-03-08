@@ -1,8 +1,8 @@
-const {Command} = require('@sapphire/framework');
+/* const {Command} = require('@sapphire/framework');
 
-const {retrieveUser, minimumBet, addExperience} = require('../../../utility/gambling');
+const {retrieveUser, minimumBet, addExperience, modifyUserCredits} = require('../../../utility/gambling');
 
-const {notEnoughBet, notEnoughCredits, levelUpEmbed, valueNotExisting, winningCoinflipEmbed, winningNumberEmbed, losingCoinflipEmbed, losingNumberEmbed} = require('../../../../parameters/embeds/rouletteEmbed');
+const {notEnoughBet, notEnoughCredits, levelUpEmbed, valueNotExisting, winningCoinflipEmbed} = require('../../../../parameters/gambling/embeds/rouletteEmbed');
 
 const {envConfig, commandsParameters, getOption, getSubcommand} = require('../../../utility/basicImportations');
 
@@ -78,11 +78,11 @@ module.exports = class RouletteCommand extends Command {
 
         /**
          * @param colorMode if true -> color mode, if false -> value mode
-         */
+         /
         const colorMode = interaction.options.getSubcommand() === getSubcommand(commandParameters, 'color').name;
 
         // Test of parameters validity
-        if (colorMode ? !([ 'black', 'red' ].includes(interaction.options.getString(getOption(colorSubcommandParameters, 'value').name))) : !(0 <= interaction.options.getNumber(getOption(valueSubcommandParameters, 'value').name) <= 36)) {
+        if (colorMode ? !(['black', 'red'].includes(interaction.options.getString(getOption(colorSubcommandParameters, 'value').name))) : !(0 <= interaction.options.getNumber(getOption(valueSubcommandParameters, 'value').name) <= 36)) {
             await interaction.reply({embeds: [valueNotExisting()]});
             return;
         }
@@ -105,8 +105,8 @@ module.exports = class RouletteCommand extends Command {
 
         if (colorMode) {
             const userColor = interaction.options.getString(getOption(colorSubcommandParameters, 'value').name);
-            const botValue = Math.round(Math.random() * 37) - 1; //TODO: refaire les maths ici
-            const botColor = 5;//TODO
+            const botValue = Math.round(Math.random() * 37) - 1;
+            const botColor = botValue == 0 ? 'green' : (botValue % 2 == 0 ? 'red' : 'black');
 
             if (userColor === botColor) {
                 await modifyUserCredits(clientId, bet);
@@ -131,6 +131,29 @@ module.exports = class RouletteCommand extends Command {
         }
         else {
             const userValue = interaction.options.getNumber(getOption(valueSubcommandParameters, 'value').name);
+            const botValue = Math.round(Math.random() * 37) - 1;
+
+            if (userColor === botColor) {
+                await modifyUserCredits(clientId, bet);
+
+                if (newLevel === user.level) {
+                    await interaction.reply({embeds: [winningCoinflipEmbed(user.name, userColor === 'black', userValue, profit, user.credits, experienceAdded)]});
+                }
+                else {
+                    await interaction.reply({embeds: [winningCoinflipEmbed(user.name, botValue, userValue, profit, user.credits, experienceAdded), levelUpEmbed(newLevel)]});
+                }
+            }
+            else {
+                await modifyUserCredits(clientId, - bet);
+
+                if (newLevel === user.level) {
+                    await interaction.reply({embeds: [winningEmbed(user.name, botValue, userValue, profit, user.credits, experienceAdded)]});
+                }
+                else {
+                    await interaction.reply({embeds: [winningEmbed(user.name, botValue, userValue, profit, user.credits, experienceAdded), levelUpEmbed(newLevel)]});
+                }
+            }
         }
     }
 };
+*/

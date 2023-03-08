@@ -1,8 +1,8 @@
 const {Command} = require('@sapphire/framework');
 
-const {retrieveUser} = require('../../../utility/gambling');
+// const {embed1, embed2, ...} = require('../../../../parameters/dofus/embeds/functionEmbed');
 
-const {statsEmbed} = require('../../../../parameters/gambling/embeds/statsEmbed');
+const {almanaxData} = require('../../../../parameters/dofus/almanaxData.json');
 
 const {envConfig, commandsParameters} = require('../../../utility/basicImportations');
 
@@ -10,9 +10,9 @@ for (const k in envConfig) {
     process.env[k] = envConfig[k];
 }
 
-const commandParameters = commandsParameters('stats');
+const commandParameters = commandsParameters('almanax');
 
-module.exports = class StatsCommand extends Command {
+module.exports = class AlmanaxCommand extends Command {
     constructor(context, options) {
         super(context, {
             ...options,
@@ -36,9 +36,5 @@ module.exports = class StatsCommand extends Command {
     async chatInputRun(interaction) {
         const clientId = parseInt(interaction.user.id);
         const name = interaction.user.username;
-
-        const user = await retrieveUser(name, clientId);
-
-        await interaction.reply({embeds: [statsEmbed(user.name, user.statistics)]});
     }
 };
