@@ -68,14 +68,16 @@ function singleOfferingEmbed(offering) {
             break;
     }
 
+    const encoder = new TextEncoder();
+
     return new MessageEmbed()
         .setColor(colors.neutral)
         .setTitle("Almanax du " + currentDate.getUTCDate() + " " + month + " " + currentDate.getFullYear())
         .setThumbnail(offering.meridia.image)
         .setImage(offering.resource.image)
         .addFields(
-            {name: `Nous célébrons ${offering.meridia.name} !`, value: `${offering.bonus.name} : ${offering.bonus.description}.`},
-            {name: `Offrande du jour :`, value: `${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`}
+            {name: encoder.encode(`Nous célébrons ${offering.meridia.name} !`), value: encoder.encode(`${offering.bonus.name} : ${offering.bonus.description}.`)},
+            {name: encoder.encode(`Offrande du jour :`), value: encoder.encode(`${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`)}
         );
 }
 
