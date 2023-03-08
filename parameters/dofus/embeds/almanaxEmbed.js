@@ -70,7 +70,13 @@ function singleOfferingEmbed(offering) {
 
     return new MessageEmbed()
         .setColor(colors.neutral)
-        .setTitle("Almanax du " + currentDate.getUTCDate() + " " + month + " " + currentDate.getFullYear());
+        .setTitle("Almanax du " + currentDate.getUTCDate() + " " + month + " " + currentDate.getFullYear())
+        .setThumbnail(offering.meridia.image)
+        .setImage(offering.resource.image)
+        .addFields(
+            {name: `Nous célébrons ${offering.meridia.name} !`, value: `${offering.bonus.name} : ${offering.bonus.description}.`},
+            {name: `Offrande du jour :`, value: `${offering.resource.number} x ${offering.resource.name} pour ${offering.kamas} kamas.`}
+        );
 }
 
 module.exports = {notValidDaysNumberEmbed, offeringListEmbed, singleOfferingEmbed};

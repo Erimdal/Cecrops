@@ -8,7 +8,7 @@
         "resource": {
             "name": "\u00c5\u2019uf de Dragoeuf Argile",
             "image": "http://static.ankama.com/dofus/www/game/items/200/105205.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 6948,
         "bonus": {
@@ -25,7 +25,7 @@
         "resource": {
             "name": "Avoine",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34154.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 791,
         "bonus": {
@@ -42,7 +42,7 @@
         "resource": {
             "name": "Foulard du Sparo",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15014.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 5365,
         "bonus": {
@@ -59,7 +59,7 @@
         "resource": {
             "name": "Queue de Wolvero",
             "image": "http://static.ankama.com/dofus/www/game/items/200/65759.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 38702,
         "bonus": {
@@ -76,7 +76,7 @@
         "resource": {
             "name": "Bois d'If",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38094.w75h75.png",
-            "icon": "12"
+            "number": "12"
         },
         "kamas": 3518,
         "bonus": {
@@ -93,7 +93,7 @@
         "resource": {
             "name": "Poils de Wo Wabbit",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54197.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3254,
         "bonus": {
@@ -110,7 +110,7 @@
         "resource": {
             "name": "Groin de Sanglier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15058.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 1055,
         "bonus": {
@@ -127,7 +127,7 @@
         "resource": {
             "name": "Serviette de Plage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/55130.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 791,
         "bonus": {
@@ -144,7 +144,7 @@
         "resource": {
             "name": "Ep\u00c3\u00a9e Sacr\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/6001.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3518,
         "bonus": {
@@ -161,7 +161,7 @@
         "resource": {
             "name": "Aile de Dragodinde Dor\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/104594.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 9103,
         "bonus": {
@@ -178,7 +178,7 @@
         "resource": {
             "name": "Miroir de Dopeul",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15092.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2506,
         "bonus": {
@@ -195,7 +195,7 @@
         "resource": {
             "name": "Argent",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39028.w75h75.png",
-            "icon": "12"
+            "number": "12"
         },
         "kamas": 4793,
         "bonus": {
@@ -212,7 +212,7 @@
         "resource": {
             "name": "Plume du Timansot",
             "image": "http://static.ankama.com/dofus/www/game/items/200/53646.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 15524,
         "bonus": {
@@ -229,7 +229,7 @@
         "resource": {
             "name": "Mall\u00c3\u00a9ole de Yomi Givrefoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47678.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 42352,
         "bonus": {
@@ -246,7 +246,7 @@
         "resource": {
             "name": "Bave de Ouassingue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15093.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 10511,
         "bonus": {
@@ -263,7 +263,7 @@
         "resource": {
             "name": "Relique Familiale",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15094.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 5541,
         "bonus": {
@@ -280,7 +280,7 @@
         "resource": {
             "name": "Patte d'Arakne",
             "image": "http://static.ankama.com/dofus/www/game/items/200/103035.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 439,
         "bonus": {
@@ -297,7 +297,7 @@
         "resource": {
             "name": "Bar Rikain",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41290.w75h75.png",
-            "icon": "14"
+            "number": "14"
         },
         "kamas": 2418,
         "bonus": {
@@ -314,7 +314,7 @@
         "resource": {
             "name": "Bracelet de Ino-Naru",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164674.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 43980,
         "bonus": {
@@ -331,7 +331,7 @@
         "resource": {
             "name": "Short de Capoei Rat",
             "image": "http://static.ankama.com/dofus/www/game/items/200/165033.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 12006,
         "bonus": {
@@ -348,7 +348,7 @@
         "resource": {
             "name": "Bouteille de Gloutoburg",
             "image": "http://static.ankama.com/dofus/www/game/items/200/79177.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 8752,
         "bonus": {
@@ -365,7 +365,7 @@
         "resource": {
             "name": "Bract\u00c3\u00a9e de Chiendent",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36011.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14293,
         "bonus": {
@@ -382,7 +382,7 @@
         "resource": {
             "name": "Viande Hach\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/175008.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 439,
         "bonus": {
@@ -399,7 +399,7 @@
         "resource": {
             "name": "Bourgeon d'Abraknyde Sombre Irascible",
             "image": "http://static.ankama.com/dofus/www/game/items/200/108230.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 18383,
         "bonus": {
@@ -416,7 +416,7 @@
         "resource": {
             "name": "Tibia de Koalak Fossoyeur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47640.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 8004,
         "bonus": {
@@ -433,7 +433,7 @@
         "resource": {
             "name": "Marteau de Boisaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/7001.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 307,
         "bonus": {
@@ -450,7 +450,7 @@
         "resource": {
             "name": "Frostiz",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34552.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 12006,
         "bonus": {
@@ -467,7 +467,7 @@
         "resource": {
             "name": "Queue de Rat Pine",
             "image": "http://static.ankama.com/dofus/www/game/items/200/65521.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 22121,
         "bonus": {
@@ -484,7 +484,7 @@
         "resource": {
             "name": "Laine de Bouftou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57056.w75h75.png",
-            "icon": "11"
+            "number": "11"
         },
         "kamas": 747,
         "bonus": {
@@ -501,7 +501,7 @@
         "resource": {
             "name": "S\u00c3\u00a9pale de Nerbe",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36010.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14777,
         "bonus": {
@@ -518,7 +518,7 @@
         "resource": {
             "name": "Menthe Sauvage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36052.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 1495,
         "bonus": {
@@ -535,7 +535,7 @@
         "resource": {
             "name": "Potion de Mini Soin Sup\u00c3\u00a9rieure",
             "image": "http://static.ankama.com/dofus/www/game/items/200/12038.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 307,
         "bonus": {
@@ -552,7 +552,7 @@
         "resource": {
             "name": "Roulade de Carne",
             "image": "http://static.ankama.com/dofus/www/game/items/200/69825.w75h75.png",
-            "icon": "6"
+            "number": "6"
         },
         "kamas": 439,
         "bonus": {
@@ -569,7 +569,7 @@
         "resource": {
             "name": "Goujon en Tranche",
             "image": "http://static.ankama.com/dofus/www/game/items/200/49083.w75h75.png",
-            "icon": "6"
+            "number": "6"
         },
         "kamas": 307,
         "bonus": {
@@ -586,7 +586,7 @@
         "resource": {
             "name": "Molaire de Bl\u00c3\u00a9rice",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47681.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 42748,
         "bonus": {
@@ -603,7 +603,7 @@
         "resource": {
             "name": "Concombre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164653.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 5233,
         "bonus": {
@@ -620,7 +620,7 @@
         "resource": {
             "name": "Anneau de Sagesse",
             "image": "http://static.ankama.com/dofus/www/game/items/200/9007.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 791,
         "bonus": {
@@ -637,7 +637,7 @@
         "resource": {
             "name": "Croissant de Tsukinochi",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164764.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 39889,
         "bonus": {
@@ -654,7 +654,7 @@
         "resource": {
             "name": "Bois de Fr\u00c3\u00aane",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38017.w75h75.png",
-            "icon": "30"
+            "number": "30"
         },
         "kamas": 307,
         "bonus": {
@@ -671,7 +671,7 @@
         "resource": {
             "name": "Ongle de Kanigrou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47559.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 10907,
         "bonus": {
@@ -688,7 +688,7 @@
         "resource": {
             "name": "Pic de Dragodinde Rousse Sauvage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47596.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 5673,
         "bonus": {
@@ -705,7 +705,7 @@
         "resource": {
             "name": "Duvet de Mamansot",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54675.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 18955,
         "bonus": {
@@ -722,7 +722,7 @@
         "resource": {
             "name": "Canine de Mergranlou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47106.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 11126,
         "bonus": {
@@ -739,7 +739,7 @@
         "resource": {
             "name": "Cuivre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39108.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -756,7 +756,7 @@
         "resource": {
             "name": "Shigekax Passion",
             "image": "http://static.ankama.com/dofus/www/game/items/200/42004.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 747,
         "bonus": {
@@ -773,7 +773,7 @@
         "resource": {
             "name": "Feuille de Branche Soignante",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36015.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 21814,
         "bonus": {
@@ -790,7 +790,7 @@
         "resource": {
             "name": "Viande Hach\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/175008.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 439,
         "bonus": {
@@ -807,7 +807,7 @@
         "resource": {
             "name": "Champignon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15001.w75h75.png",
-            "icon": "11"
+            "number": "11"
         },
         "kamas": 3518,
         "bonus": {
@@ -824,7 +824,7 @@
         "resource": {
             "name": "Bourgeon d'Abraknyde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/108104.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 1759,
         "bonus": {
@@ -841,7 +841,7 @@
         "resource": {
             "name": "Poisson-Chaton",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41277.w75h75.png",
-            "icon": "25"
+            "number": "25"
         },
         "kamas": 307,
         "bonus": {
@@ -858,7 +858,7 @@
         "resource": {
             "name": "Croupion du Bitouf a\u00c3\u00a9rien",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15022.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 26124,
         "bonus": {
@@ -875,7 +875,7 @@
         "resource": {
             "name": "Bi\u00c3\u00a8re de Bwork",
             "image": "http://static.ankama.com/dofus/www/game/items/200/37001.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 3518,
         "bonus": {
@@ -892,7 +892,7 @@
         "resource": {
             "name": "Peau de Dragueuse",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59609.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14293,
         "bonus": {
@@ -909,7 +909,7 @@
         "resource": {
             "name": "Avoine",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34154.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 791,
         "bonus": {
@@ -926,7 +926,7 @@
         "resource": {
             "name": "Bec du Tofu",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47037.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 483,
         "bonus": {
@@ -943,7 +943,7 @@
         "resource": {
             "name": "\u00c5\u2019il de Madura",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164747.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 32281,
         "bonus": {
@@ -960,7 +960,7 @@
         "resource": {
             "name": "Peau de Minoskito",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59604.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 12886,
         "bonus": {
@@ -977,7 +977,7 @@
         "resource": {
             "name": "Viande Saignante",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63453.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 4266,
         "bonus": {
@@ -994,7 +994,7 @@
         "resource": {
             "name": "Noix de Kokoko",
             "image": "http://static.ankama.com/dofus/www/game/items/200/46159.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 307,
         "bonus": {
@@ -1011,7 +1011,7 @@
         "resource": {
             "name": "Beignet de Greuvette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/49081.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 307,
         "bonus": {
@@ -1028,7 +1028,7 @@
         "resource": {
             "name": "Cr\u00c3\u00a2ne d'Aventurier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47031.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 15261,
         "bonus": {
@@ -1045,7 +1045,7 @@
         "resource": {
             "name": "Bois de Charme",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38138.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 8004,
         "bonus": {
@@ -1062,7 +1062,7 @@
         "resource": {
             "name": "Volve de Fistulor",
             "image": "http://static.ankama.com/dofus/www/game/items/200/119002.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 39889,
         "bonus": {
@@ -1079,7 +1079,7 @@
         "resource": {
             "name": "Bandeau de Nakunbra",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15088.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 5233,
         "bonus": {
@@ -1096,7 +1096,7 @@
         "resource": {
             "name": "\u00c3\u2030toffe de Rat Bougri",
             "image": "http://static.ankama.com/dofus/www/game/items/200/55731.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 11126,
         "bonus": {
@@ -1113,7 +1113,7 @@
         "resource": {
             "name": "\u00c3\u2030toffe de Kurookin",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164675.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 15524,
         "bonus": {
@@ -1130,7 +1130,7 @@
         "resource": {
             "name": "Patte de Wabbit",
             "image": "http://static.ankama.com/dofus/www/game/items/200/103440.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 1363,
         "bonus": {
@@ -1147,7 +1147,7 @@
         "resource": {
             "name": "Houblon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34080.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 1495,
         "bonus": {
@@ -1164,7 +1164,7 @@
         "resource": {
             "name": "Lait de Dragodinde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15424.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 4925,
         "bonus": {
@@ -1181,7 +1181,7 @@
         "resource": {
             "name": "Dent de Bourbassingue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47698.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 11346,
         "bonus": {
@@ -1198,7 +1198,7 @@
         "resource": {
             "name": "Poisson Pan\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41269.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 791,
         "bonus": {
@@ -1215,7 +1215,7 @@
         "resource": {
             "name": "B\u00c3\u00a2ton Kouyu",
             "image": "http://static.ankama.com/dofus/www/game/items/200/4003.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1495,
         "bonus": {
@@ -1232,7 +1232,7 @@
         "resource": {
             "name": "Tr\u00c3\u00a8fle \u00c3\u00a0",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36067.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 791,
         "bonus": {
@@ -1249,7 +1249,7 @@
         "resource": {
             "name": "Groin de Sanglier des Plaines",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15540.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2814,
         "bonus": {
@@ -1266,7 +1266,7 @@
         "resource": {
             "name": "Jouet de Gamine Zoth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15099.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 16272,
         "bonus": {
@@ -1283,7 +1283,7 @@
         "resource": {
             "name": "Pierre d'\u00c3\u2030meraude",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51145.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 9103,
         "bonus": {
@@ -1300,7 +1300,7 @@
         "resource": {
             "name": "Marteau Pickeur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/7012.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 2814,
         "bonus": {
@@ -1317,7 +1317,7 @@
         "resource": {
             "name": "Mangan\u00c3\u00a8se",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39397.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 2418,
         "bonus": {
@@ -1334,7 +1334,7 @@
         "resource": {
             "name": "Pierre du Courtilieur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51466.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 38702,
         "bonus": {
@@ -1351,7 +1351,7 @@
         "resource": {
             "name": "Bave de Bouftou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15057.w75h75.png",
-            "icon": "6"
+            "number": "6"
         },
         "kamas": 747,
         "bonus": {
@@ -1368,7 +1368,7 @@
         "resource": {
             "name": "Fragment de Pierre Pointue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51455.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 5541,
         "bonus": {
@@ -1385,7 +1385,7 @@
         "resource": {
             "name": "Bois de Ch\u00c3\u00a2taignier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38086.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -1402,7 +1402,7 @@
         "resource": {
             "name": "Orge",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34082.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -1419,7 +1419,7 @@
         "resource": {
             "name": "Laine de Maho Givrefoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57657.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 39889,
         "bonus": {
@@ -1436,7 +1436,7 @@
         "resource": {
             "name": "Oreille d'Ap\u00c3\u00a9riglours",
             "image": "http://static.ankama.com/dofus/www/game/items/200/106634.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 40285,
         "bonus": {
@@ -1453,7 +1453,7 @@
         "resource": {
             "name": "Viande Ladre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63420.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1011,
         "bonus": {
@@ -1470,7 +1470,7 @@
         "resource": {
             "name": "Corne de Boufmouth de guerre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47661.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14777,
         "bonus": {
@@ -1487,7 +1487,7 @@
         "resource": {
             "name": "\u00c3\u2030toffe de Vigie Pirate",
             "image": "http://static.ankama.com/dofus/www/game/items/200/55733.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 28147,
         "bonus": {
@@ -1504,7 +1504,7 @@
         "resource": {
             "name": "Poing rocheux d'Ishigro Pake",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164681.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 7124,
         "bonus": {
@@ -1521,7 +1521,7 @@
         "resource": {
             "name": "Dent de Larve \u00c3\u2030meraude",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47654.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3166,
         "bonus": {
@@ -1538,7 +1538,7 @@
         "resource": {
             "name": "Fluide Glacial",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15100.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1935,
         "bonus": {
@@ -1555,7 +1555,7 @@
         "resource": {
             "name": "Crabe Sourimi",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41273.w75h75.png",
-            "icon": "16"
+            "number": "16"
         },
         "kamas": 307,
         "bonus": {
@@ -1572,7 +1572,7 @@
         "resource": {
             "name": "Kaokurimono",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164737.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 43980,
         "bonus": {
@@ -1589,7 +1589,7 @@
         "resource": {
             "name": "Bouclier du Bouftou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/82020.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 747,
         "bonus": {
@@ -1606,7 +1606,7 @@
         "resource": {
             "name": "Dent en Or du Craqueleur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47418.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 4925,
         "bonus": {
@@ -1623,7 +1623,7 @@
         "resource": {
             "name": "Poils de Mulounok\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54008.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 11126,
         "bonus": {
@@ -1640,7 +1640,7 @@
         "resource": {
             "name": "Orge",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34082.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -1657,7 +1657,7 @@
         "resource": {
             "name": "Carapace Verte",
             "image": "http://static.ankama.com/dofus/www/game/items/200/24018.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 923,
         "bonus": {
@@ -1674,7 +1674,7 @@
         "resource": {
             "name": "Carapace de Scaratos",
             "image": "http://static.ankama.com/dofus/www/game/items/200/107735.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 15261,
         "bonus": {
@@ -1691,7 +1691,7 @@
         "resource": {
             "name": "Mangeoire en Fr\u00c3\u00aane",
             "image": "http://static.ankama.com/dofus/www/game/items/200/93002.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 6289,
         "bonus": {
@@ -1708,7 +1708,7 @@
         "resource": {
             "name": "Bout de Blop Coco",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15281.w75h75.png",
-            "icon": "9"
+            "number": "9"
         },
         "kamas": 1187,
         "bonus": {
@@ -1725,7 +1725,7 @@
         "resource": {
             "name": "Plastron de Tamboura\u00c3\u00af",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164765.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 33028,
         "bonus": {
@@ -1742,7 +1742,7 @@
         "resource": {
             "name": "Bois de Kaliptus",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38001.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 7124,
         "bonus": {
@@ -1759,7 +1759,7 @@
         "resource": {
             "name": "Calumet Zoth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/4062.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 19483,
         "bonus": {
@@ -1776,7 +1776,7 @@
         "resource": {
             "name": "Baffeur en Fr\u00c3\u00aane",
             "image": "http://static.ankama.com/dofus/www/game/items/200/93005.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 395,
         "bonus": {
@@ -1793,7 +1793,7 @@
         "resource": {
             "name": "Kralamoure Grill\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/49090.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3518,
         "bonus": {
@@ -1810,7 +1810,7 @@
         "resource": {
             "name": "\u00c5\u2019uf de Dragoeuf Calcaire",
             "image": "http://static.ankama.com/dofus/www/game/items/200/105648.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 6948,
         "bonus": {
@@ -1827,7 +1827,7 @@
         "resource": {
             "name": "Queue de Meliglours",
             "image": "http://static.ankama.com/dofus/www/game/items/200/65762.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 42748,
         "bonus": {
@@ -1844,7 +1844,7 @@
         "resource": {
             "name": "Or",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39022.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 8004,
         "bonus": {
@@ -1861,7 +1861,7 @@
         "resource": {
             "name": "Poils de Boumbardier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54202.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 22385,
         "bonus": {
@@ -1878,7 +1878,7 @@
         "resource": {
             "name": "Corne de Gamino",
             "image": "http://static.ankama.com/dofus-touch/www/game/items/200/54009.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 17855,
         "bonus": {
@@ -1895,7 +1895,7 @@
         "resource": {
             "name": "Carpe d'Iem",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41305.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 2418,
         "bonus": {
@@ -1912,7 +1912,7 @@
         "resource": {
             "name": "Bave de Ouassingue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15093.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 10511,
         "bonus": {
@@ -1929,7 +1929,7 @@
         "resource": {
             "name": "Pierre du Craqueleur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51127.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 4925,
         "bonus": {
@@ -1946,7 +1946,7 @@
         "resource": {
             "name": "Viande Rassie",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63473.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 6289,
         "bonus": {
@@ -1963,7 +1963,7 @@
         "resource": {
             "name": "Bourse Suspecte",
             "image": "http://static.ankama.com/dofus/www/game/items/200/141010.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2946,
         "bonus": {
@@ -1980,7 +1980,7 @@
         "resource": {
             "name": "Oreille de Foufayteur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/106562.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 10907,
         "bonus": {
@@ -1997,7 +1997,7 @@
         "resource": {
             "name": "Cristal",
             "image": "http://static.ankama.com/dofus/www/game/items/200/50098.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 4925,
         "bonus": {
@@ -2014,7 +2014,7 @@
         "resource": {
             "name": "Plume de Piou Rouge",
             "image": "http://static.ankama.com/dofus/www/game/items/200/53117.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 439,
         "bonus": {
@@ -2031,7 +2031,7 @@
         "resource": {
             "name": "Sauge",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36643.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -2048,7 +2048,7 @@
         "resource": {
             "name": "Capsule Explosive",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15711.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2946,
         "bonus": {
@@ -2065,7 +2065,7 @@
         "resource": {
             "name": "Langue du Champodonte",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15765.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 34876,
         "bonus": {
@@ -2082,7 +2082,7 @@
         "resource": {
             "name": "Souche de l'Abrakleur clair",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38003.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 27443,
         "bonus": {
@@ -2099,7 +2099,7 @@
         "resource": {
             "name": "Sang d'Oni",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15662.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 7124,
         "bonus": {
@@ -2116,7 +2116,7 @@
         "resource": {
             "name": "Moustache du Mufafah",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15015.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 11126,
         "bonus": {
@@ -2133,7 +2133,7 @@
         "resource": {
             "name": "Bois d'Erable",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38153.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 2418,
         "bonus": {
@@ -2150,7 +2150,7 @@
         "resource": {
             "name": "Boulette de Viande",
             "image": "http://static.ankama.com/dofus/www/game/items/200/69750.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 307,
         "bonus": {
@@ -2167,7 +2167,7 @@
         "resource": {
             "name": "Pomme de Terre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/68135.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 307,
         "bonus": {
@@ -2184,7 +2184,7 @@
         "resource": {
             "name": "Pierre M\u00c3\u00a9dicinale",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51496.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 6948,
         "bonus": {
@@ -2201,7 +2201,7 @@
         "resource": {
             "name": "Pelle de Boisaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/8001.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 307,
         "bonus": {
@@ -2218,7 +2218,7 @@
         "resource": {
             "name": "Carapace de Scarafeuille Vert",
             "image": "http://static.ankama.com/dofus/www/game/items/200/107444.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 2199,
         "bonus": {
@@ -2235,7 +2235,7 @@
         "resource": {
             "name": "Malt",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34083.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 4793,
         "bonus": {
@@ -2252,7 +2252,7 @@
         "resource": {
             "name": "D\u00c3\u00a9dicace de Skeunk pour \u00c3\u2030meraude",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15804.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 16800,
         "bonus": {
@@ -2269,7 +2269,7 @@
         "resource": {
             "name": "Dagues de Fouraille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/5003.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3518,
         "bonus": {
@@ -2286,7 +2286,7 @@
         "resource": {
             "name": "Laine de Bouftou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57056.w75h75.png",
-            "icon": "11"
+            "number": "11"
         },
         "kamas": 747,
         "bonus": {
@@ -2303,7 +2303,7 @@
         "resource": {
             "name": "Ortie",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36642.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -2320,7 +2320,7 @@
         "resource": {
             "name": "\u00c3\u2030toffe du Roissingue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/55019.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 41912,
         "bonus": {
@@ -2337,7 +2337,7 @@
         "resource": {
             "name": "Pistil de Floristile",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164666.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 2594,
         "bonus": {
@@ -2354,7 +2354,7 @@
         "resource": {
             "name": "Etain",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39078.w75h75.png",
-            "icon": "12"
+            "number": "12"
         },
         "kamas": 3518,
         "bonus": {
@@ -2371,7 +2371,7 @@
         "resource": {
             "name": "Papier Charbon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15816.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2506,
         "bonus": {
@@ -2388,7 +2388,7 @@
         "resource": {
             "name": "Capouze des Champs",
             "image": "http://static.ankama.com/dofus/www/game/items/200/17065.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 483,
         "bonus": {
@@ -2405,7 +2405,7 @@
         "resource": {
             "name": "Laine de Yoka\u00c3\u00af Givrefoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57658.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 42352,
         "bonus": {
@@ -2422,7 +2422,7 @@
         "resource": {
             "name": "Perche",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41313.w75h75.png",
-            "icon": "12"
+            "number": "12"
         },
         "kamas": 6289,
         "bonus": {
@@ -2439,7 +2439,7 @@
         "resource": {
             "name": "Graine de Tournesol",
             "image": "http://static.ankama.com/dofus/www/game/items/200/58006.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 923,
         "bonus": {
@@ -2456,7 +2456,7 @@
         "resource": {
             "name": "Bave du Kaskargo",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15006.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 26783,
         "bonus": {
@@ -2473,7 +2473,7 @@
         "resource": {
             "name": "Sac du Petit R\u00c3\u00a9colteur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/81026.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 483,
         "bonus": {
@@ -2490,7 +2490,7 @@
         "resource": {
             "name": "Pain Consistant",
             "image": "http://static.ankama.com/dofus/www/game/items/200/33012.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 2418,
         "bonus": {
@@ -2507,7 +2507,7 @@
         "resource": {
             "name": "Viande Sanguinolente",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63464.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 9103,
         "bonus": {
@@ -2524,7 +2524,7 @@
         "resource": {
             "name": "Poils de Koalak Forestier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54004.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 8752,
         "bonus": {
@@ -2541,7 +2541,7 @@
         "resource": {
             "name": "Coquille de Dragoeuf Argile",
             "image": "http://static.ankama.com/dofus/www/game/items/200/111202.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 5365,
         "bonus": {
@@ -2558,7 +2558,7 @@
         "resource": {
             "name": "Lamelle de Dramanite",
             "image": "http://static.ankama.com/dofus/www/game/items/200/119001.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 37910,
         "bonus": {
@@ -2575,7 +2575,7 @@
         "resource": {
             "name": "Pince du Crabe",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47051.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 1363,
         "bonus": {
@@ -2592,7 +2592,7 @@
         "resource": {
             "name": "Sardine Brillante",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41317.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 791,
         "bonus": {
@@ -2609,7 +2609,7 @@
         "resource": {
             "name": "Graine de la Discorde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/58472.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2506,
         "bonus": {
@@ -2626,7 +2626,7 @@
         "resource": {
             "name": "Sceau Royal Contrefait",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15131.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2726,
         "bonus": {
@@ -2643,7 +2643,7 @@
         "resource": {
             "name": "Or",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39022.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 8004,
         "bonus": {
@@ -2660,7 +2660,7 @@
         "resource": {
             "name": "Cawotte",
             "image": "http://static.ankama.com/dofus/www/game/items/200/68031.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 1363,
         "bonus": {
@@ -2677,7 +2677,7 @@
         "resource": {
             "name": "Incisive de Kami Givrefoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47685.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 41912,
         "bonus": {
@@ -2694,7 +2694,7 @@
         "resource": {
             "name": "Tige de Bambouto",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164665.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2286,
         "bonus": {
@@ -2711,7 +2711,7 @@
         "resource": {
             "name": "Orchid\u00c3\u00a9e Freyesque",
             "image": "http://static.ankama.com/dofus/www/game/items/200/35192.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 2418,
         "bonus": {
@@ -2728,7 +2728,7 @@
         "resource": {
             "name": "Pic de Dragodinde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47597.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 4925,
         "bonus": {
@@ -2745,7 +2745,7 @@
         "resource": {
             "name": "Kokopaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15433.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1187,
         "bonus": {
@@ -2762,7 +2762,7 @@
         "resource": {
             "name": "Baguette de Glace",
             "image": "http://static.ankama.com/dofus/www/game/items/200/3002.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2814,
         "bonus": {
@@ -2779,7 +2779,7 @@
         "resource": {
             "name": "Bave de Champ \u00c3\u00a0 Gnons",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15045.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 37163,
         "bonus": {
@@ -2796,7 +2796,7 @@
         "resource": {
             "name": "Clef des Champs",
             "image": "http://static.ankama.com/dofus/www/game/items/200/84013.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 923,
         "bonus": {
@@ -2813,7 +2813,7 @@
         "resource": {
             "name": "Bois de Merisier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38139.w75h75.png",
-            "icon": "12"
+            "number": "12"
         },
         "kamas": 4793,
         "bonus": {
@@ -2830,7 +2830,7 @@
         "resource": {
             "name": "Coquille de Dragoeuf Ardoise",
             "image": "http://static.ankama.com/dofus/www/game/items/200/111211.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 4002,
         "bonus": {
@@ -2847,7 +2847,7 @@
         "resource": {
             "name": "\u00c3\u2030pine de Bulbuisson",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164667.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 7828,
         "bonus": {
@@ -2864,7 +2864,7 @@
         "resource": {
             "name": "Peau de Draguaindrop",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59610.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14293,
         "bonus": {
@@ -2881,7 +2881,7 @@
         "resource": {
             "name": "Peau de Crachefoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59038.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 7828,
         "bonus": {
@@ -2898,7 +2898,7 @@
         "resource": {
             "name": "Bl\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34009.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -2915,7 +2915,7 @@
         "resource": {
             "name": "Conque Marine",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15813.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 791,
         "bonus": {
@@ -2932,7 +2932,7 @@
         "resource": {
             "name": "Pince de Crustorail",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47017.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2199,
         "bonus": {
@@ -2949,7 +2949,7 @@
         "resource": {
             "name": "Bave du Kaskargo",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15006.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 26783,
         "bonus": {
@@ -2966,7 +2966,7 @@
         "resource": {
             "name": "Langue d'\u00c3\u2030pouvanteur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36555.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 483,
         "bonus": {
@@ -2983,7 +2983,7 @@
         "resource": {
             "name": "Fer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39024.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -3000,7 +3000,7 @@
         "resource": {
             "name": "Dagob mineure",
             "image": "http://static.ankama.com/dofus/www/game/items/200/178025.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 3518,
         "bonus": {
@@ -3017,7 +3017,7 @@
         "resource": {
             "name": "Vieille Ventouse de Kralamoure",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15817.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 43980,
         "bonus": {
@@ -3034,7 +3034,7 @@
         "resource": {
             "name": "Racine d'Abraknyde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/98102.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 1759,
         "bonus": {
@@ -3051,7 +3051,7 @@
         "resource": {
             "name": "Viande Frelat\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63491.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 307,
         "bonus": {
@@ -3068,7 +3068,7 @@
         "resource": {
             "name": "Peau de Mandrine",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59602.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 12886,
         "bonus": {
@@ -3085,7 +3085,7 @@
         "resource": {
             "name": "\u00c3\u2030caille de Chef Crocodaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59547.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 6157,
         "bonus": {
@@ -3102,7 +3102,7 @@
         "resource": {
             "name": "D\u00c3\u00a9fense du Sanglier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47059.w75h75.png",
-            "icon": "6"
+            "number": "6"
         },
         "kamas": 1055,
         "bonus": {
@@ -3119,7 +3119,7 @@
         "resource": {
             "name": "Potion de Mini Soin",
             "image": "http://static.ankama.com/dofus/www/game/items/200/12016.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 307,
         "bonus": {
@@ -3136,7 +3136,7 @@
         "resource": {
             "name": "Michette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/33011.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 307,
         "bonus": {
@@ -3153,7 +3153,7 @@
         "resource": {
             "name": "Poils magiques de Tanuki",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164678.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 6772,
         "bonus": {
@@ -3170,7 +3170,7 @@
         "resource": {
             "name": "Poisson-Chaton",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41277.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -3187,7 +3187,7 @@
         "resource": {
             "name": "R\u00c3\u00a9sidu de Solfatar\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51471.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 31225,
         "bonus": {
@@ -3204,7 +3204,7 @@
         "resource": {
             "name": "Laine du Boufcoul",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57001.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 4002,
         "bonus": {
@@ -3221,7 +3221,7 @@
         "resource": {
             "name": "Bois de Fr\u00c3\u00aane",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38017.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -3238,7 +3238,7 @@
         "resource": {
             "name": "Arc Ecologique",
             "image": "http://static.ankama.com/dofus/www/game/items/200/2020.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 2946,
         "bonus": {
@@ -3255,7 +3255,7 @@
         "resource": {
             "name": "Bauxite",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39076.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 6289,
         "bonus": {
@@ -3272,7 +3272,7 @@
         "resource": {
             "name": "Laine de Boufmouth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57211.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 12886,
         "bonus": {
@@ -3289,7 +3289,7 @@
         "resource": {
             "name": "Pierre d'Atomystique",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51469.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 32677,
         "bonus": {
@@ -3306,7 +3306,7 @@
         "resource": {
             "name": "Cha\u00c3\u00aenes Bris\u00c3\u00a9es",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15245.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3166,
         "bonus": {
@@ -3323,7 +3323,7 @@
         "resource": {
             "name": "Viande Persill\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63457.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 5365,
         "bonus": {
@@ -3340,7 +3340,7 @@
         "resource": {
             "name": "Boue V\u00c3\u00a9n\u00c3\u00a9rable",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15793.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 33776,
         "bonus": {
@@ -3357,7 +3357,7 @@
         "resource": {
             "name": "Fleur de Pissenlit Diabolique",
             "image": "http://static.ankama.com/dofus/www/game/items/200/35018.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 483,
         "bonus": {
@@ -3374,7 +3374,7 @@
         "resource": {
             "name": "Substrat de Buisson",
             "image": "http://static.ankama.com/dofus/www/game/items/200/26016.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 791,
         "bonus": {
@@ -3391,7 +3391,7 @@
         "resource": {
             "name": "Coccyx du Corailleur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47012.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 4002,
         "bonus": {
@@ -3408,7 +3408,7 @@
         "resource": {
             "name": "Huile de Tournesol Sauvage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/60061.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 923,
         "bonus": {
@@ -3425,7 +3425,7 @@
         "resource": {
             "name": "Pierre Pr\u00c3\u00a9cieuse Zoth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/50716.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 17328,
         "bonus": {
@@ -3442,7 +3442,7 @@
         "resource": {
             "name": "Plume de G\u00c3\u00a9likan",
             "image": "http://static.ankama.com/dofus/www/game/items/200/53648.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 7476,
         "bonus": {
@@ -3459,7 +3459,7 @@
         "resource": {
             "name": "Greuvette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41292.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -3476,7 +3476,7 @@
         "resource": {
             "name": "Bois d'Orme",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38140.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 9895,
         "bonus": {
@@ -3493,7 +3493,7 @@
         "resource": {
             "name": "Peau de Don Duss Ang",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59618.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 11346,
         "bonus": {
@@ -3510,7 +3510,7 @@
         "resource": {
             "name": "Queue d'\u00c3\u2030cumouth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/65754.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 15524,
         "bonus": {
@@ -3527,7 +3527,7 @@
         "resource": {
             "name": "Beignet Astrubien",
             "image": "http://static.ankama.com/dofus/www/game/items/200/69115.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 483,
         "bonus": {
@@ -3544,7 +3544,7 @@
         "resource": {
             "name": "P\u00c3\u00a9ron\u00c3\u00a9 du Mar\u00c3\u00b4deur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47670.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 37558,
         "bonus": {
@@ -3561,7 +3561,7 @@
         "resource": {
             "name": "Masque de Shinibaru",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164680.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 7476,
         "bonus": {
@@ -3578,7 +3578,7 @@
         "resource": {
             "name": "Sang du Vampire",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15089.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1935,
         "bonus": {
@@ -3595,7 +3595,7 @@
         "resource": {
             "name": "Poudre Novice",
             "image": "http://static.ankama.com/dofus/www/game/items/200/48281.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 6289,
         "bonus": {
@@ -3612,7 +3612,7 @@
         "resource": {
             "name": "Edelweiss",
             "image": "http://static.ankama.com/dofus/www/game/items/200/35191.w75h75.png",
-            "icon": "10"
+            "number": "10"
         },
         "kamas": 3518,
         "bonus": {
@@ -3629,7 +3629,7 @@
         "resource": {
             "name": "\u00c5\u2019uf de Tofu",
             "image": "http://static.ankama.com/dofus/www/game/items/200/105038.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 483,
         "bonus": {
@@ -3646,7 +3646,7 @@
         "resource": {
             "name": "Potion de cit\u00c3\u00a9 : Bonta",
             "image": "http://static.ankama.com/dofus/www/game/items/200/12144.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 3518,
         "bonus": {
@@ -3663,7 +3663,7 @@
         "resource": {
             "name": "Cendres Matures",
             "image": "http://static.ankama.com/dofus/www/game/items/200/48282.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 16800,
         "bonus": {
@@ -3680,7 +3680,7 @@
         "resource": {
             "name": "Poisskaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41403.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 12006,
         "bonus": {
@@ -3697,7 +3697,7 @@
         "resource": {
             "name": "Cr\u00c3\u00a8me \u00c3\u00a0 bronzer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15814.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 791,
         "bonus": {
@@ -3714,7 +3714,7 @@
         "resource": {
             "name": "Racine de Tronkoblop",
             "image": "http://static.ankama.com/dofus/www/game/items/200/98001.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3738,
         "bonus": {
@@ -3731,7 +3731,7 @@
         "resource": {
             "name": "Bottes du Chat But\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/11003.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 439,
         "bonus": {
@@ -3748,7 +3748,7 @@
         "resource": {
             "name": "Bl\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34009.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -3765,7 +3765,7 @@
         "resource": {
             "name": "Pic de Dragodinde Dor\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47598.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 9103,
         "bonus": {
@@ -3782,7 +3782,7 @@
         "resource": {
             "name": "Kapokaza",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164736.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 34128,
         "bonus": {
@@ -3799,7 +3799,7 @@
         "resource": {
             "name": "Boules de Kanniboul",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164077.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 4398,
         "bonus": {
@@ -3816,7 +3816,7 @@
         "resource": {
             "name": "Flaque Juv\u00c3\u00a9nile",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15794.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1495,
         "bonus": {
@@ -3833,7 +3833,7 @@
         "resource": {
             "name": "Menthe Sauvage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36052.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 1495,
         "bonus": {
@@ -3850,7 +3850,7 @@
         "resource": {
             "name": "Paupi\u00c3\u00a8re d'\u00c3\u2030toile",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15815.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 791,
         "bonus": {
@@ -3867,7 +3867,7 @@
         "resource": {
             "name": "Baguette de T\u00c3\u00a9tonuki",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164682.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 7124,
         "bonus": {
@@ -3884,7 +3884,7 @@
         "resource": {
             "name": "Bronze",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39109.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 791,
         "bonus": {
@@ -3901,7 +3901,7 @@
         "resource": {
             "name": "Poil de Gamino",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47699.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 17855,
         "bonus": {
@@ -3918,7 +3918,7 @@
         "resource": {
             "name": "Houblon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34080.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 1495,
         "bonus": {
@@ -3935,7 +3935,7 @@
         "resource": {
             "name": "Cuir du Cochon de Lait",
             "image": "http://static.ankama.com/dofus/www/game/items/200/56141.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 1759,
         "bonus": {
@@ -3952,7 +3952,7 @@
         "resource": {
             "name": "Fum\u00c3\u00a9e Juv\u00c3\u00a9nile",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15795.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1495,
         "bonus": {
@@ -3969,7 +3969,7 @@
         "resource": {
             "name": "Viande Min\u00c3\u00a9rale",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63411.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1055,
         "bonus": {
@@ -3986,7 +3986,7 @@
         "resource": {
             "name": "Poils de Boulglours",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54682.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 42352,
         "bonus": {
@@ -4003,7 +4003,7 @@
         "resource": {
             "name": "Furoncle de la Mama Bwork",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15819.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 33776,
         "bonus": {
@@ -4020,7 +4020,7 @@
         "resource": {
             "name": "Dent de Tofu Mutant",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47047.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 923,
         "bonus": {
@@ -4037,7 +4037,7 @@
         "resource": {
             "name": "Peau de Dragueuse",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59609.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14293,
         "bonus": {
@@ -4054,7 +4054,7 @@
         "resource": {
             "name": "\u00c3\u2030caille de Harpirate",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59631.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 27795,
         "bonus": {
@@ -4071,7 +4071,7 @@
         "resource": {
             "name": "Bois de Noyer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38095.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 791,
         "bonus": {
@@ -4088,7 +4088,7 @@
         "resource": {
             "name": "Fleur de Blopignon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/35008.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 4002,
         "bonus": {
@@ -4105,7 +4105,7 @@
         "resource": {
             "name": "Peau de Don Dorgan",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59617.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 12006,
         "bonus": {
@@ -4122,7 +4122,7 @@
         "resource": {
             "name": "Michette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/33011.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 3518,
         "bonus": {
@@ -4139,7 +4139,7 @@
         "resource": {
             "name": "Os de P\u00c3\u00a9keualak",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47010.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 8752,
         "bonus": {
@@ -4156,7 +4156,7 @@
         "resource": {
             "name": "Potion de Vieillesse",
             "image": "http://static.ankama.com/dofus/www/game/items/200/12002.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 6289,
         "bonus": {
@@ -4173,7 +4173,7 @@
         "resource": {
             "name": "Ortie",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36642.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -4190,7 +4190,7 @@
         "resource": {
             "name": "Griffe de Bl\u00c3\u00a9rauve",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47680.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 40285,
         "bonus": {
@@ -4207,7 +4207,7 @@
         "resource": {
             "name": "Sarbacane en Bambou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164652.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 2418,
         "bonus": {
@@ -4224,7 +4224,7 @@
         "resource": {
             "name": "Poil de Renarbo",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54005.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 10687,
         "bonus": {
@@ -4241,7 +4241,7 @@
         "resource": {
             "name": "Pierre de Mofette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51474.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 34480,
         "bonus": {
@@ -4258,7 +4258,7 @@
         "resource": {
             "name": "Sardine Brillante",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41317.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 791,
         "bonus": {
@@ -4275,7 +4275,7 @@
         "resource": {
             "name": "Trident Cass\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15512.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1407,
         "bonus": {
@@ -4292,7 +4292,7 @@
         "resource": {
             "name": "Aile de Dragodinde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/104593.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 4925,
         "bonus": {
@@ -4309,7 +4309,7 @@
         "resource": {
             "name": "Peau de Dragnarok",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59611.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 14293,
         "bonus": {
@@ -4326,7 +4326,7 @@
         "resource": {
             "name": "Flamme Spectrale",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15247.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 5541,
         "bonus": {
@@ -4343,7 +4343,7 @@
         "resource": {
             "name": "Lin",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34122.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 2418,
         "bonus": {
@@ -4360,7 +4360,7 @@
         "resource": {
             "name": "\u00c3\u2030corce d'Abrazif",
             "image": "http://static.ankama.com/dofus/www/game/items/200/96668.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 42352,
         "bonus": {
@@ -4377,7 +4377,7 @@
         "resource": {
             "name": "Collier de l'Arc en Ciel",
             "image": "http://static.ankama.com/dofus/www/game/items/200/1011.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 791,
         "bonus": {
@@ -4394,7 +4394,7 @@
         "resource": {
             "name": "Oreille de Bouftonmouth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/106624.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 11126,
         "bonus": {
@@ -4411,7 +4411,7 @@
         "resource": {
             "name": "\u00c3\u2030pine du Champ Champ",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15049.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 527,
         "bonus": {
@@ -4428,7 +4428,7 @@
         "resource": {
             "name": "Os de Chafer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47015.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 2023,
         "bonus": {
@@ -4445,7 +4445,7 @@
         "resource": {
             "name": "Bois de Noyer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38095.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 791,
         "bonus": {
@@ -4462,7 +4462,7 @@
         "resource": {
             "name": "Viande Fra\u00c3\u00aeche",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63441.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 6289,
         "bonus": {
@@ -4479,7 +4479,7 @@
         "resource": {
             "name": "Hache V\u00c3\u00b4r'Om",
             "image": "http://static.ankama.com/dofus/www/game/items/200/19013.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 791,
         "bonus": {
@@ -4496,7 +4496,7 @@
         "resource": {
             "name": "Poils de P\u00c3\u00a9tartifoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54204.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 18119,
         "bonus": {
@@ -4513,7 +4513,7 @@
         "resource": {
             "name": "Duvet du Kilibriss",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54012.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 11566,
         "bonus": {
@@ -4530,7 +4530,7 @@
         "resource": {
             "name": "Hachette de B\u00c3\u00bbcheron",
             "image": "http://static.ankama.com/dofus/www/game/items/200/19006.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 307,
         "bonus": {
@@ -4547,7 +4547,7 @@
         "resource": {
             "name": "Dent de Crocodaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47234.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 3034,
         "bonus": {
@@ -4564,7 +4564,7 @@
         "resource": {
             "name": "Obsidienne",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39112.w75h75.png",
-            "icon": "21"
+            "number": "21"
         },
         "kamas": 12006,
         "bonus": {
@@ -4581,7 +4581,7 @@
         "resource": {
             "name": "Pelage a\u00c3\u00a9rodynamique",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164670.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 22385,
         "bonus": {
@@ -4598,7 +4598,7 @@
         "resource": {
             "name": "Plume du Serpiplume",
             "image": "http://static.ankama.com/dofus/www/game/items/200/53004.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 17855,
         "bonus": {
@@ -4615,7 +4615,7 @@
         "resource": {
             "name": "Maillot de corps de Barbroussa",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15011.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 5673,
         "bonus": {
@@ -4632,7 +4632,7 @@
         "resource": {
             "name": "Croupion du Bitouf a\u00c3\u00a9rien",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15022.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 26124,
         "bonus": {
@@ -4649,7 +4649,7 @@
         "resource": {
             "name": "Os de Jiangshi-Nobi",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164767.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 34128,
         "bonus": {
@@ -4666,7 +4666,7 @@
         "resource": {
             "name": "Bois de Ch\u00c3\u00aane",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38092.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 1495,
         "bonus": {
@@ -4683,7 +4683,7 @@
         "resource": {
             "name": "Arc de Boisaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/2001.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 2418,
         "bonus": {
@@ -4700,7 +4700,7 @@
         "resource": {
             "name": "Pic du Prespic",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47134.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 1187,
         "bonus": {
@@ -4717,7 +4717,7 @@
         "resource": {
             "name": "B\u00c3\u00a2ton de Crabe",
             "image": "http://static.ankama.com/dofus/www/game/items/200/49074.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 307,
         "bonus": {
@@ -4734,7 +4734,7 @@
         "resource": {
             "name": "\u00c3\u2030tamine de Floribonde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36008.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 18383,
         "bonus": {
@@ -4751,7 +4751,7 @@
         "resource": {
             "name": "Racine d'Abraknyde Sombre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/98232.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 8752,
         "bonus": {
@@ -4768,7 +4768,7 @@
         "resource": {
             "name": "Viande Exsudative",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63471.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1671,
         "bonus": {
@@ -4785,7 +4785,7 @@
         "resource": {
             "name": "Peau de Rouquette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59042.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1275,
         "bonus": {
@@ -4802,7 +4802,7 @@
         "resource": {
             "name": "Parmentier \u00c3\u00a0 l'Oignon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/69758.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 1275,
         "bonus": {
@@ -4819,7 +4819,7 @@
         "resource": {
             "name": "R\u00c3\u00a9sidu de Solfatar\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51471.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 31225,
         "bonus": {
@@ -4836,7 +4836,7 @@
         "resource": {
             "name": "Tige de Bambouto",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164665.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 2418,
         "bonus": {
@@ -4853,7 +4853,7 @@
         "resource": {
             "name": "Eau de Kwapa",
             "image": "http://static.ankama.com/dofus/www/game/items/200/164651.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 2286,
         "bonus": {
@@ -4870,7 +4870,7 @@
         "resource": {
             "name": "Aile du Tofu Mal\u00c3\u00a9fique",
             "image": "http://static.ankama.com/dofus/www/game/items/200/104048.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 1187,
         "bonus": {
@@ -4887,7 +4887,7 @@
         "resource": {
             "name": "Sauge",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36643.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -4904,7 +4904,7 @@
         "resource": {
             "name": "Corne du Boufcoul",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47009.w75h75.png",
-            "icon": "9"
+            "number": "9"
         },
         "kamas": 12006,
         "bonus": {
@@ -4921,7 +4921,7 @@
         "resource": {
             "name": "Viande Faisand\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63348.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 703,
         "bonus": {
@@ -4938,7 +4938,7 @@
         "resource": {
             "name": "Enfumoir Zoth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15130.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 15261,
         "bonus": {
@@ -4955,7 +4955,7 @@
         "resource": {
             "name": "Brochet",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41400.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 307,
         "bonus": {
@@ -4972,7 +4972,7 @@
         "resource": {
             "name": "Coquille de Dragoeuf Charbon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/111203.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 4002,
         "bonus": {
@@ -4989,7 +4989,7 @@
         "resource": {
             "name": "Po\u00c3\u00aal\u00c3\u00a9e Paysanne",
             "image": "http://static.ankama.com/dofus/www/game/items/200/69804.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1055,
         "bonus": {
@@ -5006,7 +5006,7 @@
         "resource": {
             "name": "Plume de Tofu",
             "image": "http://static.ankama.com/dofus/www/game/items/200/53014.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 483,
         "bonus": {
@@ -5023,7 +5023,7 @@
         "resource": {
             "name": "Plume de Crowneille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/53327.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1495,
         "bonus": {
@@ -5040,7 +5040,7 @@
         "resource": {
             "name": "Fer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39024.w75h75.png",
-            "icon": "40"
+            "number": "40"
         },
         "kamas": 307,
         "bonus": {
@@ -5057,7 +5057,7 @@
         "resource": {
             "name": "Poil de Smilomouth",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54676.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 16800,
         "bonus": {
@@ -5074,7 +5074,7 @@
         "resource": {
             "name": "Dent de Wabbit",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47758.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 3254,
         "bonus": {
@@ -5091,7 +5091,7 @@
         "resource": {
             "name": "Baguette de Boisaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/3008.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 307,
         "bonus": {
@@ -5108,7 +5108,7 @@
         "resource": {
             "name": "Chanvre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34121.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 6289,
         "bonus": {
@@ -5125,7 +5125,7 @@
         "resource": {
             "name": "Oreille de Soryo Givrefoux",
             "image": "http://static.ankama.com/dofus/www/game/items/200/106629.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 38306,
         "bonus": {
@@ -5142,7 +5142,7 @@
         "resource": {
             "name": "Peau d'Ouilleur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59630.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 37163,
         "bonus": {
@@ -5159,7 +5159,7 @@
         "resource": {
             "name": "Poils de Barbe du Bwork Mage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54131.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 2946,
         "bonus": {
@@ -5176,7 +5176,7 @@
         "resource": {
             "name": "Slip de Bwork Archer",
             "image": "http://static.ankama.com/dofus/www/game/items/200/56649.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2726,
         "bonus": {
@@ -5193,7 +5193,7 @@
         "resource": {
             "name": "Moustache de Kol\u00c3\u00a9rat",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15451.w75h75.png",
-            "icon": "9"
+            "number": "9"
         },
         "kamas": 5365,
         "bonus": {
@@ -5210,7 +5210,7 @@
         "resource": {
             "name": "Cape Sombre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/17194.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 439,
         "bonus": {
@@ -5227,7 +5227,7 @@
         "resource": {
             "name": "Sceau Royal Contrefait",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15131.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2726,
         "bonus": {
@@ -5244,7 +5244,7 @@
         "resource": {
             "name": "Poil de Chachachovage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54677.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 9103,
         "bonus": {
@@ -5261,7 +5261,7 @@
         "resource": {
             "name": "Bois de Ch\u00c3\u00a2taignier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38086.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -5278,7 +5278,7 @@
         "resource": {
             "name": "Calice de F\u00c3\u00a9corce",
             "image": "http://static.ankama.com/dofus/www/game/items/200/36012.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 17064,
         "bonus": {
@@ -5295,7 +5295,7 @@
         "resource": {
             "name": "Queue de Prespic",
             "image": "http://static.ankama.com/dofus/www/game/items/200/65579.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1187,
         "bonus": {
@@ -5312,7 +5312,7 @@
         "resource": {
             "name": "Coquille de Fantimonier",
             "image": "http://static.ankama.com/dofus/www/game/items/200/111751.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 26475,
         "bonus": {
@@ -5329,7 +5329,7 @@
         "resource": {
             "name": "Goujon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41294.w75h75.png",
-            "icon": "28"
+            "number": "28"
         },
         "kamas": 307,
         "bonus": {
@@ -5346,7 +5346,7 @@
         "resource": {
             "name": "\u00c3\u2030caille de Crocodaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59233.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 3034,
         "bonus": {
@@ -5363,7 +5363,7 @@
         "resource": {
             "name": "Raie Bleue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41296.w75h75.png",
-            "icon": "18"
+            "number": "18"
         },
         "kamas": 8004,
         "bonus": {
@@ -5380,7 +5380,7 @@
         "resource": {
             "name": "Pustule de Rat Sio",
             "image": "http://static.ankama.com/dofus/www/game/items/200/165026.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 12006,
         "bonus": {
@@ -5397,7 +5397,7 @@
         "resource": {
             "name": "Aile de Dragodinde Rousse Sauvage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/104592.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 5673,
         "bonus": {
@@ -5414,7 +5414,7 @@
         "resource": {
             "name": "Leurnettes",
             "image": "http://static.ankama.com/dofus/www/game/items/200/5009.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 2418,
         "bonus": {
@@ -5431,7 +5431,7 @@
         "resource": {
             "name": "Peau de Ramane d'\u00c3\u2030goutant",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59622.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 4002,
         "bonus": {
@@ -5448,7 +5448,7 @@
         "resource": {
             "name": "Viande Mac\u00c3\u00a9r\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63476.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 15524,
         "bonus": {
@@ -5465,7 +5465,7 @@
         "resource": {
             "name": "Patte de la Gardienne des \u00c3\u2030gouts",
             "image": "http://static.ankama.com/dofus/www/game/items/200/103034.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 27135,
         "bonus": {
@@ -5482,7 +5482,7 @@
         "resource": {
             "name": "Substrat de Futaie",
             "image": "http://static.ankama.com/dofus/www/game/items/200/26017.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 3518,
         "bonus": {
@@ -5499,7 +5499,7 @@
         "resource": {
             "name": "Patte de Corbac",
             "image": "http://static.ankama.com/dofus/www/game/items/200/103330.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 1495,
         "bonus": {
@@ -5516,7 +5516,7 @@
         "resource": {
             "name": "Cloaque du Poolay",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15021.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 25508,
         "bonus": {
@@ -5533,7 +5533,7 @@
         "resource": {
             "name": "Queue du Mulou",
             "image": "http://static.ankama.com/dofus/www/game/items/200/65105.w75h75.png",
-            "icon": "7"
+            "number": "7"
         },
         "kamas": 11126,
         "bonus": {
@@ -5550,7 +5550,7 @@
         "resource": {
             "name": "M\u00c3\u00a2choire du Chafer Draugr",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47697.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1275,
         "bonus": {
@@ -5567,7 +5567,7 @@
         "resource": {
             "name": "Viande Avari\u00c3\u00a9e",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63426.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 791,
         "bonus": {
@@ -5584,7 +5584,7 @@
         "resource": {
             "name": "Laine de Boufmouth l\u00c3\u00a9gendaire",
             "image": "http://static.ankama.com/dofus/www/game/items/200/57212.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 16272,
         "bonus": {
@@ -5601,7 +5601,7 @@
         "resource": {
             "name": "Tatouage de Mauvais Gar\u00c3\u00a7on",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15132.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 1275,
         "bonus": {
@@ -5618,7 +5618,7 @@
         "resource": {
             "name": "Rembourrage de Meupette",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15024.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 25200,
         "bonus": {
@@ -5635,7 +5635,7 @@
         "resource": {
             "name": "C\u00c5\u201cur de Crapeur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/51472.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 35227,
         "bonus": {
@@ -5652,7 +5652,7 @@
         "resource": {
             "name": "Kobalte",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39077.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 1495,
         "bonus": {
@@ -5669,7 +5669,7 @@
         "resource": {
             "name": "Oreille de Gobosteur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/106628.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 36019,
         "bonus": {
@@ -5686,7 +5686,7 @@
         "resource": {
             "name": "Cuir de Bouftou Noir",
             "image": "http://static.ankama.com/dofus/www/game/items/200/56016.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 747,
         "bonus": {
@@ -5703,7 +5703,7 @@
         "resource": {
             "name": "Clef du Ch\u00c3\u00a2teau Ensabl\u00c3\u00a9",
             "image": "http://static.ankama.com/dofus/www/game/items/200/84237.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 791,
         "bonus": {
@@ -5720,7 +5720,7 @@
         "resource": {
             "name": "Peau de Mansob\u00c3\u00a8se",
             "image": "http://static.ankama.com/dofus/www/game/items/200/59049.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 17328,
         "bonus": {
@@ -5737,7 +5737,7 @@
         "resource": {
             "name": "Bois de Ch\u00c3\u00aane",
             "image": "http://static.ankama.com/dofus/www/game/items/200/38092.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 1495,
         "bonus": {
@@ -5754,7 +5754,7 @@
         "resource": {
             "name": "\u00c5\u2019uf de Dragoeuf Charbon",
             "image": "http://static.ankama.com/dofus/www/game/items/200/105206.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 5365,
         "bonus": {
@@ -5771,7 +5771,7 @@
         "resource": {
             "name": "Pelle de Rapage",
             "image": "http://static.ankama.com/dofus/www/game/items/200/8005.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 2418,
         "bonus": {
@@ -5788,7 +5788,7 @@
         "resource": {
             "name": "\u00c3\u2030toffe de Dok Alako",
             "image": "http://static.ankama.com/dofus/www/game/items/200/55720.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 7300,
         "bonus": {
@@ -5805,7 +5805,7 @@
         "resource": {
             "name": "\u00c5\u2019il de Sapeur",
             "image": "http://static.ankama.com/dofus/www/game/items/200/109593.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 36371,
         "bonus": {
@@ -5822,7 +5822,7 @@
         "resource": {
             "name": "Perce-Neige",
             "image": "http://static.ankama.com/dofus/www/game/items/200/35635.w75h75.png",
-            "icon": "5"
+            "number": "5"
         },
         "kamas": 12006,
         "bonus": {
@@ -5839,7 +5839,7 @@
         "resource": {
             "name": "Dent de Dragodinde",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47419.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 4925,
         "bonus": {
@@ -5856,7 +5856,7 @@
         "resource": {
             "name": "Sandales Tofuesques",
             "image": "http://static.ankama.com/dofus/www/game/items/200/11004.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 483,
         "bonus": {
@@ -5873,7 +5873,7 @@
         "resource": {
             "name": "Potion de cit\u00c3\u00a9 : Br\u00c3\u00a2kmar",
             "image": "http://static.ankama.com/dofus/www/game/items/200/12145.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 3518,
         "bonus": {
@@ -5890,7 +5890,7 @@
         "resource": {
             "name": "Cuivre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/39108.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 307,
         "bonus": {
@@ -5907,7 +5907,7 @@
         "resource": {
             "name": "Babines de Macien",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15463.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 3606,
         "bonus": {
@@ -5924,7 +5924,7 @@
         "resource": {
             "name": "Cuir de Porkass",
             "image": "http://static.ankama.com/dofus/www/game/items/200/56429.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 1407,
         "bonus": {
@@ -5941,7 +5941,7 @@
         "resource": {
             "name": "Emballage de Nowel \u00c3\u2030carlate",
             "image": "http://static.ankama.com/dofus/www/game/items/200/154000.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3518,
         "bonus": {
@@ -5958,7 +5958,7 @@
         "resource": {
             "name": "Kralamoure",
             "image": "http://static.ankama.com/dofus/www/game/items/200/41309.w75h75.png",
-            "icon": "15"
+            "number": "15"
         },
         "kamas": 3518,
         "bonus": {
@@ -5975,7 +5975,7 @@
         "resource": {
             "name": "Ep\u00c3\u00a9e de Boisaille",
             "image": "http://static.ankama.com/dofus/www/game/items/200/6007.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 307,
         "bonus": {
@@ -5992,7 +5992,7 @@
         "resource": {
             "name": "Flocon de Neige",
             "image": "http://static.ankama.com/dofus/www/game/items/200/153007.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3518,
         "bonus": {
@@ -6009,7 +6009,7 @@
         "resource": {
             "name": "Aluminite",
             "image": "http://static.ankama.com/dofus/www/game/items/200/40660.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 307,
         "bonus": {
@@ -6026,7 +6026,7 @@
         "resource": {
             "name": "Dent Pointue",
             "image": "http://static.ankama.com/dofus/www/game/items/200/47432.w75h75.png",
-            "icon": "3"
+            "number": "3"
         },
         "kamas": 1935,
         "bonus": {
@@ -6043,7 +6043,7 @@
         "resource": {
             "name": "N\u00c5\u201cud de Marin",
             "image": "http://static.ankama.com/dofus/www/game/items/200/15129.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 3606,
         "bonus": {
@@ -6060,7 +6060,7 @@
         "resource": {
             "name": "Viande Tendre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/63483.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 2199,
         "bonus": {
@@ -6077,7 +6077,7 @@
         "resource": {
             "name": "Tra\u00c3\u00aeneau en Pain d'\u00c3\u2030pices",
             "image": "http://static.ankama.com/dofus/www/game/items/200/42164.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 3518,
         "bonus": {
@@ -6094,7 +6094,7 @@
         "resource": {
             "name": "Cadeau de Nowel",
             "image": "http://static.ankama.com/dofus/www/game/items/200/89002.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 12006,
         "bonus": {
@@ -6111,7 +6111,7 @@
         "resource": {
             "name": "Poil de barbe du Shamansot",
             "image": "http://static.ankama.com/dofus/www/game/items/200/54674.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 19790,
         "bonus": {
@@ -6128,7 +6128,7 @@
         "resource": {
             "name": "Paquet Cadeau en Chocolat",
             "image": "http://static.ankama.com/dofus/www/game/items/200/42158.w75h75.png",
-            "icon": "1"
+            "number": "1"
         },
         "kamas": 3518,
         "bonus": {
@@ -6145,7 +6145,7 @@
         "resource": {
             "name": "Cadeau de Nowel",
             "image": "http://static.ankama.com/dofus/www/game/items/200/89002.w75h75.png",
-            "icon": "4"
+            "number": "4"
         },
         "kamas": 12006,
         "bonus": {
@@ -6162,7 +6162,7 @@
         "resource": {
             "name": "Seigle",
             "image": "http://static.ankama.com/dofus/www/game/items/200/34082.w75h75.png",
-            "icon": "20"
+            "number": "20"
         },
         "kamas": 3518,
         "bonus": {
@@ -6179,7 +6179,7 @@
         "resource": {
             "name": "Graine de l'Abrakleur sombre",
             "image": "http://static.ankama.com/dofus/www/game/items/200/58001.w75h75.png",
-            "icon": "2"
+            "number": "2"
         },
         "kamas": 20934,
         "bonus": {
@@ -6196,7 +6196,7 @@
         "resource": {
             "name": "Papillote au Citron",
             "image": "http://static.ankama.com/dofus/www/game/items/200/69744.w75h75.png",
-            "icon": "8"
+            "number": "8"
         },
         "kamas": 483,
         "bonus": {

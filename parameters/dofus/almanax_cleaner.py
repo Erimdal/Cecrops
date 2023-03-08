@@ -136,7 +136,7 @@ class Offering:
             "resource": {
                 "name": self.resource_name,
                 "image": self.resource_image,
-                "icon": self.resource_number
+                "number": self.resource_number
             },
             "kamas": self.kamas_given,
             "bonus": {
