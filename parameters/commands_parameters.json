@@ -63,6 +63,29 @@
         "description": "Activate or deactivate god mode. Only for admins."
     },
     {
+        "index": "schedule",
+        "name": "schedule",
+        "description": "Tool for organisation of Avalanche team.",
+        "options": [
+            {
+                "index": "week",
+                "name": "week",
+                "description": "Choose wether it's a normal week or a holiday week.",
+                "required": true,
+                "choices": [
+                    {
+                        "name": "normal",
+                        "value": "normal"
+                    },
+                    {
+                        "name": "holiday",
+                        "value": "holiday"
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "index": "loadTeam",
         "name": "load",
         "description": "Deprecated."
